@@ -40,11 +40,11 @@ export function List({
       <div className="fixed bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
       <Header
-        title="Village Management"
-        subtitle="Organize and monitor villages within your Union Parishad jurisdiction."
+        title="গ্রাম ব্যবস্থাপনা"
+        subtitle="আপনার ইউনিয়ন পরিষদের আওতাধীন গ্রামগুলো সংগঠিত এবং তদারকি করুন।"
         count={total}
         onAdd={onAdd}
-        addLabel="Add Village"
+        addLabel="গ্রাম যোগ করুন"
         icon={<Building2 className="w-5 h-5" />}
       />
 

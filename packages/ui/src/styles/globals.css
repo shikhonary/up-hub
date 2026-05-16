@@ -117,8 +117,11 @@
 
 /* 2. Map Variables to Tailwind Theme */
 @theme inline {
-  --font-display: "Inter", sans-serif;
+  --font-sans: "Inter", "SolaimanLipi", sans-serif;
+  --font-display: "SolaimanLipi", "Inter", sans-serif;
   --font-body: "SolaimanLipi", "Inter", sans-serif;
+  --font-headline: "SolaimanLipi", "Inter", sans-serif;
+  --font-bengali: "SolaimanLipi", sans-serif;
 
   --color-surface: var(--surface);
   --color-surface-container-lowest: var(--surface-container-lowest);

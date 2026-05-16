@@ -64,9 +64,10 @@ export class CitizenService {
     limit?: number;
     search?: string | null;
     wardNo?: number;
+    village?: string | null;
     gender?: string;
   }) {
-    const { page = 1, limit = 10, search, wardNo, gender } = filters;
+    const { page = 1, limit = 10, search, wardNo, village, gender } = filters;
     const skip = (page - 1) * limit;
 
     const where: any = { isActive: true };
@@ -84,8 +85,12 @@ export class CitizenService {
       where.presentWardNo = wardNo;
     }
 
+    if (village) {
+      where.presentVillageBn = village;
+    }
+
     if (gender) {
-      where.gender = gender;
+      where.genderBn = gender;
     }
 
     const [items, total] = await Promise.all([
@@ -105,6 +110,36 @@ export class CitizenService {
         total,
         page,
         limit,
+      },
+    };
+  }
+
+  async getStats() {
+    const [total, male, female] = await Promise.all([
+      this.prisma.citizen.count({ where: { isActive: true } }),
+      this.prisma.citizen.count({ where: { isActive: true, genderBn: "পুরুষ" } }),
+      this.prisma.citizen.count({ where: { isActive: true, genderBn: "মহিলা" } }),
+    ]);
+
+    // Group by ward
+    const wardStats = await this.prisma.citizen.groupBy({
+      by: ["presentWardNo"],
+      where: { isActive: true },
+      _count: {
+        _all: true,
+      },
+    });
+
+    return {
+      success: true,
+      data: {
+        total,
+        male,
+        female,
+        wardStats: wardStats.map((w) => ({
+          wardNo: w.presentWardNo,
+          count: w._count._all,
+        })),
       },
     };
   }

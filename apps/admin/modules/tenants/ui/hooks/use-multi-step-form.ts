@@ -19,6 +19,14 @@ function getFieldsForStep(step: number) {
       return ["name", "slug", "type", "currentFiscalYear"] as const;
     case 2:
       return [
+        "divisionId",
+        "districtId",
+        "upazilaId",
+        "unionId",
+        "geoCode",
+      ] as const;
+    case 3:
+      return [
         "email",
         "phone",
         "address",
@@ -26,12 +34,11 @@ function getFieldsForStep(step: number) {
         "state",
         "postalCode",
       ] as const;
-    case 3:
-      return ["subdomain", "customDomain"] as const;
     case 4:
-      return ["planId"] as const;
+      return ["subdomain", "customDomain"] as const;
     case 5:
       return [
+        "planId",
         "isActive",
         "customUserLimit",
         "customAdminLimit",

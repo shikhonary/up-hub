@@ -6,6 +6,7 @@ import {
   CheckCircle,
   PauseCircle,
 } from "lucide-react";
+import { enToBnNumber } from "@workspace/utils";
 
 export function Stats() {
   const { data: stats } = useWardStats();
@@ -14,22 +15,22 @@ export function Stats() {
     <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
       <StatCard
         icon={<FolderIcon className="w-6 h-6" />}
-        label="Total Wards"
-        value={stats?.total.toString() ?? "0"}
+        label="মোট ওয়ার্ড"
+        value={enToBnNumber(stats?.total) || "০"}
         iconBgClass="bg-primary/10"
         iconTextClass="text-primary"
       />
       <StatCard
         icon={<CheckCircle className="w-6 h-6" />}
-        label="Active Wards"
-        value={stats?.active.toString() ?? "0"}
+        label="সক্রিয় ওয়ার্ড"
+        value={enToBnNumber(stats?.active) || "০"}
         iconBgClass="bg-emerald-500/10"
         iconTextClass="text-emerald-600"
       />
       <StatCard
         icon={<PauseCircle className="w-6 h-6" />}
-        label="Inactive Wards"
-        value={stats?.inactive.toString() ?? "0"}
+        label="নিষ্ক্রিয় ওয়ার্ড"
+        value={enToBnNumber(stats?.inactive) || "০"}
         iconBgClass="bg-slate-200/50"
         iconTextClass="text-slate-600"
       />

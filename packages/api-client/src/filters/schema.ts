@@ -260,3 +260,89 @@ export const citizenApplicationFilterSchema = {
   status: parseAsString.withOptions({ clearOnDefault: true }),
   wardNo: parseAsInteger.withOptions({ clearOnDefault: true }),
 };
+
+/**
+ * Citizen Filters
+ */
+export const citizenFilterSchema = {
+  ...baseFilterSchema,
+  wardNo: parseAsInteger.withOptions({ clearOnDefault: true }),
+  village: parseAsString.withOptions({ clearOnDefault: true }),
+  gender: parseAsString.withOptions({ clearOnDefault: true }),
+};
+
+/**
+ * Assessment Filters
+ */
+export const assessmentFilterSchema = {
+  ...baseFilterSchema,
+  wardNo: parseAsInteger.withOptions({ clearOnDefault: true }),
+  villageBn: parseAsString.withOptions({ clearOnDefault: true }),
+  holdingNo: parseAsString.withOptions({ clearOnDefault: true }),
+  fiscalYearId: parseAsString.withOptions({ clearOnDefault: true }),
+};
+
+/**
+ * Fiscal Year Filters
+ */
+export const fiscalYearFilterSchema = {
+  ...baseFilterSchema,
+  isActive: parseAsBoolean.withOptions({ clearOnDefault: true }),
+  isCurrent: parseAsBoolean.withOptions({ clearOnDefault: true }),
+};
+
+/**
+ * Holding Tax Filters
+ */
+export const holdingTaxFilterSchema = {
+  ...baseFilterSchema,
+  status: parseAsString.withOptions({ clearOnDefault: true }),
+  assessmentId: parseAsString.withOptions({ clearOnDefault: true }),
+  citizenId: parseAsString.withOptions({ clearOnDefault: true }),
+  fiscalYearId: parseAsString.withOptions({ clearOnDefault: true }),
+  wardNo: parseAsInteger.withOptions({ clearOnDefault: true }),
+  villageBn: parseAsString.withOptions({ clearOnDefault: true }),
+};
+
+/**
+ * Certificate Counter Filters
+ */
+export const certificateCounterFilterSchema = {
+  ...baseFilterSchema,
+};
+
+/**
+ * Trade License Category Filters
+ */
+export const tradeLicenseCategoryFilterSchema = {
+  ...baseFilterSchema,
+};
+/**
+ * Trade License Application Filters
+ */
+export const tradeLicenseApplicationFilterSchema = {
+  ...baseFilterSchema,
+  wardNo: parseAsInteger.withOptions({ clearOnDefault: true }),
+  categoryId: parseAsString.withOptions({ clearOnDefault: true }),
+  fiscalYearId: parseAsString.withOptions({ clearOnDefault: true }),
+  status: parseAsString.withOptions({ clearOnDefault: true }),
+};
+
+/**
+ * Trade License Filters
+ */
+export const tradeLicenseFilterSchema = {
+  ...baseFilterSchema,
+  fiscalYearId: parseAsString.withOptions({ clearOnDefault: true }),
+  paymentStatus: parseAsString.withOptions({ clearOnDefault: true }),
+  isExpired: parseAsBoolean.withOptions({ clearOnDefault: true }),
+};
+
+/**
+ * Succession Application Filters
+ */
+export const successionApplicationFilterSchema = {
+  ...baseFilterSchema,
+  wardNo: parseAsInteger.withOptions({ clearOnDefault: true }),
+  status: parseAsString.withOptions({ clearOnDefault: true }),
+};

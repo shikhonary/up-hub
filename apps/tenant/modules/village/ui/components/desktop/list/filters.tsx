@@ -20,6 +20,7 @@ import { Badge } from "@workspace/ui/components/badge";
 import { motion, AnimatePresence } from "framer-motion";
 import { DEFAULT_PAGE, DEFAULT_PAGE_SIZE } from "@workspace/utils/constants";
 import { cn } from "@workspace/ui/lib/utils";
+import { enToBnNumber } from "@workspace/utils";
 
 interface FiltersProps {
   viewMode: "table" | "grid";
@@ -77,8 +78,8 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
         <div className="relative flex-grow min-w-[300px]">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-on-surface-variant/50" />
           <Input
-            className="w-full bg-surface-container-low py-2.5 pl-10 pr-4 rounded-xl border-none focus-visible:ring-2 focus-visible:ring-primary/40 text-sm text-on-surface placeholder:text-on-surface-variant/40 h-10 transition-all"
-            placeholder="Search villages..."
+            className="w-full bg-surface-container-low py-2.5 pl-10 pr-4 rounded-xl border-none focus-visible:ring-2 focus-visible:ring-primary/40 text-sm font-bold text-on-surface placeholder:text-on-surface-variant/40 h-10 transition-all"
+            placeholder="গ্রাম খুঁজুন..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -89,66 +90,66 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
             value={filters.wardId ?? "all"}
             onValueChange={handleWardChange}
           >
-            <SelectTrigger className="bg-surface-container-low border-none rounded-xl text-sm font-bold text-on-surface w-[180px] h-10 px-4 focus:ring-2 focus:ring-primary/20 transition-all hover:bg-surface-container-low/80">
+            <SelectTrigger className="bg-surface-container-low border-none rounded-xl text-sm font-black text-on-surface w-[180px] h-10 px-4 focus:ring-2 focus:ring-primary/20 transition-all hover:bg-surface-container-low/80 shadow-sm">
               <div className="flex items-center gap-2 truncate">
                 <MapPin className="w-3.5 h-3.5 text-primary/60" />
-                <SelectValue placeholder="All Wards" />
+                <SelectValue placeholder="সব ওয়ার্ড" />
               </div>
             </SelectTrigger>
             <SelectContent className="rounded-xl border-outline/5 shadow-xl bg-white">
-              <SelectItem value="all" className="font-bold">All Wards</SelectItem>
+              <SelectItem value="all" className="font-black text-sm">সব ওয়ার্ড</SelectItem>
               {wards?.map((ward) => (
-                <SelectItem key={ward.id} value={ward.id} className="font-medium">
-                  {ward.name}
+                <SelectItem key={ward.id} value={ward.id} className="font-bold text-sm">
+                  {enToBnNumber(ward.name)}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
         </div>
 
-        <div className="flex items-center bg-surface-container-low p-1 rounded-xl border border-outline/5">
+        <div className="flex items-center bg-surface-container-low p-1 rounded-xl border border-outline/5 shadow-sm">
           <Button
             variant="ghost"
             size="sm"
             onClick={() => handleStatusChange("all")}
             className={cn(
-              "h-8 px-4 rounded-lg text-xs font-bold transition-all duration-200",
+              "h-8 px-4 rounded-lg text-xs font-black transition-all duration-200",
               filters.isActive === null
                 ? "bg-surface-container-lowest text-primary shadow-sm"
                 : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/50",
             )}
           >
-            All
+            সব
           </Button>
           <Button
             variant="ghost"
             size="sm"
             onClick={() => handleStatusChange("active")}
             className={cn(
-              "h-8 px-4 rounded-lg text-xs font-bold transition-all duration-200",
+              "h-8 px-4 rounded-lg text-xs font-black transition-all duration-200",
               filters.isActive === true
                 ? "bg-surface-container-lowest text-primary shadow-sm"
                 : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/50",
             )}
           >
-            Active
+            সক্রিয়
           </Button>
           <Button
             variant="ghost"
             size="sm"
             onClick={() => handleStatusChange("inactive")}
             className={cn(
-              "h-8 px-4 rounded-lg text-xs font-bold transition-all duration-200",
+              "h-8 px-4 rounded-lg text-xs font-black transition-all duration-200",
               filters.isActive === false
                 ? "bg-surface-container-lowest text-primary shadow-sm"
                 : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/50",
             )}
           >
-            Inactive
+            নিষ্ক্রিয়
           </Button>
         </div>
 
-        <div className="ml-auto flex items-center bg-surface-container-low p-1 rounded-xl border border-outline/5">
+        <div className="ml-auto flex items-center bg-surface-container-low p-1 rounded-xl border border-outline/5 shadow-sm">
           <Button
             variant="ghost"
             size="icon"
@@ -193,7 +194,7 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
                   className="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline/10 text-xs text-primary shadow-sm rounded-lg hover:bg-surface-container-lowest"
                 >
                   <span className="font-black text-[10px] uppercase opacity-50 mr-1">
-                    Search:
+                    সার্চ:
                   </span>
                   <span className="font-bold text-[11px]">
                     {filters.search}
@@ -216,10 +217,10 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
                   className="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline/10 text-xs text-primary shadow-sm rounded-lg hover:bg-surface-container-lowest"
                 >
                   <span className="font-black text-[10px] uppercase opacity-50 mr-1">
-                    Status:
+                    অবস্থা:
                   </span>
                   <span className="font-bold text-[11px]">
-                    {filters.isActive ? "Active" : "Inactive"}
+                    {filters.isActive ? "সক্রিয়" : "নিষ্ক্রিয়"}
                   </span>
                   <button
                     onClick={() => setFilters({ ...filters, isActive: null })}
@@ -236,10 +237,10 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
                   className="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline/10 text-xs text-primary shadow-sm rounded-lg hover:bg-surface-container-lowest"
                 >
                   <span className="font-black text-[10px] uppercase opacity-50 mr-1">
-                    Ward:
+                    ওয়ার্ড:
                   </span>
                   <span className="font-bold text-[11px]">
-                    {wards?.find(w => w.id === filters.wardId)?.name || "Selected Ward"}
+                    {enToBnNumber(wards?.find(w => w.id === filters.wardId)?.name) || "সিলেক্টেড ওয়ার্ড"}
                   </span>
                   <button
                     onClick={() => setFilters({ ...filters, wardId: null })}
@@ -257,7 +258,7 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
                 className="ml-auto text-[10px] font-black text-on-surface-variant/80 hover:text-rose-600 hover:bg-rose-50 transition-all flex items-center gap-1.5 px-3 h-8 rounded-lg"
               >
                 <RotateCcw className="w-3 h-3" />
-                Reset All
+                সব রিসেট করুন
               </Button>
             </div>
           </motion.div>

@@ -86,7 +86,12 @@ export const ModelName = {
   QuestionPaper: 'QuestionPaper',
   QuestionPaperSubject: 'QuestionPaperSubject',
   QuestionPaperSubjectMarkDistribution: 'QuestionPaperSubjectMarkDistribution',
-  QuestionPaperQuestion: 'QuestionPaperQuestion'
+  QuestionPaperQuestion: 'QuestionPaperQuestion',
+  Division: 'Division',
+  District: 'District',
+  Upazila: 'Upazila',
+  Union: 'Union',
+  PostOffice: 'PostOffice'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -182,6 +187,11 @@ export const TenantScalarFieldEnum = {
   subdomain: 'subdomain',
   customDomain: 'customDomain',
   customDomainVerified: 'customDomainVerified',
+  divisionId: 'divisionId',
+  districtId: 'districtId',
+  upazilaId: 'upazilaId',
+  unionId: 'unionId',
+  geoCode: 'geoCode',
   databaseName: 'databaseName',
   connectionString: 'connectionString',
   databaseStatus: 'databaseStatus',
@@ -199,6 +209,7 @@ export const TenantScalarFieldEnum = {
   updatedAt: 'updatedAt',
   deletedAt: 'deletedAt',
   customUserLimit: 'customUserLimit',
+  customAdminLimit: 'customAdminLimit',
   customRecordLimit: 'customRecordLimit',
   customStorageLimit: 'customStorageLimit'
 } as const
@@ -732,6 +743,61 @@ export const QuestionPaperQuestionScalarFieldEnum = {
 } as const
 
 export type QuestionPaperQuestionScalarFieldEnum = (typeof QuestionPaperQuestionScalarFieldEnum)[keyof typeof QuestionPaperQuestionScalarFieldEnum]
+
+
+export const DivisionScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  nameBn: 'nameBn',
+  geoCode: 'geoCode'
+} as const
+
+export type DivisionScalarFieldEnum = (typeof DivisionScalarFieldEnum)[keyof typeof DivisionScalarFieldEnum]
+
+
+export const DistrictScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  nameBn: 'nameBn',
+  geoCode: 'geoCode',
+  divisionId: 'divisionId'
+} as const
+
+export type DistrictScalarFieldEnum = (typeof DistrictScalarFieldEnum)[keyof typeof DistrictScalarFieldEnum]
+
+
+export const UpazilaScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  nameBn: 'nameBn',
+  geoCode: 'geoCode',
+  districtId: 'districtId'
+} as const
+
+export type UpazilaScalarFieldEnum = (typeof UpazilaScalarFieldEnum)[keyof typeof UpazilaScalarFieldEnum]
+
+
+export const UnionScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  nameBn: 'nameBn',
+  geoCode: 'geoCode',
+  upazilaId: 'upazilaId'
+} as const
+
+export type UnionScalarFieldEnum = (typeof UnionScalarFieldEnum)[keyof typeof UnionScalarFieldEnum]
+
+
+export const PostOfficeScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  nameBn: 'nameBn',
+  geoCode: 'geoCode',
+  postCode: 'postCode',
+  upazilaId: 'upazilaId'
+} as const
+
+export type PostOfficeScalarFieldEnum = (typeof PostOfficeScalarFieldEnum)[keyof typeof PostOfficeScalarFieldEnum]
 
 
 export const SortOrder = {

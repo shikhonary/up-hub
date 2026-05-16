@@ -55,21 +55,18 @@ export const ModelName = {
   Citizen: 'Citizen',
   Ward: 'Ward',
   Village: 'Village',
-  Student: 'Student',
-  Batch: 'Batch',
-  Teacher: 'Teacher',
-  Exam: 'Exam',
-  ExamAttempt: 'ExamAttempt',
-  AnswerHistory: 'AnswerHistory',
-  Attendance: 'Attendance',
-  Announcement: 'Announcement',
-  Notification: 'Notification',
-  ExamAnalytics: 'ExamAnalytics',
-  StudentAnalytics: 'StudentAnalytics',
-  AcademicYear: 'AcademicYear',
-  Counter: 'Counter',
-  AdmissionFee: 'AdmissionFee',
-  MonthlyFee: 'MonthlyFee'
+  FamilyApplication: 'FamilyApplication',
+  FamilyMember: 'FamilyMember',
+  AssessmentApplication: 'AssessmentApplication',
+  HoldingTax: 'HoldingTax',
+  FiscalYear: 'FiscalYear',
+  CertificateCounter: 'CertificateCounter',
+  TradeLicenseCategory: 'TradeLicenseCategory',
+  TradeLicenseApplication: 'TradeLicenseApplication',
+  TradeLicense: 'TradeLicense',
+  CertificateApplication: 'CertificateApplication',
+  SuccessionApplication: 'SuccessionApplication',
+  Heir: 'Heir'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -100,30 +97,42 @@ export const CitizenApplicationScalarFieldEnum = {
   fatherNameBn: 'fatherNameBn',
   motherNameEn: 'motherNameEn',
   motherNameBn: 'motherNameBn',
-  occupation: 'occupation',
-  residentStatus: 'residentStatus',
-  educationalQualification: 'educationalQualification',
-  religion: 'religion',
-  gender: 'gender',
-  maritalStatus: 'maritalStatus',
+  occupationEn: 'occupationEn',
+  occupationBn: 'occupationBn',
+  residentStatusEn: 'residentStatusEn',
+  residentStatusBn: 'residentStatusBn',
+  educationalQualificationEn: 'educationalQualificationEn',
+  educationalQualificationBn: 'educationalQualificationBn',
+  religionEn: 'religionEn',
+  religionBn: 'religionBn',
+  genderEn: 'genderEn',
+  genderBn: 'genderBn',
+  maritalStatusEn: 'maritalStatusEn',
+  maritalStatusBn: 'maritalStatusBn',
   presentVillageEn: 'presentVillageEn',
   presentVillageBn: 'presentVillageBn',
   presentRoadBlockSectorEn: 'presentRoadBlockSectorEn',
   presentRoadBlockSectorBn: 'presentRoadBlockSectorBn',
   presentHoldingNo: 'presentHoldingNo',
   presentWardNo: 'presentWardNo',
-  presentDistrict: 'presentDistrict',
-  presentUpazila: 'presentUpazila',
-  presentPostOffice: 'presentPostOffice',
+  presentDistrictEn: 'presentDistrictEn',
+  presentDistrictBn: 'presentDistrictBn',
+  presentUpazilaEn: 'presentUpazilaEn',
+  presentUpazilaBn: 'presentUpazilaBn',
+  presentPostOfficeEn: 'presentPostOfficeEn',
+  presentPostOfficeBn: 'presentPostOfficeBn',
   permanentVillageEn: 'permanentVillageEn',
   permanentVillageBn: 'permanentVillageBn',
   permanentRoadBlockSectorEn: 'permanentRoadBlockSectorEn',
   permanentRoadBlockSectorBn: 'permanentRoadBlockSectorBn',
   permanentHoldingNo: 'permanentHoldingNo',
   permanentWardNo: 'permanentWardNo',
-  permanentDistrict: 'permanentDistrict',
-  permanentUpazila: 'permanentUpazila',
-  permanentPostOffice: 'permanentPostOffice',
+  permanentDistrictEn: 'permanentDistrictEn',
+  permanentDistrictBn: 'permanentDistrictBn',
+  permanentUpazilaEn: 'permanentUpazilaEn',
+  permanentUpazilaBn: 'permanentUpazilaBn',
+  permanentPostOfficeEn: 'permanentPostOfficeEn',
+  permanentPostOfficeBn: 'permanentPostOfficeBn',
   mobile: 'mobile',
   email: 'email',
   commentsEn: 'commentsEn',
@@ -149,32 +158,46 @@ export const CitizenScalarFieldEnum = {
   fatherNameBn: 'fatherNameBn',
   motherNameEn: 'motherNameEn',
   motherNameBn: 'motherNameBn',
-  occupation: 'occupation',
-  residentStatus: 'residentStatus',
-  educationalQualification: 'educationalQualification',
-  religion: 'religion',
-  gender: 'gender',
-  maritalStatus: 'maritalStatus',
+  occupationEn: 'occupationEn',
+  occupationBn: 'occupationBn',
+  residentStatusEn: 'residentStatusEn',
+  residentStatusBn: 'residentStatusBn',
+  educationalQualificationEn: 'educationalQualificationEn',
+  educationalQualificationBn: 'educationalQualificationBn',
+  religionEn: 'religionEn',
+  religionBn: 'religionBn',
+  genderEn: 'genderEn',
+  genderBn: 'genderBn',
+  maritalStatusEn: 'maritalStatusEn',
+  maritalStatusBn: 'maritalStatusBn',
   presentVillageEn: 'presentVillageEn',
   presentVillageBn: 'presentVillageBn',
   presentRoadBlockSectorEn: 'presentRoadBlockSectorEn',
   presentRoadBlockSectorBn: 'presentRoadBlockSectorBn',
   presentHoldingNo: 'presentHoldingNo',
   presentWardNo: 'presentWardNo',
-  presentDistrict: 'presentDistrict',
-  presentUpazila: 'presentUpazila',
-  presentPostOffice: 'presentPostOffice',
+  presentDistrictEn: 'presentDistrictEn',
+  presentDistrictBn: 'presentDistrictBn',
+  presentUpazilaEn: 'presentUpazilaEn',
+  presentUpazilaBn: 'presentUpazilaBn',
+  presentPostOfficeEn: 'presentPostOfficeEn',
+  presentPostOfficeBn: 'presentPostOfficeBn',
   permanentVillageEn: 'permanentVillageEn',
   permanentVillageBn: 'permanentVillageBn',
   permanentRoadBlockSectorEn: 'permanentRoadBlockSectorEn',
   permanentRoadBlockSectorBn: 'permanentRoadBlockSectorBn',
   permanentHoldingNo: 'permanentHoldingNo',
   permanentWardNo: 'permanentWardNo',
-  permanentDistrict: 'permanentDistrict',
-  permanentUpazila: 'permanentUpazila',
-  permanentPostOffice: 'permanentPostOffice',
+  permanentDistrictEn: 'permanentDistrictEn',
+  permanentDistrictBn: 'permanentDistrictBn',
+  permanentUpazilaEn: 'permanentUpazilaEn',
+  permanentUpazilaBn: 'permanentUpazilaBn',
+  permanentPostOfficeEn: 'permanentPostOfficeEn',
+  permanentPostOfficeBn: 'permanentPostOfficeBn',
   mobile: 'mobile',
   email: 'email',
+  commentsEn: 'commentsEn',
+  commentsBn: 'commentsBn',
   isActive: 'isActive',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
@@ -208,291 +231,116 @@ export const VillageScalarFieldEnum = {
 export type VillageScalarFieldEnum = (typeof VillageScalarFieldEnum)[keyof typeof VillageScalarFieldEnum]
 
 
-export const StudentScalarFieldEnum = {
+export const FamilyApplicationScalarFieldEnum = {
   id: 'id',
-  studentId: 'studentId',
-  name: 'name',
-  email: 'email',
-  academicClassId: 'academicClassId',
-  className: 'className',
-  batchId: 'batchId',
-  institute: 'institute',
-  roll: 'roll',
-  group: 'group',
-  shift: 'shift',
-  section: 'section',
-  fatherName: 'fatherName',
-  motherName: 'motherName',
+  applicantName: 'applicantName',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  citizenId: 'citizenId'
+} as const
+
+export type FamilyApplicationScalarFieldEnum = (typeof FamilyApplicationScalarFieldEnum)[keyof typeof FamilyApplicationScalarFieldEnum]
+
+
+export const FamilyMemberScalarFieldEnum = {
+  id: 'id',
+  nameBengali: 'nameBengali',
+  nameEnglish: 'nameEnglish',
+  relationBengali: 'relationBengali',
+  relationEnglish: 'relationEnglish',
+  dateOrAge: 'dateOrAge',
+  identityNumber: 'identityNumber',
+  maritalStatus: 'maritalStatus',
+  vitalStatus: 'vitalStatus',
+  applicationId: 'applicationId',
+  citizenId: 'citizenId'
+} as const
+
+export type FamilyMemberScalarFieldEnum = (typeof FamilyMemberScalarFieldEnum)[keyof typeof FamilyMemberScalarFieldEnum]
+
+
+export const AssessmentApplicationScalarFieldEnum = {
+  id: 'id',
+  citizenId: 'citizenId',
+  fullNameBn: 'fullNameBn',
+  genderBn: 'genderBn',
+  genderEn: 'genderEn',
+  maritalStatusBn: 'maritalStatusBn',
+  mobile: 'mobile',
+  nid: 'nid',
+  birthRegistrationNo: 'birthRegistrationNo',
+  passportNo: 'passportNo',
   dateOfBirth: 'dateOfBirth',
-  gender: 'gender',
-  bloodGroup: 'bloodGroup',
-  nationality: 'nationality',
-  religion: 'religion',
-  imageUrl: 'imageUrl',
-  primaryPhone: 'primaryPhone',
-  secondaryPhone: 'secondaryPhone',
-  presentAddress: 'presentAddress',
-  permanentAddress: 'permanentAddress',
-  isActive: 'isActive',
-  admissionFee: 'admissionFee',
-  monthlyFee: 'monthlyFee',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  deletedAt: 'deletedAt',
-  academicYearId: 'academicYearId'
-} as const
-
-export type StudentScalarFieldEnum = (typeof StudentScalarFieldEnum)[keyof typeof StudentScalarFieldEnum]
-
-
-export const BatchScalarFieldEnum = {
-  id: 'id',
-  name: 'name',
-  academicClassId: 'academicClassId',
-  className: 'className',
-  capacity: 'capacity',
-  currentSize: 'currentSize',
-  isActive: 'isActive',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  academicYearId: 'academicYearId'
-} as const
-
-export type BatchScalarFieldEnum = (typeof BatchScalarFieldEnum)[keyof typeof BatchScalarFieldEnum]
-
-
-export const TeacherScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  name: 'name',
-  email: 'email',
-  phone: 'phone',
-  imageUrl: 'imageUrl',
-  subjectIds: 'subjectIds',
-  designation: 'designation',
-  department: 'department',
-  joinDate: 'joinDate',
-  isActive: 'isActive',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  deletedAt: 'deletedAt'
-} as const
-
-export type TeacherScalarFieldEnum = (typeof TeacherScalarFieldEnum)[keyof typeof TeacherScalarFieldEnum]
-
-
-export const ExamScalarFieldEnum = {
-  id: 'id',
-  title: 'title',
-  description: 'description',
-  instructions: 'instructions',
-  type: 'type',
-  status: 'status',
-  academicClassId: 'academicClassId',
-  subjectIds: 'subjectIds',
-  chapterIds: 'chapterIds',
-  topicIds: 'topicIds',
-  startDate: 'startDate',
-  endDate: 'endDate',
-  duration: 'duration',
-  mcqCount: 'mcqCount',
-  cqCount: 'cqCount',
-  mcqIds: 'mcqIds',
-  cqIds: 'cqIds',
-  totalMarks: 'totalMarks',
-  passingMarks: 'passingMarks',
-  isPublished: 'isPublished',
-  isPublic: 'isPublic',
-  isActive: 'isActive',
-  hasNegativeMark: 'hasNegativeMark',
-  negativeMark: 'negativeMark',
-  hasRandom: 'hasRandom',
-  hasShuffle: 'hasShuffle',
-  batchId: 'batchId',
-  teacherId: 'teacherId',
-  targetStudentIds: 'targetStudentIds',
-  totalQuestions: 'totalQuestions',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  deletedAt: 'deletedAt'
-} as const
-
-export type ExamScalarFieldEnum = (typeof ExamScalarFieldEnum)[keyof typeof ExamScalarFieldEnum]
-
-
-export const ExamAttemptScalarFieldEnum = {
-  id: 'id',
-  examId: 'examId',
-  studentId: 'studentId',
-  status: 'status',
-  startTime: 'startTime',
-  endTime: 'endTime',
-  score: 'score',
-  percentage: 'percentage',
-  rank: 'rank',
-  percentile: 'percentile',
-  correctAnswers: 'correctAnswers',
-  wrongAnswers: 'wrongAnswers',
-  skippedQuestions: 'skippedQuestions',
-  totalQuestions: 'totalQuestions',
-  duration: 'duration',
-  totalDuration: 'totalDuration',
-  isGraded: 'isGraded',
-  gradedBy: 'gradedBy',
-  gradedAt: 'gradedAt',
-  tabSwitches: 'tabSwitches',
-  tabSwitchTimes: 'tabSwitchTimes',
-  ipAddress: 'ipAddress',
-  userAgent: 'userAgent',
-  bestStreak: 'bestStreak',
-  currentStreak: 'currentStreak',
-  answeredCount: 'answeredCount',
-  feedbackStatus: 'feedbackStatus',
-  reviewNotes: 'reviewNotes',
-  teacherRemarks: 'teacherRemarks',
-  answers: 'answers',
-  warnings: 'warnings',
-  flaggedQuestions: 'flaggedQuestions',
-  type: 'type',
-  submissionType: 'submissionType',
-  lastActivityAt: 'lastActivityAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type ExamAttemptScalarFieldEnum = (typeof ExamAttemptScalarFieldEnum)[keyof typeof ExamAttemptScalarFieldEnum]
-
-
-export const AnswerHistoryScalarFieldEnum = {
-  id: 'id',
-  attemptId: 'attemptId',
-  studentId: 'studentId',
-  mcqId: 'mcqId',
-  questionNumber: 'questionNumber',
-  selectedOption: 'selectedOption',
-  correctAnswer: 'correctAnswer',
-  isCorrect: 'isCorrect',
-  answeredAt: 'answeredAt',
-  timeSpent: 'timeSpent',
-  previousAnswer: 'previousAnswer',
-  isChanged: 'isChanged',
-  changeCount: 'changeCount',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type AnswerHistoryScalarFieldEnum = (typeof AnswerHistoryScalarFieldEnum)[keyof typeof AnswerHistoryScalarFieldEnum]
-
-
-export const AttendanceScalarFieldEnum = {
-  id: 'id',
-  studentId: 'studentId',
-  batchId: 'batchId',
-  date: 'date',
-  status: 'status',
+  fatherNameBn: 'fatherNameBn',
+  motherNameBn: 'motherNameBn',
+  occupationBn: 'occupationBn',
+  residentType: 'residentType',
+  educationalQualificationBn: 'educationalQualificationBn',
+  religionBn: 'religionBn',
+  holdingNo: 'holdingNo',
+  wardNo: 'wardNo',
+  villageBn: 'villageBn',
+  districtBn: 'districtBn',
+  upazilaBn: 'upazilaBn',
+  postOfficeBn: 'postOfficeBn',
+  roadBlockSectorBn: 'roadBlockSectorBn',
+  maleCount: 'maleCount',
+  femaleCount: 'femaleCount',
+  childCount: 'childCount',
+  disabledCount: 'disabledCount',
+  earningMembers: 'earningMembers',
+  dependentMembers: 'dependentMembers',
+  jobSeekersSscPlus: 'jobSeekersSscPlus',
+  entrepreneurSeekersSscPlus: 'entrepreneurSeekersSscPlus',
+  landOwnership: 'landOwnership',
+  annualIncomeSource: 'annualIncomeSource',
+  annualIncome: 'annualIncome',
+  hasTubewell: 'hasTubewell',
+  majorExpenditureSectors: 'majorExpenditureSectors',
+  remittanceSenders: 'remittanceSenders',
+  sanitationStatus: 'sanitationStatus',
+  hasUtilities: 'hasUtilities',
+  isSocialSafetyNetCovered: 'isSocialSafetyNetCovered',
+  multiStoriedBuildingCount: 'multiStoriedBuildingCount',
+  pakaBuildingCount: 'pakaBuildingCount',
+  semiPakaBuildingCount: 'semiPakaBuildingCount',
+  tinShedCount: 'tinShedCount',
+  kachaHouseCount: 'kachaHouseCount',
+  annualValuation: 'annualValuation',
+  taxRatePercent: 'taxRatePercent',
+  totalTax: 'totalTax',
   remarks: 'remarks',
-  markedBy: 'markedBy',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
 
-export type AttendanceScalarFieldEnum = (typeof AttendanceScalarFieldEnum)[keyof typeof AttendanceScalarFieldEnum]
+export type AssessmentApplicationScalarFieldEnum = (typeof AssessmentApplicationScalarFieldEnum)[keyof typeof AssessmentApplicationScalarFieldEnum]
 
 
-export const AnnouncementScalarFieldEnum = {
+export const HoldingTaxScalarFieldEnum = {
   id: 'id',
-  title: 'title',
-  content: 'content',
-  publishAt: 'publishAt',
-  expiresAt: 'expiresAt',
-  isPublished: 'isPublished',
-  isPinned: 'isPinned',
-  createdBy: 'createdBy',
-  priority: 'priority',
-  targetIds: 'targetIds',
-  targetType: 'targetType',
+  assessmentId: 'assessmentId',
+  fiscalYearId: 'fiscalYearId',
+  citizenId: 'citizenId',
+  totalAmount: 'totalAmount',
+  paidAmount: 'paidAmount',
+  dueAmount: 'dueAmount',
+  status: 'status',
+  collectedById: 'collectedById',
+  collectedByName: 'collectedByName',
+  paidAt: 'paidAt',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
 
-export type AnnouncementScalarFieldEnum = (typeof AnnouncementScalarFieldEnum)[keyof typeof AnnouncementScalarFieldEnum]
+export type HoldingTaxScalarFieldEnum = (typeof HoldingTaxScalarFieldEnum)[keyof typeof HoldingTaxScalarFieldEnum]
 
 
-export const NotificationScalarFieldEnum = {
-  id: 'id',
-  recipientId: 'recipientId',
-  recipientType: 'recipientType',
-  title: 'title',
-  message: 'message',
-  type: 'type',
-  isRead: 'isRead',
-  readAt: 'readAt',
-  relatedEntityType: 'relatedEntityType',
-  relatedEntityId: 'relatedEntityId',
-  metadata: 'metadata',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type NotificationScalarFieldEnum = (typeof NotificationScalarFieldEnum)[keyof typeof NotificationScalarFieldEnum]
-
-
-export const ExamAnalyticsScalarFieldEnum = {
-  id: 'id',
-  examId: 'examId',
-  totalStudents: 'totalStudents',
-  attemptedStudents: 'attemptedStudents',
-  participationRate: 'participationRate',
-  averageScore: 'averageScore',
-  averagePercentage: 'averagePercentage',
-  highestScore: 'highestScore',
-  lowestScore: 'lowestScore',
-  medianScore: 'medianScore',
-  scoreDistribution: 'scoreDistribution',
-  gradeDistribution: 'gradeDistribution',
-  questionAnalysis: 'questionAnalysis',
-  topPerformers: 'topPerformers',
-  averageTimeTaken: 'averageTimeTaken',
-  completionRate: 'completionRate',
-  lastCalculated: 'lastCalculated',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type ExamAnalyticsScalarFieldEnum = (typeof ExamAnalyticsScalarFieldEnum)[keyof typeof ExamAnalyticsScalarFieldEnum]
-
-
-export const StudentAnalyticsScalarFieldEnum = {
-  id: 'id',
-  studentId: 'studentId',
-  totalExamsAttempted: 'totalExamsAttempted',
-  currentStreak: 'currentStreak',
-  bestStreak: 'bestStreak',
-  classRank: 'classRank',
-  batchRank: 'batchRank',
-  overallRank: 'overallRank',
-  attendancePercentage: 'attendancePercentage',
-  averageScore: 'averageScore',
-  averagePercentage: 'averagePercentage',
-  averageTimePerQuestion: 'averageTimePerQuestion',
-  subjectPerformance: 'subjectPerformance',
-  strongSubjects: 'strongSubjects',
-  weakSubjects: 'weakSubjects',
-  strongTopics: 'strongTopics',
-  weakTopics: 'weakTopics',
-  totalClassesAttended: 'totalClassesAttended',
-  totalClassesConducted: 'totalClassesConducted',
-  lastCalculated: 'lastCalculated',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type StudentAnalyticsScalarFieldEnum = (typeof StudentAnalyticsScalarFieldEnum)[keyof typeof StudentAnalyticsScalarFieldEnum]
-
-
-export const AcademicYearScalarFieldEnum = {
+export const FiscalYearScalarFieldEnum = {
   id: 'id',
   name: 'name',
+  nameBn: 'nameBn',
   startDate: 'startDate',
   endDate: 'endDate',
   isCurrent: 'isCurrent',
@@ -501,46 +349,237 @@ export const AcademicYearScalarFieldEnum = {
   updatedAt: 'updatedAt'
 } as const
 
-export type AcademicYearScalarFieldEnum = (typeof AcademicYearScalarFieldEnum)[keyof typeof AcademicYearScalarFieldEnum]
+export type FiscalYearScalarFieldEnum = (typeof FiscalYearScalarFieldEnum)[keyof typeof FiscalYearScalarFieldEnum]
 
 
-export const CounterScalarFieldEnum = {
+export const CertificateCounterScalarFieldEnum = {
   id: 'id',
-  academicYearId: 'academicYearId',
-  academicClassId: 'academicClassId',
-  className: 'className',
-  value: 'value',
+  typeEn: 'typeEn',
+  typeBn: 'typeBn',
+  count: 'count',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
 
-export type CounterScalarFieldEnum = (typeof CounterScalarFieldEnum)[keyof typeof CounterScalarFieldEnum]
+export type CertificateCounterScalarFieldEnum = (typeof CertificateCounterScalarFieldEnum)[keyof typeof CertificateCounterScalarFieldEnum]
 
 
-export const AdmissionFeeScalarFieldEnum = {
+export const TradeLicenseCategoryScalarFieldEnum = {
   id: 'id',
-  academicYearId: 'academicYearId',
-  academicClassId: 'academicClassId',
-  className: 'className',
-  amount: 'amount',
+  typeEn: 'typeEn',
+  typeBn: 'typeBn',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
 
-export type AdmissionFeeScalarFieldEnum = (typeof AdmissionFeeScalarFieldEnum)[keyof typeof AdmissionFeeScalarFieldEnum]
+export type TradeLicenseCategoryScalarFieldEnum = (typeof TradeLicenseCategoryScalarFieldEnum)[keyof typeof TradeLicenseCategoryScalarFieldEnum]
 
 
-export const MonthlyFeeScalarFieldEnum = {
+export const TradeLicenseApplicationScalarFieldEnum = {
   id: 'id',
-  academicYearId: 'academicYearId',
-  academicClassId: 'academicClassId',
-  className: 'className',
-  amount: 'amount',
+  trackingId: 'trackingId',
+  orgNameEn: 'orgNameEn',
+  orgNameBn: 'orgNameBn',
+  ownershipTypeBn: 'ownershipTypeBn',
+  ownershipTypeEn: 'ownershipTypeEn',
+  fullNameEn: 'fullNameEn',
+  fullNameBn: 'fullNameBn',
+  tinBn: 'tinBn',
+  tinEn: 'tinEn',
+  binBn: 'binBn',
+  binEn: 'binEn',
+  fatherNameEn: 'fatherNameEn',
+  fatherNameBn: 'fatherNameBn',
+  motherNameEn: 'motherNameEn',
+  motherNameBn: 'motherNameBn',
+  nidBn: 'nidBn',
+  nidEn: 'nidEn',
+  birthRegistrationBn: 'birthRegistrationBn',
+  birthRegistrationEn: 'birthRegistrationEn',
+  passportBn: 'passportBn',
+  passportEn: 'passportEn',
+  presentVillageEn: 'presentVillageEn',
+  presentVillageBn: 'presentVillageBn',
+  presentRoadBlockEn: 'presentRoadBlockEn',
+  presentRoadBlockBn: 'presentRoadBlockBn',
+  presentDivisionEn: 'presentDivisionEn',
+  presentDivisionBn: 'presentDivisionBn',
+  presentHoldingNoBn: 'presentHoldingNoBn',
+  presentHoldingNoEn: 'presentHoldingNoEn',
+  presentWardNo: 'presentWardNo',
+  presentDistrictEn: 'presentDistrictEn',
+  presentDistrictBn: 'presentDistrictBn',
+  presentUpazilaEn: 'presentUpazilaEn',
+  presentUpazilaBn: 'presentUpazilaBn',
+  presentPostOfficeEn: 'presentPostOfficeEn',
+  presentPostOfficeBn: 'presentPostOfficeBn',
+  permanentIsSameAsPresent: 'permanentIsSameAsPresent',
+  permanentVillageEn: 'permanentVillageEn',
+  permanentVillageBn: 'permanentVillageBn',
+  permanentRoadBlockEn: 'permanentRoadBlockEn',
+  permanentRoadBlockBn: 'permanentRoadBlockBn',
+  permanentDivisionEn: 'permanentDivisionEn',
+  permanentDivisionBn: 'permanentDivisionBn',
+  permanentHoldingNoBn: 'permanentHoldingNoBn',
+  permanentHoldingNoEn: 'permanentHoldingNoEn',
+  permanentWardNo: 'permanentWardNo',
+  permanentDistrictEn: 'permanentDistrictEn',
+  permanentDistrictBn: 'permanentDistrictBn',
+  permanentUpazilaEn: 'permanentUpazilaEn',
+  permanentUpazilaBn: 'permanentUpazilaBn',
+  permanentPostOfficeEn: 'permanentPostOfficeEn',
+  permanentPostOfficeBn: 'permanentPostOfficeBn',
+  vatIdBn: 'vatIdBn',
+  vatIdEn: 'vatIdEn',
+  taxIdBn: 'taxIdBn',
+  taxIdEn: 'taxIdEn',
+  paidUpCapital: 'paidUpCapital',
+  businessStartDate: 'businessStartDate',
+  ownershipStatusBn: 'ownershipStatusBn',
+  ownershipStatusEn: 'ownershipStatusEn',
+  signboardSize: 'signboardSize',
+  tradeLicenseCategoryId: 'tradeLicenseCategoryId',
+  fiscalYearId: 'fiscalYearId',
+  businessVillageEn: 'businessVillageEn',
+  businessVillageBn: 'businessVillageBn',
+  businessRoadBlockEn: 'businessRoadBlockEn',
+  businessRoadBlockBn: 'businessRoadBlockBn',
+  businessDivisionEn: 'businessDivisionEn',
+  businessDivisionBn: 'businessDivisionBn',
+  businessHoldingNoBn: 'businessHoldingNoBn',
+  businessHoldingNoEn: 'businessHoldingNoEn',
+  businessWardNo: 'businessWardNo',
+  businessDistrictEn: 'businessDistrictEn',
+  businessDistrictBn: 'businessDistrictBn',
+  businessUpazilaEn: 'businessUpazilaEn',
+  businessUpazilaBn: 'businessUpazilaBn',
+  businessPostOfficeEn: 'businessPostOfficeEn',
+  businessPostOfficeBn: 'businessPostOfficeBn',
+  mobileBn: 'mobileBn',
+  mobileEn: 'mobileEn',
+  email: 'email',
+  applicantNameEn: 'applicantNameEn',
+  applicantNameBn: 'applicantNameBn',
+  phoneBn: 'phoneBn',
+  phoneEn: 'phoneEn',
+  status: 'status',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
 
-export type MonthlyFeeScalarFieldEnum = (typeof MonthlyFeeScalarFieldEnum)[keyof typeof MonthlyFeeScalarFieldEnum]
+export type TradeLicenseApplicationScalarFieldEnum = (typeof TradeLicenseApplicationScalarFieldEnum)[keyof typeof TradeLicenseApplicationScalarFieldEnum]
+
+
+export const TradeLicenseScalarFieldEnum = {
+  id: 'id',
+  licenseNo: 'licenseNo',
+  trackingNo: 'trackingNo',
+  applicationId: 'applicationId',
+  fiscalYearId: 'fiscalYearId',
+  licenseFee: 'licenseFee',
+  arrears: 'arrears',
+  arrearsFiscalYear: 'arrearsFiscalYear',
+  discount: 'discount',
+  vatAmount: 'vatAmount',
+  signboardTax: 'signboardTax',
+  professionalTax: 'professionalTax',
+  subCharge: 'subCharge',
+  totalAmount: 'totalAmount',
+  paymentStatus: 'paymentStatus',
+  paymentType: 'paymentType',
+  paymentDate: 'paymentDate',
+  issueDate: 'issueDate',
+  expiryDate: 'expiryDate',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TradeLicenseScalarFieldEnum = (typeof TradeLicenseScalarFieldEnum)[keyof typeof TradeLicenseScalarFieldEnum]
+
+
+export const CertificateApplicationScalarFieldEnum = {
+  id: 'id',
+  certificateTypeEn: 'certificateTypeEn',
+  certificateTypeBn: 'certificateTypeBn',
+  citizenId: 'citizenId',
+  specificData: 'specificData',
+  status: 'status',
+  issuedAt: 'issuedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CertificateApplicationScalarFieldEnum = (typeof CertificateApplicationScalarFieldEnum)[keyof typeof CertificateApplicationScalarFieldEnum]
+
+
+export const SuccessionApplicationScalarFieldEnum = {
+  id: 'id',
+  trackingId: 'trackingId',
+  nameEn: 'nameEn',
+  nameBn: 'nameBn',
+  nidNo: 'nidNo',
+  deathDate: 'deathDate',
+  fatherNameEn: 'fatherNameEn',
+  fatherNameBn: 'fatherNameBn',
+  motherNameEn: 'motherNameEn',
+  motherNameBn: 'motherNameBn',
+  residentStatus: 'residentStatus',
+  religion: 'religion',
+  gender: 'gender',
+  maritalStatus: 'maritalStatus',
+  applicantNameEn: 'applicantNameEn',
+  applicantNameBn: 'applicantNameBn',
+  applicantGuardianNameEn: 'applicantGuardianNameEn',
+  applicantGuardianNameBn: 'applicantGuardianNameBn',
+  attachmentFile: 'attachmentFile',
+  deceasedPreWarish: 'deceasedPreWarish',
+  presentVillageEn: 'presentVillageEn',
+  presentVillageBn: 'presentVillageBn',
+  presentRoadBlockSectorEn: 'presentRoadBlockSectorEn',
+  presentRoadBlockSectorBn: 'presentRoadBlockSectorBn',
+  presentHoldingNo: 'presentHoldingNo',
+  presentWardNo: 'presentWardNo',
+  presentDistrictEn: 'presentDistrictEn',
+  presentDistrictBn: 'presentDistrictBn',
+  presentUpazilaEn: 'presentUpazilaEn',
+  presentUpazilaBn: 'presentUpazilaBn',
+  presentPostOfficeEn: 'presentPostOfficeEn',
+  presentPostOfficeBn: 'presentPostOfficeBn',
+  permanentVillageEn: 'permanentVillageEn',
+  permanentVillageBn: 'permanentVillageBn',
+  permanentRoadBlockSectorEn: 'permanentRoadBlockSectorEn',
+  permanentRoadBlockSectorBn: 'permanentRoadBlockSectorBn',
+  permanentHoldingNo: 'permanentHoldingNo',
+  permanentWardNo: 'permanentWardNo',
+  permanentDistrictEn: 'permanentDistrictEn',
+  permanentDistrictBn: 'permanentDistrictBn',
+  permanentUpazilaEn: 'permanentUpazilaEn',
+  permanentUpazilaBn: 'permanentUpazilaBn',
+  permanentPostOfficeEn: 'permanentPostOfficeEn',
+  permanentPostOfficeBn: 'permanentPostOfficeBn',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type SuccessionApplicationScalarFieldEnum = (typeof SuccessionApplicationScalarFieldEnum)[keyof typeof SuccessionApplicationScalarFieldEnum]
+
+
+export const HeirScalarFieldEnum = {
+  id: 'id',
+  serialNo: 'serialNo',
+  heirNameBn: 'heirNameBn',
+  heirNameEn: 'heirNameEn',
+  relationBn: 'relationBn',
+  relationEn: 'relationEn',
+  ageDobDod: 'ageDobDod',
+  idNo: 'idNo',
+  maritalStatus: 'maritalStatus',
+  isAlive: 'isAlive',
+  applicationId: 'applicationId'
+} as const
+
+export type HeirScalarFieldEnum = (typeof HeirScalarFieldEnum)[keyof typeof HeirScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -551,11 +590,12 @@ export const SortOrder = {
 export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 
-export const JsonNullValueInput = {
+export const NullableJsonNullValueInput = {
+  DbNull: 'DbNull',
   JsonNull: 'JsonNull'
 } as const
 
-export type JsonNullValueInput = (typeof JsonNullValueInput)[keyof typeof JsonNullValueInput]
+export type NullableJsonNullValueInput = (typeof NullableJsonNullValueInput)[keyof typeof NullableJsonNullValueInput]
 
 
 export const QueryMode = {

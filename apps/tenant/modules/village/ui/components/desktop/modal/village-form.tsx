@@ -34,6 +34,7 @@ import {
 } from "lucide-react";
 import { cn } from "@workspace/ui/lib/utils";
 import { useWardsForSelection } from "@workspace/api-client";
+import { enToBnNumber } from "@workspace/utils";
 
 interface VillageFormProps {
   initialData?: Partial<VillageFormValues>;
@@ -64,16 +65,16 @@ export const VillageForm = ({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         {/* Ward Selection */}
         <FormField
           control={form.control}
           name="wardId"
           render={({ field }) => (
-            <FormItem className="space-y-1.5">
-              <FormLabel className="flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-widest">
-                <MapPin className="w-3.5 h-3.5 text-primary" />
-                Assigned Ward
+            <FormItem className="space-y-2">
+              <FormLabel className="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest">
+                <MapPin className="w-4 h-4 text-primary" />
+                ওয়ার্ড
               </FormLabel>
               <Select
                 onValueChange={field.onChange}
@@ -81,18 +82,18 @@ export const VillageForm = ({
                 value={field.value}
               >
                 <FormControl>
-                  <SelectTrigger className="w-full h-11 px-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all">
-                    <SelectValue placeholder="Select ward" />
+                  <SelectTrigger className="w-full h-12 px-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-bold text-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all shadow-sm">
+                    <SelectValue placeholder="ওয়ার্ড সিলেক্ট করুন" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent className="rounded-2xl border-slate-100 shadow-xl">
+                <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white p-1">
                   {wards?.map((ward) => (
                     <SelectItem
                       key={ward.id}
                       value={ward.id}
-                      className="text-sm font-medium rounded-xl"
+                      className="text-sm font-bold rounded-xl py-2.5 cursor-pointer"
                     >
-                      {ward.name} ({ward.displayName})
+                      {enToBnNumber(ward.name)} ({ward.displayName})
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -107,16 +108,16 @@ export const VillageForm = ({
           control={form.control}
           name="name"
           render={({ field }) => (
-            <FormItem className="space-y-1.5">
-              <FormLabel className="flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-widest">
-                <Building2 className="w-3.5 h-3.5 text-primary" />
-                Village Name
+            <FormItem className="space-y-2">
+              <FormLabel className="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest">
+                <Building2 className="w-4 h-4 text-primary" />
+                গ্রামের নাম (ইংরেজি)
               </FormLabel>
               <FormControl>
                 <Input
-                  placeholder="e.g., Uttarpara"
+                  placeholder="ex: uttarpara"
                   {...field}
-                  className="h-11 px-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all placeholder:font-normal placeholder:text-slate-300"
+                  className="h-12 px-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-bold text-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all placeholder:font-normal placeholder:text-slate-300 shadow-sm"
                 />
               </FormControl>
               <FormMessage className="text-[11px] font-bold text-rose-500" />
@@ -129,16 +130,16 @@ export const VillageForm = ({
           control={form.control}
           name="displayName"
           render={({ field }) => (
-            <FormItem className="space-y-1.5">
-              <FormLabel className="flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-widest">
-                <FileText className="w-3.5 h-3.5 text-primary" />
-                Display Name
+            <FormItem className="space-y-2">
+              <FormLabel className="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest">
+                <FileText className="w-4 h-4 text-primary" />
+                গ্রামের নাম (বাংলা)
               </FormLabel>
               <FormControl>
                 <Input
-                  placeholder="e.g., North Para Village"
+                  placeholder="ex: উত্তরপাড়া গ্রাম"
                   {...field}
-                  className="h-11 px-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all placeholder:font-normal placeholder:text-slate-300"
+                  className="h-12 px-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-bold text-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all placeholder:font-normal placeholder:text-slate-300 shadow-sm"
                 />
               </FormControl>
               <FormMessage className="text-[11px] font-bold text-rose-500" />
@@ -151,20 +152,20 @@ export const VillageForm = ({
           control={form.control}
           name="isActive"
           render={({ field }) => (
-            <FormItem className="flex items-center justify-between p-4 bg-slate-50 border border-slate-100 rounded-2xl group/toggle transition-all hover:bg-slate-100/50">
+            <FormItem className="flex items-center justify-between p-4 bg-slate-50 border border-slate-100 rounded-2xl group/toggle transition-all hover:bg-slate-100/50 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className={cn(
-                  "w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300",
+                  "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm",
                   field.value ? "bg-emerald-100 text-emerald-600" : "bg-slate-200 text-slate-400"
                 )}>
-                  <Activity className={cn("w-4 h-4", field.value && "scale-110")} />
+                  <Activity className={cn("w-5 h-5", field.value && "scale-110")} />
                 </div>
                 <div className="space-y-0.5">
-                  <FormLabel className="text-sm font-bold text-slate-700 leading-none cursor-pointer">
-                    Active Status
+                  <FormLabel className="text-sm font-black text-slate-700 leading-none cursor-pointer">
+                    সক্রিয় অবস্থা
                   </FormLabel>
-                  <p className="text-[10px] text-slate-400 font-medium italic leading-none">
-                    Available for registration
+                  <p className="text-[10px] text-slate-400 font-bold italic leading-none">
+                    নিবন্ধনের জন্য উন্মুক্ত আছে কিনা
                   </p>
                 </div>
               </div>
@@ -180,21 +181,21 @@ export const VillageForm = ({
         />
 
         {/* Actions */}
-        <div className="flex items-center gap-2 pt-3">
+        <div className="flex items-center gap-3 pt-4 border-t border-slate-50">
           <Button
             type="button"
             variant="ghost"
             onClick={onCancel}
-            className="flex items-center gap-1.5 h-11 px-4 rounded-2xl text-sm font-bold text-slate-400 hover:text-slate-600 hover:bg-slate-100 bg-slate-50 border-none transition-all"
+            className="flex items-center gap-2 h-12 px-6 rounded-2xl text-sm font-bold text-slate-400 hover:text-slate-600 hover:bg-slate-100 bg-slate-50 border-none transition-all"
           >
             <X className="w-4 h-4" strokeWidth={2.5} />
-            Cancel
+            বাতিল করুন
           </Button>
 
           <Button
             type="submit"
             disabled={isLoading}
-            className="flex-1 flex items-center justify-center gap-2 h-11 bg-primary hover:bg-primary/90 text-white font-bold rounded-2xl shadow-md shadow-primary/25 active:scale-[0.98] transition-all disabled:opacity-60 disabled:scale-100 border-none"
+            className="flex-1 flex items-center justify-center gap-2 h-12 bg-primary hover:bg-primary/90 text-white font-black rounded-2xl shadow-md shadow-primary/25 active:scale-[0.98] transition-all disabled:opacity-60 disabled:scale-100 border-none"
           >
             {isLoading ? (
               <Loader2 className="w-4 h-4 animate-spin" />
@@ -205,11 +206,11 @@ export const VillageForm = ({
             )}
             {isLoading
               ? mode === "create"
-                ? "Creating..."
-                : "Saving..."
+                ? "তৈরি হচ্ছে..."
+                : "সংরক্ষণ হচ্ছে..."
               : mode === "create"
-                ? "Create Village"
-                : "Save Changes"}
+                ? "গ্রাম তৈরি করুন"
+                : "পরিবর্তন সংরক্ষণ করুন"}
           </Button>
         </div>
       </form>

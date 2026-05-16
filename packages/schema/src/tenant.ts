@@ -29,6 +29,13 @@ export const tenantFormSchema = z.object({
   logo: urlSchema.optional().or(z.literal("")),
   type: z.nativeEnum(TENANT_TYPE),
 
+  // Geographic Location
+  divisionId: uuidSchema,
+  districtId: uuidSchema,
+  upazilaId: uuidSchema,
+  unionId: uuidSchema,
+  geoCode: z.string().min(1, "Geo Code is required"),
+
   // Contact Info
   email: emailSchema,
   phone: bdPhoneSchema,
@@ -67,6 +74,11 @@ export const defaultTenantValues: Partial<TenantFormValues> = {
   type: TENANT_TYPE.UNION,
   email: "",
   phone: "",
+  divisionId: "",
+  districtId: "",
+  upazilaId: "",
+  unionId: "",
+  geoCode: "",
   address: "",
   city: "",
   state: "",

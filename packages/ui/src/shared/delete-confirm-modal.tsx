@@ -38,6 +38,11 @@ const entityLabels: Record<
   student: { singular: "Student", icon: "📚" },
   ward: { singular: "Ward", icon: "🏫" },
   village: { singular: "Village", icon: "🏡" },
+  assessment: { singular: "Assessment", icon: "📄" },
+  citizenApplication: { singular: "Application", icon: "📄" },
+  fiscalYear: { singular: "Fiscal Year", icon: "📅" },
+  category: { singular: "Category", icon: "📁" },
+  "trade-license-application": { singular: "Application", icon: "📄" },
 };
 
 export function DeleteConfirmModal() {

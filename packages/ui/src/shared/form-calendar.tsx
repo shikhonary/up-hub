@@ -17,7 +17,7 @@ import { cn } from "../lib/utils";
 
 interface FormCalendarProps<T extends FieldValues> {
   name: Path<T>;
-  label?: string;
+  label?: React.ReactNode;
   placeholder?: string;
   disabled?: boolean;
   className?: string;
@@ -31,6 +31,7 @@ interface FormCalendarProps<T extends FieldValues> {
   disabledDates?: (date: Date) => boolean;
   fromDate?: Date;
   toDate?: Date;
+  labelClassName?: string;
 }
 
 export function FormCalendar<T extends FieldValues>({
@@ -39,6 +40,7 @@ export function FormCalendar<T extends FieldValues>({
   placeholder = "Pick a date",
   disabled = false,
   className,
+  labelClassName,
   icon: Icon,
   iconPosition = "left",
   required = false,
@@ -59,7 +61,7 @@ export function FormCalendar<T extends FieldValues>({
       render={({ field }) => (
         <FormItem>
           {label && !hideLabel && (
-            <FormLabel>
+            <FormLabel className={labelClassName}>
               {label}
               {required && <span className="text-red-500">*</span>}
             </FormLabel>

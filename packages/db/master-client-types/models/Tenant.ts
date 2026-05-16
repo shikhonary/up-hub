@@ -31,6 +31,7 @@ export type TenantAvgAggregateOutputType = {
   recordCount: number | null
   storageUsedMB: number | null
   customUserLimit: number | null
+  customAdminLimit: number | null
   customRecordLimit: number | null
   customStorageLimit: number | null
 }
@@ -40,6 +41,7 @@ export type TenantSumAggregateOutputType = {
   recordCount: number | null
   storageUsedMB: number | null
   customUserLimit: number | null
+  customAdminLimit: number | null
   customRecordLimit: number | null
   customStorageLimit: number | null
 }
@@ -60,6 +62,11 @@ export type TenantMinAggregateOutputType = {
   subdomain: string | null
   customDomain: string | null
   customDomainVerified: boolean | null
+  divisionId: string | null
+  districtId: string | null
+  upazilaId: string | null
+  unionId: string | null
+  geoCode: string | null
   databaseName: string | null
   connectionString: string | null
   databaseStatus: string | null
@@ -76,6 +83,7 @@ export type TenantMinAggregateOutputType = {
   updatedAt: Date | null
   deletedAt: Date | null
   customUserLimit: number | null
+  customAdminLimit: number | null
   customRecordLimit: number | null
   customStorageLimit: number | null
 }
@@ -96,6 +104,11 @@ export type TenantMaxAggregateOutputType = {
   subdomain: string | null
   customDomain: string | null
   customDomainVerified: boolean | null
+  divisionId: string | null
+  districtId: string | null
+  upazilaId: string | null
+  unionId: string | null
+  geoCode: string | null
   databaseName: string | null
   connectionString: string | null
   databaseStatus: string | null
@@ -112,6 +125,7 @@ export type TenantMaxAggregateOutputType = {
   updatedAt: Date | null
   deletedAt: Date | null
   customUserLimit: number | null
+  customAdminLimit: number | null
   customRecordLimit: number | null
   customStorageLimit: number | null
 }
@@ -132,6 +146,11 @@ export type TenantCountAggregateOutputType = {
   subdomain: number
   customDomain: number
   customDomainVerified: number
+  divisionId: number
+  districtId: number
+  upazilaId: number
+  unionId: number
+  geoCode: number
   databaseName: number
   connectionString: number
   databaseStatus: number
@@ -149,6 +168,7 @@ export type TenantCountAggregateOutputType = {
   updatedAt: number
   deletedAt: number
   customUserLimit: number
+  customAdminLimit: number
   customRecordLimit: number
   customStorageLimit: number
   _all: number
@@ -160,6 +180,7 @@ export type TenantAvgAggregateInputType = {
   recordCount?: true
   storageUsedMB?: true
   customUserLimit?: true
+  customAdminLimit?: true
   customRecordLimit?: true
   customStorageLimit?: true
 }
@@ -169,6 +190,7 @@ export type TenantSumAggregateInputType = {
   recordCount?: true
   storageUsedMB?: true
   customUserLimit?: true
+  customAdminLimit?: true
   customRecordLimit?: true
   customStorageLimit?: true
 }
@@ -189,6 +211,11 @@ export type TenantMinAggregateInputType = {
   subdomain?: true
   customDomain?: true
   customDomainVerified?: true
+  divisionId?: true
+  districtId?: true
+  upazilaId?: true
+  unionId?: true
+  geoCode?: true
   databaseName?: true
   connectionString?: true
   databaseStatus?: true
@@ -205,6 +232,7 @@ export type TenantMinAggregateInputType = {
   updatedAt?: true
   deletedAt?: true
   customUserLimit?: true
+  customAdminLimit?: true
   customRecordLimit?: true
   customStorageLimit?: true
 }
@@ -225,6 +253,11 @@ export type TenantMaxAggregateInputType = {
   subdomain?: true
   customDomain?: true
   customDomainVerified?: true
+  divisionId?: true
+  districtId?: true
+  upazilaId?: true
+  unionId?: true
+  geoCode?: true
   databaseName?: true
   connectionString?: true
   databaseStatus?: true
@@ -241,6 +274,7 @@ export type TenantMaxAggregateInputType = {
   updatedAt?: true
   deletedAt?: true
   customUserLimit?: true
+  customAdminLimit?: true
   customRecordLimit?: true
   customStorageLimit?: true
 }
@@ -261,6 +295,11 @@ export type TenantCountAggregateInputType = {
   subdomain?: true
   customDomain?: true
   customDomainVerified?: true
+  divisionId?: true
+  districtId?: true
+  upazilaId?: true
+  unionId?: true
+  geoCode?: true
   databaseName?: true
   connectionString?: true
   databaseStatus?: true
@@ -278,6 +317,7 @@ export type TenantCountAggregateInputType = {
   updatedAt?: true
   deletedAt?: true
   customUserLimit?: true
+  customAdminLimit?: true
   customRecordLimit?: true
   customStorageLimit?: true
   _all?: true
@@ -385,6 +425,11 @@ export type TenantGroupByOutputType = {
   subdomain: string | null
   customDomain: string | null
   customDomainVerified: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName: string | null
   connectionString: string | null
   databaseStatus: string
@@ -402,6 +447,7 @@ export type TenantGroupByOutputType = {
   updatedAt: Date
   deletedAt: Date | null
   customUserLimit: number | null
+  customAdminLimit: number | null
   customRecordLimit: number | null
   customStorageLimit: number | null
   _count: TenantCountAggregateOutputType | null
@@ -445,6 +491,11 @@ export type TenantWhereInput = {
   subdomain?: Prisma.StringNullableFilter<"Tenant"> | string | null
   customDomain?: Prisma.StringNullableFilter<"Tenant"> | string | null
   customDomainVerified?: Prisma.BoolFilter<"Tenant"> | boolean
+  divisionId?: Prisma.StringFilter<"Tenant"> | string
+  districtId?: Prisma.StringFilter<"Tenant"> | string
+  upazilaId?: Prisma.StringFilter<"Tenant"> | string
+  unionId?: Prisma.StringFilter<"Tenant"> | string
+  geoCode?: Prisma.StringFilter<"Tenant"> | string
   databaseName?: Prisma.StringNullableFilter<"Tenant"> | string | null
   connectionString?: Prisma.StringNullableFilter<"Tenant"> | string | null
   databaseStatus?: Prisma.StringFilter<"Tenant"> | string
@@ -462,8 +513,13 @@ export type TenantWhereInput = {
   updatedAt?: Prisma.DateTimeFilter<"Tenant"> | Date | string
   deletedAt?: Prisma.DateTimeNullableFilter<"Tenant"> | Date | string | null
   customUserLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
+  customAdminLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
   customRecordLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
   customStorageLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
+  division?: Prisma.XOR<Prisma.DivisionScalarRelationFilter, Prisma.DivisionWhereInput>
+  district?: Prisma.XOR<Prisma.DistrictScalarRelationFilter, Prisma.DistrictWhereInput>
+  upazila?: Prisma.XOR<Prisma.UpazilaScalarRelationFilter, Prisma.UpazilaWhereInput>
+  union?: Prisma.XOR<Prisma.UnionScalarRelationFilter, Prisma.UnionWhereInput>
   owner?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
   subscription?: Prisma.XOR<Prisma.SubscriptionNullableScalarRelationFilter, Prisma.SubscriptionWhereInput> | null
   members?: Prisma.TenantMemberListRelationFilter
@@ -486,6 +542,11 @@ export type TenantOrderByWithRelationInput = {
   subdomain?: Prisma.SortOrderInput | Prisma.SortOrder
   customDomain?: Prisma.SortOrderInput | Prisma.SortOrder
   customDomainVerified?: Prisma.SortOrder
+  divisionId?: Prisma.SortOrder
+  districtId?: Prisma.SortOrder
+  upazilaId?: Prisma.SortOrder
+  unionId?: Prisma.SortOrder
+  geoCode?: Prisma.SortOrder
   databaseName?: Prisma.SortOrderInput | Prisma.SortOrder
   connectionString?: Prisma.SortOrderInput | Prisma.SortOrder
   databaseStatus?: Prisma.SortOrder
@@ -503,8 +564,13 @@ export type TenantOrderByWithRelationInput = {
   updatedAt?: Prisma.SortOrder
   deletedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   customUserLimit?: Prisma.SortOrderInput | Prisma.SortOrder
+  customAdminLimit?: Prisma.SortOrderInput | Prisma.SortOrder
   customRecordLimit?: Prisma.SortOrderInput | Prisma.SortOrder
   customStorageLimit?: Prisma.SortOrderInput | Prisma.SortOrder
+  division?: Prisma.DivisionOrderByWithRelationInput
+  district?: Prisma.DistrictOrderByWithRelationInput
+  upazila?: Prisma.UpazilaOrderByWithRelationInput
+  union?: Prisma.UnionOrderByWithRelationInput
   owner?: Prisma.UserOrderByWithRelationInput
   subscription?: Prisma.SubscriptionOrderByWithRelationInput
   members?: Prisma.TenantMemberOrderByRelationAggregateInput
@@ -531,6 +597,11 @@ export type TenantWhereUniqueInput = Prisma.AtLeast<{
   state?: Prisma.StringFilter<"Tenant"> | string
   postalCode?: Prisma.StringNullableFilter<"Tenant"> | string | null
   customDomainVerified?: Prisma.BoolFilter<"Tenant"> | boolean
+  divisionId?: Prisma.StringFilter<"Tenant"> | string
+  districtId?: Prisma.StringFilter<"Tenant"> | string
+  upazilaId?: Prisma.StringFilter<"Tenant"> | string
+  unionId?: Prisma.StringFilter<"Tenant"> | string
+  geoCode?: Prisma.StringFilter<"Tenant"> | string
   connectionString?: Prisma.StringNullableFilter<"Tenant"> | string | null
   databaseStatus?: Prisma.StringFilter<"Tenant"> | string
   userCount?: Prisma.IntFilter<"Tenant"> | number
@@ -547,8 +618,13 @@ export type TenantWhereUniqueInput = Prisma.AtLeast<{
   updatedAt?: Prisma.DateTimeFilter<"Tenant"> | Date | string
   deletedAt?: Prisma.DateTimeNullableFilter<"Tenant"> | Date | string | null
   customUserLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
+  customAdminLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
   customRecordLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
   customStorageLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
+  division?: Prisma.XOR<Prisma.DivisionScalarRelationFilter, Prisma.DivisionWhereInput>
+  district?: Prisma.XOR<Prisma.DistrictScalarRelationFilter, Prisma.DistrictWhereInput>
+  upazila?: Prisma.XOR<Prisma.UpazilaScalarRelationFilter, Prisma.UpazilaWhereInput>
+  union?: Prisma.XOR<Prisma.UnionScalarRelationFilter, Prisma.UnionWhereInput>
   owner?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
   subscription?: Prisma.XOR<Prisma.SubscriptionNullableScalarRelationFilter, Prisma.SubscriptionWhereInput> | null
   members?: Prisma.TenantMemberListRelationFilter
@@ -571,6 +647,11 @@ export type TenantOrderByWithAggregationInput = {
   subdomain?: Prisma.SortOrderInput | Prisma.SortOrder
   customDomain?: Prisma.SortOrderInput | Prisma.SortOrder
   customDomainVerified?: Prisma.SortOrder
+  divisionId?: Prisma.SortOrder
+  districtId?: Prisma.SortOrder
+  upazilaId?: Prisma.SortOrder
+  unionId?: Prisma.SortOrder
+  geoCode?: Prisma.SortOrder
   databaseName?: Prisma.SortOrderInput | Prisma.SortOrder
   connectionString?: Prisma.SortOrderInput | Prisma.SortOrder
   databaseStatus?: Prisma.SortOrder
@@ -588,6 +669,7 @@ export type TenantOrderByWithAggregationInput = {
   updatedAt?: Prisma.SortOrder
   deletedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   customUserLimit?: Prisma.SortOrderInput | Prisma.SortOrder
+  customAdminLimit?: Prisma.SortOrderInput | Prisma.SortOrder
   customRecordLimit?: Prisma.SortOrderInput | Prisma.SortOrder
   customStorageLimit?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.TenantCountOrderByAggregateInput
@@ -616,6 +698,11 @@ export type TenantScalarWhereWithAggregatesInput = {
   subdomain?: Prisma.StringNullableWithAggregatesFilter<"Tenant"> | string | null
   customDomain?: Prisma.StringNullableWithAggregatesFilter<"Tenant"> | string | null
   customDomainVerified?: Prisma.BoolWithAggregatesFilter<"Tenant"> | boolean
+  divisionId?: Prisma.StringWithAggregatesFilter<"Tenant"> | string
+  districtId?: Prisma.StringWithAggregatesFilter<"Tenant"> | string
+  upazilaId?: Prisma.StringWithAggregatesFilter<"Tenant"> | string
+  unionId?: Prisma.StringWithAggregatesFilter<"Tenant"> | string
+  geoCode?: Prisma.StringWithAggregatesFilter<"Tenant"> | string
   databaseName?: Prisma.StringNullableWithAggregatesFilter<"Tenant"> | string | null
   connectionString?: Prisma.StringNullableWithAggregatesFilter<"Tenant"> | string | null
   databaseStatus?: Prisma.StringWithAggregatesFilter<"Tenant"> | string
@@ -633,6 +720,7 @@ export type TenantScalarWhereWithAggregatesInput = {
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Tenant"> | Date | string
   deletedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Tenant"> | Date | string | null
   customUserLimit?: Prisma.IntNullableWithAggregatesFilter<"Tenant"> | number | null
+  customAdminLimit?: Prisma.IntNullableWithAggregatesFilter<"Tenant"> | number | null
   customRecordLimit?: Prisma.IntNullableWithAggregatesFilter<"Tenant"> | number | null
   customStorageLimit?: Prisma.IntNullableWithAggregatesFilter<"Tenant"> | number | null
 }
@@ -653,6 +741,7 @@ export type TenantCreateInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -669,8 +758,13 @@ export type TenantCreateInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
   owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
   subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
   members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
@@ -693,6 +787,11 @@ export type TenantUncheckedCreateInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -710,6 +809,7 @@ export type TenantUncheckedCreateInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
   subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
@@ -733,6 +833,7 @@ export type TenantUpdateInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -749,8 +850,13 @@ export type TenantUpdateInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
   owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
   subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
   members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
@@ -773,6 +879,11 @@ export type TenantUncheckedUpdateInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -790,6 +901,7 @@ export type TenantUncheckedUpdateInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
@@ -813,6 +925,11 @@ export type TenantCreateManyInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -830,6 +947,7 @@ export type TenantCreateManyInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
 }
@@ -850,6 +968,7 @@ export type TenantUpdateManyMutationInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -866,6 +985,7 @@ export type TenantUpdateManyMutationInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
 }
@@ -886,6 +1006,11 @@ export type TenantUncheckedUpdateManyInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -903,6 +1028,7 @@ export type TenantUncheckedUpdateManyInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
 }
@@ -933,6 +1059,11 @@ export type TenantCountOrderByAggregateInput = {
   subdomain?: Prisma.SortOrder
   customDomain?: Prisma.SortOrder
   customDomainVerified?: Prisma.SortOrder
+  divisionId?: Prisma.SortOrder
+  districtId?: Prisma.SortOrder
+  upazilaId?: Prisma.SortOrder
+  unionId?: Prisma.SortOrder
+  geoCode?: Prisma.SortOrder
   databaseName?: Prisma.SortOrder
   connectionString?: Prisma.SortOrder
   databaseStatus?: Prisma.SortOrder
@@ -950,6 +1081,7 @@ export type TenantCountOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
   deletedAt?: Prisma.SortOrder
   customUserLimit?: Prisma.SortOrder
+  customAdminLimit?: Prisma.SortOrder
   customRecordLimit?: Prisma.SortOrder
   customStorageLimit?: Prisma.SortOrder
 }
@@ -959,6 +1091,7 @@ export type TenantAvgOrderByAggregateInput = {
   recordCount?: Prisma.SortOrder
   storageUsedMB?: Prisma.SortOrder
   customUserLimit?: Prisma.SortOrder
+  customAdminLimit?: Prisma.SortOrder
   customRecordLimit?: Prisma.SortOrder
   customStorageLimit?: Prisma.SortOrder
 }
@@ -979,6 +1112,11 @@ export type TenantMaxOrderByAggregateInput = {
   subdomain?: Prisma.SortOrder
   customDomain?: Prisma.SortOrder
   customDomainVerified?: Prisma.SortOrder
+  divisionId?: Prisma.SortOrder
+  districtId?: Prisma.SortOrder
+  upazilaId?: Prisma.SortOrder
+  unionId?: Prisma.SortOrder
+  geoCode?: Prisma.SortOrder
   databaseName?: Prisma.SortOrder
   connectionString?: Prisma.SortOrder
   databaseStatus?: Prisma.SortOrder
@@ -995,6 +1133,7 @@ export type TenantMaxOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
   deletedAt?: Prisma.SortOrder
   customUserLimit?: Prisma.SortOrder
+  customAdminLimit?: Prisma.SortOrder
   customRecordLimit?: Prisma.SortOrder
   customStorageLimit?: Prisma.SortOrder
 }
@@ -1015,6 +1154,11 @@ export type TenantMinOrderByAggregateInput = {
   subdomain?: Prisma.SortOrder
   customDomain?: Prisma.SortOrder
   customDomainVerified?: Prisma.SortOrder
+  divisionId?: Prisma.SortOrder
+  districtId?: Prisma.SortOrder
+  upazilaId?: Prisma.SortOrder
+  unionId?: Prisma.SortOrder
+  geoCode?: Prisma.SortOrder
   databaseName?: Prisma.SortOrder
   connectionString?: Prisma.SortOrder
   databaseStatus?: Prisma.SortOrder
@@ -1031,6 +1175,7 @@ export type TenantMinOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
   deletedAt?: Prisma.SortOrder
   customUserLimit?: Prisma.SortOrder
+  customAdminLimit?: Prisma.SortOrder
   customRecordLimit?: Prisma.SortOrder
   customStorageLimit?: Prisma.SortOrder
 }
@@ -1040,6 +1185,7 @@ export type TenantSumOrderByAggregateInput = {
   recordCount?: Prisma.SortOrder
   storageUsedMB?: Prisma.SortOrder
   customUserLimit?: Prisma.SortOrder
+  customAdminLimit?: Prisma.SortOrder
   customRecordLimit?: Prisma.SortOrder
   customStorageLimit?: Prisma.SortOrder
 }
@@ -1149,6 +1295,174 @@ export type TenantUpdateOneRequiredWithoutSubscriptionNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.TenantUpdateToOneWithWhereWithoutSubscriptionInput, Prisma.TenantUpdateWithoutSubscriptionInput>, Prisma.TenantUncheckedUpdateWithoutSubscriptionInput>
 }
 
+export type TenantCreateNestedManyWithoutDivisionInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDivisionInput, Prisma.TenantUncheckedCreateWithoutDivisionInput> | Prisma.TenantCreateWithoutDivisionInput[] | Prisma.TenantUncheckedCreateWithoutDivisionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDivisionInput | Prisma.TenantCreateOrConnectWithoutDivisionInput[]
+  createMany?: Prisma.TenantCreateManyDivisionInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUncheckedCreateNestedManyWithoutDivisionInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDivisionInput, Prisma.TenantUncheckedCreateWithoutDivisionInput> | Prisma.TenantCreateWithoutDivisionInput[] | Prisma.TenantUncheckedCreateWithoutDivisionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDivisionInput | Prisma.TenantCreateOrConnectWithoutDivisionInput[]
+  createMany?: Prisma.TenantCreateManyDivisionInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUpdateManyWithoutDivisionNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDivisionInput, Prisma.TenantUncheckedCreateWithoutDivisionInput> | Prisma.TenantCreateWithoutDivisionInput[] | Prisma.TenantUncheckedCreateWithoutDivisionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDivisionInput | Prisma.TenantCreateOrConnectWithoutDivisionInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutDivisionInput | Prisma.TenantUpsertWithWhereUniqueWithoutDivisionInput[]
+  createMany?: Prisma.TenantCreateManyDivisionInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutDivisionInput | Prisma.TenantUpdateWithWhereUniqueWithoutDivisionInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutDivisionInput | Prisma.TenantUpdateManyWithWhereWithoutDivisionInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
+export type TenantUncheckedUpdateManyWithoutDivisionNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDivisionInput, Prisma.TenantUncheckedCreateWithoutDivisionInput> | Prisma.TenantCreateWithoutDivisionInput[] | Prisma.TenantUncheckedCreateWithoutDivisionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDivisionInput | Prisma.TenantCreateOrConnectWithoutDivisionInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutDivisionInput | Prisma.TenantUpsertWithWhereUniqueWithoutDivisionInput[]
+  createMany?: Prisma.TenantCreateManyDivisionInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutDivisionInput | Prisma.TenantUpdateWithWhereUniqueWithoutDivisionInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutDivisionInput | Prisma.TenantUpdateManyWithWhereWithoutDivisionInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
+export type TenantCreateNestedManyWithoutDistrictInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDistrictInput, Prisma.TenantUncheckedCreateWithoutDistrictInput> | Prisma.TenantCreateWithoutDistrictInput[] | Prisma.TenantUncheckedCreateWithoutDistrictInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDistrictInput | Prisma.TenantCreateOrConnectWithoutDistrictInput[]
+  createMany?: Prisma.TenantCreateManyDistrictInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUncheckedCreateNestedManyWithoutDistrictInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDistrictInput, Prisma.TenantUncheckedCreateWithoutDistrictInput> | Prisma.TenantCreateWithoutDistrictInput[] | Prisma.TenantUncheckedCreateWithoutDistrictInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDistrictInput | Prisma.TenantCreateOrConnectWithoutDistrictInput[]
+  createMany?: Prisma.TenantCreateManyDistrictInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUpdateManyWithoutDistrictNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDistrictInput, Prisma.TenantUncheckedCreateWithoutDistrictInput> | Prisma.TenantCreateWithoutDistrictInput[] | Prisma.TenantUncheckedCreateWithoutDistrictInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDistrictInput | Prisma.TenantCreateOrConnectWithoutDistrictInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutDistrictInput | Prisma.TenantUpsertWithWhereUniqueWithoutDistrictInput[]
+  createMany?: Prisma.TenantCreateManyDistrictInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutDistrictInput | Prisma.TenantUpdateWithWhereUniqueWithoutDistrictInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutDistrictInput | Prisma.TenantUpdateManyWithWhereWithoutDistrictInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
+export type TenantUncheckedUpdateManyWithoutDistrictNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutDistrictInput, Prisma.TenantUncheckedCreateWithoutDistrictInput> | Prisma.TenantCreateWithoutDistrictInput[] | Prisma.TenantUncheckedCreateWithoutDistrictInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutDistrictInput | Prisma.TenantCreateOrConnectWithoutDistrictInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutDistrictInput | Prisma.TenantUpsertWithWhereUniqueWithoutDistrictInput[]
+  createMany?: Prisma.TenantCreateManyDistrictInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutDistrictInput | Prisma.TenantUpdateWithWhereUniqueWithoutDistrictInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutDistrictInput | Prisma.TenantUpdateManyWithWhereWithoutDistrictInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
+export type TenantCreateNestedManyWithoutUpazilaInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUpazilaInput, Prisma.TenantUncheckedCreateWithoutUpazilaInput> | Prisma.TenantCreateWithoutUpazilaInput[] | Prisma.TenantUncheckedCreateWithoutUpazilaInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUpazilaInput | Prisma.TenantCreateOrConnectWithoutUpazilaInput[]
+  createMany?: Prisma.TenantCreateManyUpazilaInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUncheckedCreateNestedManyWithoutUpazilaInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUpazilaInput, Prisma.TenantUncheckedCreateWithoutUpazilaInput> | Prisma.TenantCreateWithoutUpazilaInput[] | Prisma.TenantUncheckedCreateWithoutUpazilaInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUpazilaInput | Prisma.TenantCreateOrConnectWithoutUpazilaInput[]
+  createMany?: Prisma.TenantCreateManyUpazilaInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUpdateManyWithoutUpazilaNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUpazilaInput, Prisma.TenantUncheckedCreateWithoutUpazilaInput> | Prisma.TenantCreateWithoutUpazilaInput[] | Prisma.TenantUncheckedCreateWithoutUpazilaInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUpazilaInput | Prisma.TenantCreateOrConnectWithoutUpazilaInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutUpazilaInput | Prisma.TenantUpsertWithWhereUniqueWithoutUpazilaInput[]
+  createMany?: Prisma.TenantCreateManyUpazilaInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutUpazilaInput | Prisma.TenantUpdateWithWhereUniqueWithoutUpazilaInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutUpazilaInput | Prisma.TenantUpdateManyWithWhereWithoutUpazilaInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
+export type TenantUncheckedUpdateManyWithoutUpazilaNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUpazilaInput, Prisma.TenantUncheckedCreateWithoutUpazilaInput> | Prisma.TenantCreateWithoutUpazilaInput[] | Prisma.TenantUncheckedCreateWithoutUpazilaInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUpazilaInput | Prisma.TenantCreateOrConnectWithoutUpazilaInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutUpazilaInput | Prisma.TenantUpsertWithWhereUniqueWithoutUpazilaInput[]
+  createMany?: Prisma.TenantCreateManyUpazilaInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutUpazilaInput | Prisma.TenantUpdateWithWhereUniqueWithoutUpazilaInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutUpazilaInput | Prisma.TenantUpdateManyWithWhereWithoutUpazilaInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
+export type TenantCreateNestedManyWithoutUnionInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUnionInput, Prisma.TenantUncheckedCreateWithoutUnionInput> | Prisma.TenantCreateWithoutUnionInput[] | Prisma.TenantUncheckedCreateWithoutUnionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUnionInput | Prisma.TenantCreateOrConnectWithoutUnionInput[]
+  createMany?: Prisma.TenantCreateManyUnionInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUncheckedCreateNestedManyWithoutUnionInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUnionInput, Prisma.TenantUncheckedCreateWithoutUnionInput> | Prisma.TenantCreateWithoutUnionInput[] | Prisma.TenantUncheckedCreateWithoutUnionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUnionInput | Prisma.TenantCreateOrConnectWithoutUnionInput[]
+  createMany?: Prisma.TenantCreateManyUnionInputEnvelope
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+}
+
+export type TenantUpdateManyWithoutUnionNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUnionInput, Prisma.TenantUncheckedCreateWithoutUnionInput> | Prisma.TenantCreateWithoutUnionInput[] | Prisma.TenantUncheckedCreateWithoutUnionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUnionInput | Prisma.TenantCreateOrConnectWithoutUnionInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutUnionInput | Prisma.TenantUpsertWithWhereUniqueWithoutUnionInput[]
+  createMany?: Prisma.TenantCreateManyUnionInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutUnionInput | Prisma.TenantUpdateWithWhereUniqueWithoutUnionInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutUnionInput | Prisma.TenantUpdateManyWithWhereWithoutUnionInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
+export type TenantUncheckedUpdateManyWithoutUnionNestedInput = {
+  create?: Prisma.XOR<Prisma.TenantCreateWithoutUnionInput, Prisma.TenantUncheckedCreateWithoutUnionInput> | Prisma.TenantCreateWithoutUnionInput[] | Prisma.TenantUncheckedCreateWithoutUnionInput[]
+  connectOrCreate?: Prisma.TenantCreateOrConnectWithoutUnionInput | Prisma.TenantCreateOrConnectWithoutUnionInput[]
+  upsert?: Prisma.TenantUpsertWithWhereUniqueWithoutUnionInput | Prisma.TenantUpsertWithWhereUniqueWithoutUnionInput[]
+  createMany?: Prisma.TenantCreateManyUnionInputEnvelope
+  set?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  disconnect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  delete?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  connect?: Prisma.TenantWhereUniqueInput | Prisma.TenantWhereUniqueInput[]
+  update?: Prisma.TenantUpdateWithWhereUniqueWithoutUnionInput | Prisma.TenantUpdateWithWhereUniqueWithoutUnionInput[]
+  updateMany?: Prisma.TenantUpdateManyWithWhereWithoutUnionInput | Prisma.TenantUpdateManyWithWhereWithoutUnionInput[]
+  deleteMany?: Prisma.TenantScalarWhereInput | Prisma.TenantScalarWhereInput[]
+}
+
 export type TenantCreateWithoutOwnerInput = {
   id?: string
   name: string
@@ -1165,6 +1479,7 @@ export type TenantCreateWithoutOwnerInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1181,8 +1496,13 @@ export type TenantCreateWithoutOwnerInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
   subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
   members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
   invitations?: Prisma.TenantInvitationCreateNestedManyWithoutTenantInput
@@ -1204,6 +1524,11 @@ export type TenantUncheckedCreateWithoutOwnerInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1220,6 +1545,7 @@ export type TenantUncheckedCreateWithoutOwnerInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
   subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
@@ -1272,6 +1598,11 @@ export type TenantScalarWhereInput = {
   subdomain?: Prisma.StringNullableFilter<"Tenant"> | string | null
   customDomain?: Prisma.StringNullableFilter<"Tenant"> | string | null
   customDomainVerified?: Prisma.BoolFilter<"Tenant"> | boolean
+  divisionId?: Prisma.StringFilter<"Tenant"> | string
+  districtId?: Prisma.StringFilter<"Tenant"> | string
+  upazilaId?: Prisma.StringFilter<"Tenant"> | string
+  unionId?: Prisma.StringFilter<"Tenant"> | string
+  geoCode?: Prisma.StringFilter<"Tenant"> | string
   databaseName?: Prisma.StringNullableFilter<"Tenant"> | string | null
   connectionString?: Prisma.StringNullableFilter<"Tenant"> | string | null
   databaseStatus?: Prisma.StringFilter<"Tenant"> | string
@@ -1289,6 +1620,7 @@ export type TenantScalarWhereInput = {
   updatedAt?: Prisma.DateTimeFilter<"Tenant"> | Date | string
   deletedAt?: Prisma.DateTimeNullableFilter<"Tenant"> | Date | string | null
   customUserLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
+  customAdminLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
   customRecordLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
   customStorageLimit?: Prisma.IntNullableFilter<"Tenant"> | number | null
 }
@@ -1309,6 +1641,7 @@ export type TenantCreateWithoutMembersInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1325,8 +1658,13 @@ export type TenantCreateWithoutMembersInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
   owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
   subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
   invitations?: Prisma.TenantInvitationCreateNestedManyWithoutTenantInput
@@ -1348,6 +1686,11 @@ export type TenantUncheckedCreateWithoutMembersInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1365,6 +1708,7 @@ export type TenantUncheckedCreateWithoutMembersInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
   subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
@@ -1403,6 +1747,7 @@ export type TenantUpdateWithoutMembersInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1419,8 +1764,13 @@ export type TenantUpdateWithoutMembersInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
   owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
   subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
   invitations?: Prisma.TenantInvitationUpdateManyWithoutTenantNestedInput
@@ -1442,6 +1792,11 @@ export type TenantUncheckedUpdateWithoutMembersInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1459,6 +1814,7 @@ export type TenantUncheckedUpdateWithoutMembersInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
@@ -1481,6 +1837,7 @@ export type TenantCreateWithoutInvitationsInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1497,8 +1854,13 @@ export type TenantCreateWithoutInvitationsInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
   owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
   subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
   members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
@@ -1520,6 +1882,11 @@ export type TenantUncheckedCreateWithoutInvitationsInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1537,6 +1904,7 @@ export type TenantUncheckedCreateWithoutInvitationsInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
   subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
@@ -1575,6 +1943,7 @@ export type TenantUpdateWithoutInvitationsInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1591,8 +1960,13 @@ export type TenantUpdateWithoutInvitationsInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
   owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
   subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
   members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
@@ -1614,6 +1988,11 @@ export type TenantUncheckedUpdateWithoutInvitationsInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1631,6 +2010,7 @@ export type TenantUncheckedUpdateWithoutInvitationsInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
@@ -1653,6 +2033,7 @@ export type TenantCreateWithoutSubscriptionInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1669,8 +2050,13 @@ export type TenantCreateWithoutSubscriptionInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
   owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
   members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
   invitations?: Prisma.TenantInvitationCreateNestedManyWithoutTenantInput
@@ -1692,6 +2078,11 @@ export type TenantUncheckedCreateWithoutSubscriptionInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1709,6 +2100,7 @@ export type TenantUncheckedCreateWithoutSubscriptionInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
   members?: Prisma.TenantMemberUncheckedCreateNestedManyWithoutTenantInput
@@ -1747,6 +2139,7 @@ export type TenantUpdateWithoutSubscriptionInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1763,8 +2156,13 @@ export type TenantUpdateWithoutSubscriptionInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
   owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
   members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
   invitations?: Prisma.TenantInvitationUpdateManyWithoutTenantNestedInput
@@ -1786,6 +2184,11 @@ export type TenantUncheckedUpdateWithoutSubscriptionInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1803,10 +2206,475 @@ export type TenantUncheckedUpdateWithoutSubscriptionInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   members?: Prisma.TenantMemberUncheckedUpdateManyWithoutTenantNestedInput
   invitations?: Prisma.TenantInvitationUncheckedUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantCreateWithoutDivisionInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
+  owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
+  subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationCreateNestedManyWithoutTenantInput
+}
+
+export type TenantUncheckedCreateWithoutDivisionInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberUncheckedCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationUncheckedCreateNestedManyWithoutTenantInput
+}
+
+export type TenantCreateOrConnectWithoutDivisionInput = {
+  where: Prisma.TenantWhereUniqueInput
+  create: Prisma.XOR<Prisma.TenantCreateWithoutDivisionInput, Prisma.TenantUncheckedCreateWithoutDivisionInput>
+}
+
+export type TenantCreateManyDivisionInputEnvelope = {
+  data: Prisma.TenantCreateManyDivisionInput | Prisma.TenantCreateManyDivisionInput[]
+  skipDuplicates?: boolean
+}
+
+export type TenantUpsertWithWhereUniqueWithoutDivisionInput = {
+  where: Prisma.TenantWhereUniqueInput
+  update: Prisma.XOR<Prisma.TenantUpdateWithoutDivisionInput, Prisma.TenantUncheckedUpdateWithoutDivisionInput>
+  create: Prisma.XOR<Prisma.TenantCreateWithoutDivisionInput, Prisma.TenantUncheckedCreateWithoutDivisionInput>
+}
+
+export type TenantUpdateWithWhereUniqueWithoutDivisionInput = {
+  where: Prisma.TenantWhereUniqueInput
+  data: Prisma.XOR<Prisma.TenantUpdateWithoutDivisionInput, Prisma.TenantUncheckedUpdateWithoutDivisionInput>
+}
+
+export type TenantUpdateManyWithWhereWithoutDivisionInput = {
+  where: Prisma.TenantScalarWhereInput
+  data: Prisma.XOR<Prisma.TenantUpdateManyMutationInput, Prisma.TenantUncheckedUpdateManyWithoutDivisionInput>
+}
+
+export type TenantCreateWithoutDistrictInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
+  owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
+  subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationCreateNestedManyWithoutTenantInput
+}
+
+export type TenantUncheckedCreateWithoutDistrictInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  divisionId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberUncheckedCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationUncheckedCreateNestedManyWithoutTenantInput
+}
+
+export type TenantCreateOrConnectWithoutDistrictInput = {
+  where: Prisma.TenantWhereUniqueInput
+  create: Prisma.XOR<Prisma.TenantCreateWithoutDistrictInput, Prisma.TenantUncheckedCreateWithoutDistrictInput>
+}
+
+export type TenantCreateManyDistrictInputEnvelope = {
+  data: Prisma.TenantCreateManyDistrictInput | Prisma.TenantCreateManyDistrictInput[]
+  skipDuplicates?: boolean
+}
+
+export type TenantUpsertWithWhereUniqueWithoutDistrictInput = {
+  where: Prisma.TenantWhereUniqueInput
+  update: Prisma.XOR<Prisma.TenantUpdateWithoutDistrictInput, Prisma.TenantUncheckedUpdateWithoutDistrictInput>
+  create: Prisma.XOR<Prisma.TenantCreateWithoutDistrictInput, Prisma.TenantUncheckedCreateWithoutDistrictInput>
+}
+
+export type TenantUpdateWithWhereUniqueWithoutDistrictInput = {
+  where: Prisma.TenantWhereUniqueInput
+  data: Prisma.XOR<Prisma.TenantUpdateWithoutDistrictInput, Prisma.TenantUncheckedUpdateWithoutDistrictInput>
+}
+
+export type TenantUpdateManyWithWhereWithoutDistrictInput = {
+  where: Prisma.TenantScalarWhereInput
+  data: Prisma.XOR<Prisma.TenantUpdateManyMutationInput, Prisma.TenantUncheckedUpdateManyWithoutDistrictInput>
+}
+
+export type TenantCreateWithoutUpazilaInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  union: Prisma.UnionCreateNestedOneWithoutTenantsInput
+  owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
+  subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationCreateNestedManyWithoutTenantInput
+}
+
+export type TenantUncheckedCreateWithoutUpazilaInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  unionId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberUncheckedCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationUncheckedCreateNestedManyWithoutTenantInput
+}
+
+export type TenantCreateOrConnectWithoutUpazilaInput = {
+  where: Prisma.TenantWhereUniqueInput
+  create: Prisma.XOR<Prisma.TenantCreateWithoutUpazilaInput, Prisma.TenantUncheckedCreateWithoutUpazilaInput>
+}
+
+export type TenantCreateManyUpazilaInputEnvelope = {
+  data: Prisma.TenantCreateManyUpazilaInput | Prisma.TenantCreateManyUpazilaInput[]
+  skipDuplicates?: boolean
+}
+
+export type TenantUpsertWithWhereUniqueWithoutUpazilaInput = {
+  where: Prisma.TenantWhereUniqueInput
+  update: Prisma.XOR<Prisma.TenantUpdateWithoutUpazilaInput, Prisma.TenantUncheckedUpdateWithoutUpazilaInput>
+  create: Prisma.XOR<Prisma.TenantCreateWithoutUpazilaInput, Prisma.TenantUncheckedCreateWithoutUpazilaInput>
+}
+
+export type TenantUpdateWithWhereUniqueWithoutUpazilaInput = {
+  where: Prisma.TenantWhereUniqueInput
+  data: Prisma.XOR<Prisma.TenantUpdateWithoutUpazilaInput, Prisma.TenantUncheckedUpdateWithoutUpazilaInput>
+}
+
+export type TenantUpdateManyWithWhereWithoutUpazilaInput = {
+  where: Prisma.TenantScalarWhereInput
+  data: Prisma.XOR<Prisma.TenantUpdateManyMutationInput, Prisma.TenantUncheckedUpdateManyWithoutUpazilaInput>
+}
+
+export type TenantCreateWithoutUnionInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  division: Prisma.DivisionCreateNestedOneWithoutTenantsInput
+  district: Prisma.DistrictCreateNestedOneWithoutTenantsInput
+  upazila: Prisma.UpazilaCreateNestedOneWithoutTenantsInput
+  owner?: Prisma.UserCreateNestedOneWithoutTenantsInput
+  subscription?: Prisma.SubscriptionCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationCreateNestedManyWithoutTenantInput
+}
+
+export type TenantUncheckedCreateWithoutUnionInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+  subscription?: Prisma.SubscriptionUncheckedCreateNestedOneWithoutTenantInput
+  members?: Prisma.TenantMemberUncheckedCreateNestedManyWithoutTenantInput
+  invitations?: Prisma.TenantInvitationUncheckedCreateNestedManyWithoutTenantInput
+}
+
+export type TenantCreateOrConnectWithoutUnionInput = {
+  where: Prisma.TenantWhereUniqueInput
+  create: Prisma.XOR<Prisma.TenantCreateWithoutUnionInput, Prisma.TenantUncheckedCreateWithoutUnionInput>
+}
+
+export type TenantCreateManyUnionInputEnvelope = {
+  data: Prisma.TenantCreateManyUnionInput | Prisma.TenantCreateManyUnionInput[]
+  skipDuplicates?: boolean
+}
+
+export type TenantUpsertWithWhereUniqueWithoutUnionInput = {
+  where: Prisma.TenantWhereUniqueInput
+  update: Prisma.XOR<Prisma.TenantUpdateWithoutUnionInput, Prisma.TenantUncheckedUpdateWithoutUnionInput>
+  create: Prisma.XOR<Prisma.TenantCreateWithoutUnionInput, Prisma.TenantUncheckedCreateWithoutUnionInput>
+}
+
+export type TenantUpdateWithWhereUniqueWithoutUnionInput = {
+  where: Prisma.TenantWhereUniqueInput
+  data: Prisma.XOR<Prisma.TenantUpdateWithoutUnionInput, Prisma.TenantUncheckedUpdateWithoutUnionInput>
+}
+
+export type TenantUpdateManyWithWhereWithoutUnionInput = {
+  where: Prisma.TenantScalarWhereInput
+  data: Prisma.XOR<Prisma.TenantUpdateManyMutationInput, Prisma.TenantUncheckedUpdateManyWithoutUnionInput>
 }
 
 export type TenantCreateManyOwnerInput = {
@@ -1825,6 +2693,11 @@ export type TenantCreateManyOwnerInput = {
   subdomain?: string | null
   customDomain?: string | null
   customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
   databaseName?: string | null
   connectionString?: string | null
   databaseStatus?: string
@@ -1841,6 +2714,7 @@ export type TenantCreateManyOwnerInput = {
   updatedAt?: Date | string
   deletedAt?: Date | string | null
   customUserLimit?: number | null
+  customAdminLimit?: number | null
   customRecordLimit?: number | null
   customStorageLimit?: number | null
 }
@@ -1861,6 +2735,7 @@ export type TenantUpdateWithoutOwnerInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1877,8 +2752,13 @@ export type TenantUpdateWithoutOwnerInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
   subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
   members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
   invitations?: Prisma.TenantInvitationUpdateManyWithoutTenantNestedInput
@@ -1900,6 +2780,11 @@ export type TenantUncheckedUpdateWithoutOwnerInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1916,6 +2801,7 @@ export type TenantUncheckedUpdateWithoutOwnerInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
@@ -1939,6 +2825,11 @@ export type TenantUncheckedUpdateManyWithoutOwnerInput = {
   subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
   databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1955,6 +2846,703 @@ export type TenantUncheckedUpdateManyWithoutOwnerInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+}
+
+export type TenantCreateManyDivisionInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  districtId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+}
+
+export type TenantUpdateWithoutDivisionInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
+  owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
+  subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateWithoutDivisionInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUncheckedUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUncheckedUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateManyWithoutDivisionInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+}
+
+export type TenantCreateManyDistrictInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  divisionId: string
+  upazilaId: string
+  unionId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+}
+
+export type TenantUpdateWithoutDistrictInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
+  owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
+  subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateWithoutDistrictInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUncheckedUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUncheckedUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateManyWithoutDistrictInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+}
+
+export type TenantCreateManyUpazilaInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  unionId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+}
+
+export type TenantUpdateWithoutUpazilaInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  union?: Prisma.UnionUpdateOneRequiredWithoutTenantsNestedInput
+  owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
+  subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateWithoutUpazilaInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUncheckedUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUncheckedUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateManyWithoutUpazilaInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  unionId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+}
+
+export type TenantCreateManyUnionInput = {
+  id?: string
+  name: string
+  slug: string
+  description?: string | null
+  logo?: string | null
+  type: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode?: string | null
+  subdomain?: string | null
+  customDomain?: string | null
+  customDomainVerified?: boolean
+  divisionId: string
+  districtId: string
+  upazilaId: string
+  geoCode: string
+  databaseName?: string | null
+  connectionString?: string | null
+  databaseStatus?: string
+  userCount?: number
+  recordCount?: number
+  storageUsedMB?: number
+  isActive?: boolean
+  isSuspended?: boolean
+  suspendReason?: string | null
+  currentFiscalYear?: string | null
+  registrationNumber?: string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  deletedAt?: Date | string | null
+  customUserLimit?: number | null
+  customAdminLimit?: number | null
+  customRecordLimit?: number | null
+  customStorageLimit?: number | null
+}
+
+export type TenantUpdateWithoutUnionInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  division?: Prisma.DivisionUpdateOneRequiredWithoutTenantsNestedInput
+  district?: Prisma.DistrictUpdateOneRequiredWithoutTenantsNestedInput
+  upazila?: Prisma.UpazilaUpdateOneRequiredWithoutTenantsNestedInput
+  owner?: Prisma.UserUpdateOneWithoutTenantsNestedInput
+  subscription?: Prisma.SubscriptionUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateWithoutUnionInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  subscription?: Prisma.SubscriptionUncheckedUpdateOneWithoutTenantNestedInput
+  members?: Prisma.TenantMemberUncheckedUpdateManyWithoutTenantNestedInput
+  invitations?: Prisma.TenantInvitationUncheckedUpdateManyWithoutTenantNestedInput
+}
+
+export type TenantUncheckedUpdateManyWithoutUnionInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  type?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.StringFieldUpdateOperationsInput | string
+  address?: Prisma.StringFieldUpdateOperationsInput | string
+  city?: Prisma.StringFieldUpdateOperationsInput | string
+  state?: Prisma.StringFieldUpdateOperationsInput | string
+  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  subdomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomain?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  customDomainVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  divisionId?: Prisma.StringFieldUpdateOperationsInput | string
+  districtId?: Prisma.StringFieldUpdateOperationsInput | string
+  upazilaId?: Prisma.StringFieldUpdateOperationsInput | string
+  geoCode?: Prisma.StringFieldUpdateOperationsInput | string
+  databaseName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  connectionString?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  databaseStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  userCount?: Prisma.IntFieldUpdateOperationsInput | number
+  recordCount?: Prisma.IntFieldUpdateOperationsInput | number
+  storageUsedMB?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isSuspended?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  suspendReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currentFiscalYear?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registrationNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metadata?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  createdById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  customUserLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  customAdminLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customRecordLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   customStorageLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
 }
@@ -2015,6 +3603,11 @@ export type TenantSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   subdomain?: boolean
   customDomain?: boolean
   customDomainVerified?: boolean
+  divisionId?: boolean
+  districtId?: boolean
+  upazilaId?: boolean
+  unionId?: boolean
+  geoCode?: boolean
   databaseName?: boolean
   connectionString?: boolean
   databaseStatus?: boolean
@@ -2032,8 +3625,13 @@ export type TenantSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   updatedAt?: boolean
   deletedAt?: boolean
   customUserLimit?: boolean
+  customAdminLimit?: boolean
   customRecordLimit?: boolean
   customStorageLimit?: boolean
+  division?: boolean | Prisma.DivisionDefaultArgs<ExtArgs>
+  district?: boolean | Prisma.DistrictDefaultArgs<ExtArgs>
+  upazila?: boolean | Prisma.UpazilaDefaultArgs<ExtArgs>
+  union?: boolean | Prisma.UnionDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.Tenant$ownerArgs<ExtArgs>
   subscription?: boolean | Prisma.Tenant$subscriptionArgs<ExtArgs>
   members?: boolean | Prisma.Tenant$membersArgs<ExtArgs>
@@ -2057,6 +3655,11 @@ export type TenantSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extens
   subdomain?: boolean
   customDomain?: boolean
   customDomainVerified?: boolean
+  divisionId?: boolean
+  districtId?: boolean
+  upazilaId?: boolean
+  unionId?: boolean
+  geoCode?: boolean
   databaseName?: boolean
   connectionString?: boolean
   databaseStatus?: boolean
@@ -2074,8 +3677,13 @@ export type TenantSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extens
   updatedAt?: boolean
   deletedAt?: boolean
   customUserLimit?: boolean
+  customAdminLimit?: boolean
   customRecordLimit?: boolean
   customStorageLimit?: boolean
+  division?: boolean | Prisma.DivisionDefaultArgs<ExtArgs>
+  district?: boolean | Prisma.DistrictDefaultArgs<ExtArgs>
+  upazila?: boolean | Prisma.UpazilaDefaultArgs<ExtArgs>
+  union?: boolean | Prisma.UnionDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.Tenant$ownerArgs<ExtArgs>
 }, ExtArgs["result"]["tenant"]>
 
@@ -2095,6 +3703,11 @@ export type TenantSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extens
   subdomain?: boolean
   customDomain?: boolean
   customDomainVerified?: boolean
+  divisionId?: boolean
+  districtId?: boolean
+  upazilaId?: boolean
+  unionId?: boolean
+  geoCode?: boolean
   databaseName?: boolean
   connectionString?: boolean
   databaseStatus?: boolean
@@ -2112,8 +3725,13 @@ export type TenantSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extens
   updatedAt?: boolean
   deletedAt?: boolean
   customUserLimit?: boolean
+  customAdminLimit?: boolean
   customRecordLimit?: boolean
   customStorageLimit?: boolean
+  division?: boolean | Prisma.DivisionDefaultArgs<ExtArgs>
+  district?: boolean | Prisma.DistrictDefaultArgs<ExtArgs>
+  upazila?: boolean | Prisma.UpazilaDefaultArgs<ExtArgs>
+  union?: boolean | Prisma.UnionDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.Tenant$ownerArgs<ExtArgs>
 }, ExtArgs["result"]["tenant"]>
 
@@ -2133,6 +3751,11 @@ export type TenantSelectScalar = {
   subdomain?: boolean
   customDomain?: boolean
   customDomainVerified?: boolean
+  divisionId?: boolean
+  districtId?: boolean
+  upazilaId?: boolean
+  unionId?: boolean
+  geoCode?: boolean
   databaseName?: boolean
   connectionString?: boolean
   databaseStatus?: boolean
@@ -2150,12 +3773,17 @@ export type TenantSelectScalar = {
   updatedAt?: boolean
   deletedAt?: boolean
   customUserLimit?: boolean
+  customAdminLimit?: boolean
   customRecordLimit?: boolean
   customStorageLimit?: boolean
 }
 
-export type TenantOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "slug" | "description" | "logo" | "type" | "email" | "phone" | "address" | "city" | "state" | "postalCode" | "subdomain" | "customDomain" | "customDomainVerified" | "databaseName" | "connectionString" | "databaseStatus" | "userCount" | "recordCount" | "storageUsedMB" | "isActive" | "isSuspended" | "suspendReason" | "currentFiscalYear" | "registrationNumber" | "metadata" | "createdById" | "createdAt" | "updatedAt" | "deletedAt" | "customUserLimit" | "customRecordLimit" | "customStorageLimit", ExtArgs["result"]["tenant"]>
+export type TenantOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "slug" | "description" | "logo" | "type" | "email" | "phone" | "address" | "city" | "state" | "postalCode" | "subdomain" | "customDomain" | "customDomainVerified" | "divisionId" | "districtId" | "upazilaId" | "unionId" | "geoCode" | "databaseName" | "connectionString" | "databaseStatus" | "userCount" | "recordCount" | "storageUsedMB" | "isActive" | "isSuspended" | "suspendReason" | "currentFiscalYear" | "registrationNumber" | "metadata" | "createdById" | "createdAt" | "updatedAt" | "deletedAt" | "customUserLimit" | "customAdminLimit" | "customRecordLimit" | "customStorageLimit", ExtArgs["result"]["tenant"]>
 export type TenantInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  division?: boolean | Prisma.DivisionDefaultArgs<ExtArgs>
+  district?: boolean | Prisma.DistrictDefaultArgs<ExtArgs>
+  upazila?: boolean | Prisma.UpazilaDefaultArgs<ExtArgs>
+  union?: boolean | Prisma.UnionDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.Tenant$ownerArgs<ExtArgs>
   subscription?: boolean | Prisma.Tenant$subscriptionArgs<ExtArgs>
   members?: boolean | Prisma.Tenant$membersArgs<ExtArgs>
@@ -2163,15 +3791,27 @@ export type TenantInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   _count?: boolean | Prisma.TenantCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type TenantIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  division?: boolean | Prisma.DivisionDefaultArgs<ExtArgs>
+  district?: boolean | Prisma.DistrictDefaultArgs<ExtArgs>
+  upazila?: boolean | Prisma.UpazilaDefaultArgs<ExtArgs>
+  union?: boolean | Prisma.UnionDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.Tenant$ownerArgs<ExtArgs>
 }
 export type TenantIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  division?: boolean | Prisma.DivisionDefaultArgs<ExtArgs>
+  district?: boolean | Prisma.DistrictDefaultArgs<ExtArgs>
+  upazila?: boolean | Prisma.UpazilaDefaultArgs<ExtArgs>
+  union?: boolean | Prisma.UnionDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.Tenant$ownerArgs<ExtArgs>
 }
 
 export type $TenantPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Tenant"
   objects: {
+    division: Prisma.$DivisionPayload<ExtArgs>
+    district: Prisma.$DistrictPayload<ExtArgs>
+    upazila: Prisma.$UpazilaPayload<ExtArgs>
+    union: Prisma.$UnionPayload<ExtArgs>
     owner: Prisma.$UserPayload<ExtArgs> | null
     subscription: Prisma.$SubscriptionPayload<ExtArgs> | null
     members: Prisma.$TenantMemberPayload<ExtArgs>[]
@@ -2193,6 +3833,11 @@ export type $TenantPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     subdomain: string | null
     customDomain: string | null
     customDomainVerified: boolean
+    divisionId: string
+    districtId: string
+    upazilaId: string
+    unionId: string
+    geoCode: string
     databaseName: string | null
     connectionString: string | null
     databaseStatus: string
@@ -2210,6 +3855,7 @@ export type $TenantPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     updatedAt: Date
     deletedAt: Date | null
     customUserLimit: number | null
+    customAdminLimit: number | null
     customRecordLimit: number | null
     customStorageLimit: number | null
   }, ExtArgs["result"]["tenant"]>
@@ -2606,6 +4252,10 @@ readonly fields: TenantFieldRefs;
  */
 export interface Prisma__TenantClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  division<T extends Prisma.DivisionDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.DivisionDefaultArgs<ExtArgs>>): Prisma.Prisma__DivisionClient<runtime.Types.Result.GetResult<Prisma.$DivisionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  district<T extends Prisma.DistrictDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.DistrictDefaultArgs<ExtArgs>>): Prisma.Prisma__DistrictClient<runtime.Types.Result.GetResult<Prisma.$DistrictPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  upazila<T extends Prisma.UpazilaDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UpazilaDefaultArgs<ExtArgs>>): Prisma.Prisma__UpazilaClient<runtime.Types.Result.GetResult<Prisma.$UpazilaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  union<T extends Prisma.UnionDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UnionDefaultArgs<ExtArgs>>): Prisma.Prisma__UnionClient<runtime.Types.Result.GetResult<Prisma.$UnionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   owner<T extends Prisma.Tenant$ownerArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Tenant$ownerArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   subscription<T extends Prisma.Tenant$subscriptionArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Tenant$subscriptionArgs<ExtArgs>>): Prisma.Prisma__SubscriptionClient<runtime.Types.Result.GetResult<Prisma.$SubscriptionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   members<T extends Prisma.Tenant$membersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Tenant$membersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TenantMemberPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
@@ -2654,6 +4304,11 @@ export interface TenantFieldRefs {
   readonly subdomain: Prisma.FieldRef<"Tenant", 'String'>
   readonly customDomain: Prisma.FieldRef<"Tenant", 'String'>
   readonly customDomainVerified: Prisma.FieldRef<"Tenant", 'Boolean'>
+  readonly divisionId: Prisma.FieldRef<"Tenant", 'String'>
+  readonly districtId: Prisma.FieldRef<"Tenant", 'String'>
+  readonly upazilaId: Prisma.FieldRef<"Tenant", 'String'>
+  readonly unionId: Prisma.FieldRef<"Tenant", 'String'>
+  readonly geoCode: Prisma.FieldRef<"Tenant", 'String'>
   readonly databaseName: Prisma.FieldRef<"Tenant", 'String'>
   readonly connectionString: Prisma.FieldRef<"Tenant", 'String'>
   readonly databaseStatus: Prisma.FieldRef<"Tenant", 'String'>
@@ -2671,6 +4326,7 @@ export interface TenantFieldRefs {
   readonly updatedAt: Prisma.FieldRef<"Tenant", 'DateTime'>
   readonly deletedAt: Prisma.FieldRef<"Tenant", 'DateTime'>
   readonly customUserLimit: Prisma.FieldRef<"Tenant", 'Int'>
+  readonly customAdminLimit: Prisma.FieldRef<"Tenant", 'Int'>
   readonly customRecordLimit: Prisma.FieldRef<"Tenant", 'Int'>
   readonly customStorageLimit: Prisma.FieldRef<"Tenant", 'Int'>
 }

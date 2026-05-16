@@ -167,7 +167,7 @@ export class TenantService {
    */
   async update(input: updateTenantInputType) {
     try {
-      const { id, ...data } = input;
+      const { id, planId, ...data } = input;
       return await this.db.tenant.update({
         where: { id },
         data: {

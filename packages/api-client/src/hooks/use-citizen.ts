@@ -1,18 +1,15 @@
-"use client";
-
-import {
-  useMutation,
-  useQuery,
-  useQueryClient,
-} from "@tanstack/react-query";
-import { toast } from "@workspace/ui/components/sonner";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTRPC } from "../client";
+import { toast } from "@workspace/ui/components/sonner";
+import { useQueryState, parseAsString, parseAsInteger } from "nuqs";
+
 import { GENDER } from "@workspace/utils";
+import { useCitizenFilters } from "../filters/client";
 
+// ============================================================================
+// CITIZEN MUTATIONS
+// ============================================================================
 
-/**
- * Mutation hook for creating a citizen record
- */
 export function useCreateCitizen() {
   const trpc = useTRPC();
   const queryClient = useQueryClient();
@@ -25,9 +22,14 @@ export function useCreateCitizen() {
     onSuccess: async (data: any) => {
       if (data.success) {
         toast.success(data.message);
-        await queryClient.invalidateQueries({
-          queryKey: trpc.citizen.list.queryKey(),
-        });
+        await Promise.all([
+          queryClient.invalidateQueries({
+            queryKey: trpc.citizen.list.queryKey(),
+          }),
+          queryClient.invalidateQueries({
+            queryKey: trpc.citizen.getStats.queryKey(),
+          }),
+        ]);
       } else {
         toast.error(data.message);
       }
@@ -35,33 +37,69 @@ export function useCreateCitizen() {
   });
 }
 
-/**
- * Hook for listing citizens with filters
- */
-export function useCitizens(
-  filters: Parameters<
-    ReturnType<typeof useTRPC>["citizen"]["list"]["queryOptions"]
-  >[0]
-) {
+export function useUpdateCitizen() {
   const trpc = useTRPC();
-  return useQuery(trpc.citizen.list.queryOptions(filters as any));
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    ...trpc.citizen.update.mutationOptions(),
+    onError: (error) => {
+      toast.error(error.message || "Failed to update citizen record");
+    },
+    onSuccess: async (data: any) => {
+      if (data.success) {
+        toast.success(data.message);
+        await Promise.all([
+          queryClient.invalidateQueries({
+            queryKey: trpc.citizen.list.queryKey(),
+          }),
+          queryClient.invalidateQueries({
+            queryKey: trpc.citizen.getStats.queryKey(),
+          }),
+          queryClient.invalidateQueries({
+            queryKey: trpc.citizen.getById.queryKey(),
+          }),
+        ]);
+      } else {
+        toast.error(data.message);
+      }
+    },
+  });
 }
 
-/**
- * Hook for getting a citizen by ID
- */
+// ============================================================================
+// CITIZEN QUERIES
+// ============================================================================
+
+
+export function useCitizens() {
+  const trpc = useTRPC();
+  const [filters] = useCitizenFilters();
+
+  return useQuery(trpc.citizen.list.queryOptions(filters));
+}
+
 export function useCitizenById(id: string) {
   const trpc = useTRPC();
-  return useQuery(trpc.citizen.getById.queryOptions(id));
+  return useQuery({
+    ...trpc.citizen.getById.queryOptions(id),
+    select: (data) => data.data,
+  });
 }
 
-/**
- * Hook for getting a citizen by NID
- */
-export function useCitizenByNid(nid: string) {
+export function useCitizenStats() {
+  const trpc = useTRPC();
+  return useQuery({
+    ...trpc.citizen.getStats.queryOptions(),
+    select: (data) => data.data,
+  });
+}
+
+export function useCitizenByNid(nid: string, enabled = false) {
   const trpc = useTRPC();
   return useQuery({
     ...trpc.citizen.getByNid.queryOptions(nid),
-    enabled: !!nid,
+    enabled: enabled && nid.length >= 10,
+    select: (data) => data.data,
   });
 }

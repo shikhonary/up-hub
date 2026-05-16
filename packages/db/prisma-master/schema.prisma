@@ -96,6 +96,17 @@ model Tenant {
     customDomain         String? @unique
     customDomainVerified Boolean @default(false)
 
+    // Location Details (National Registry)
+    divisionId String
+    division   Division @relation(fields: [divisionId], references: [id])
+    districtId String
+    district   District @relation(fields: [districtId], references: [id])
+    upazilaId  String
+    upazila    Upazila  @relation(fields: [upazilaId], references: [id])
+    unionId    String
+    union      Union    @relation(fields: [unionId], references: [id])
+    geoCode    String
+
     // Multi-tenancy Isolation
     databaseName     String? @unique
     connectionString String?
@@ -127,6 +138,7 @@ model Tenant {
 
     // Flexible Limits
     customUserLimit    Int?
+    customAdminLimit   Int?
     customRecordLimit  Int?
     customStorageLimit Int?
 
@@ -1010,4 +1022,68 @@ model QuestionPaperQuestion {
     @@index([mcqId])
     @@index([cqId])
     @@map("question_paper_question")
+}
+
+// --- Administrative Registry ---
+
+model Division {
+    id        String     @id @default(uuid())
+    name      String
+    nameBn    String
+    geoCode   String?
+    districts District[]
+    tenants   Tenant[]
+
+    @@map("division")
+}
+
+model District {
+    id         String    @id @default(uuid())
+    name       String
+    nameBn     String
+    geoCode    String?
+    divisionId String
+    division   Division  @relation(fields: [divisionId], references: [id], onDelete: Cascade)
+    upazilas   Upazila[]
+    tenants    Tenant[]
+
+    @@map("district")
+}
+
+model Upazila {
+    id          String       @id @default(uuid())
+    name        String
+    nameBn      String
+    geoCode     String?
+    districtId  String
+    district    District     @relation(fields: [districtId], references: [id], onDelete: Cascade)
+    unions      Union[]
+    postOffices PostOffice[]
+    tenants     Tenant[]
+
+    @@map("upazila")
+}
+
+model Union {
+    id        String   @id @default(uuid())
+    name      String
+    nameBn    String
+    geoCode   String?
+    upazilaId String
+    upazila   Upazila  @relation(fields: [upazilaId], references: [id], onDelete: Cascade)
+    tenants   Tenant[]
+
+    @@map("union")
+}
+
+model PostOffice {
+    id        String  @id @default(uuid())
+    name      String
+    nameBn    String
+    geoCode   String?
+    postCode  String
+    upazilaId String
+    upazila   Upazila @relation(fields: [upazilaId], references: [id], onDelete: Cascade)
+
+    @@map("post_office")
 }

@@ -41,3 +41,34 @@ export const getInitials = (name: string) => {
     .toUpperCase()
     .substring(0, 2);
 };
+
+/**
+ * Converts English digits to Bengali digits
+ */
+export const enToBnNumber = (number: string | number | undefined | null): string => {
+  if (number === undefined || number === null) return "";
+  const bnDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+  return number
+    .toString()
+    .replace(/\d/g, (d) => bnDigits[parseInt(d)] as string);
+};
+
+/**
+ * Converts Bengali digits to English digits
+ */
+export const bnToEnNumber = (number: string | undefined | null): string => {
+  if (!number) return "";
+  const enDigits = {
+    "০": "0",
+    "১": "1",
+    "২": "2",
+    "৩": "3",
+    "৪": "4",
+    "৫": "5",
+    "৬": "6",
+    "৭": "7",
+    "৮": "8",
+    "৯": "9",
+  };
+  return number.replace(/[০-৯]/g, (d) => enDigits[d as keyof typeof enDigits] as string);
+};

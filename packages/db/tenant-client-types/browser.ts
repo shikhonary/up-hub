@@ -38,77 +38,62 @@ export type Ward = Prisma.WardModel
  */
 export type Village = Prisma.VillageModel
 /**
- * Model Student
+ * Model FamilyApplication
  * 
  */
-export type Student = Prisma.StudentModel
+export type FamilyApplication = Prisma.FamilyApplicationModel
 /**
- * Model Batch
+ * Model FamilyMember
  * 
  */
-export type Batch = Prisma.BatchModel
+export type FamilyMember = Prisma.FamilyMemberModel
 /**
- * Model Teacher
+ * Model AssessmentApplication
  * 
  */
-export type Teacher = Prisma.TeacherModel
+export type AssessmentApplication = Prisma.AssessmentApplicationModel
 /**
- * Model Exam
+ * Model HoldingTax
  * 
  */
-export type Exam = Prisma.ExamModel
+export type HoldingTax = Prisma.HoldingTaxModel
 /**
- * Model ExamAttempt
+ * Model FiscalYear
  * 
  */
-export type ExamAttempt = Prisma.ExamAttemptModel
+export type FiscalYear = Prisma.FiscalYearModel
 /**
- * Model AnswerHistory
+ * Model CertificateCounter
  * 
  */
-export type AnswerHistory = Prisma.AnswerHistoryModel
+export type CertificateCounter = Prisma.CertificateCounterModel
 /**
- * Model Attendance
+ * Model TradeLicenseCategory
  * 
  */
-export type Attendance = Prisma.AttendanceModel
+export type TradeLicenseCategory = Prisma.TradeLicenseCategoryModel
 /**
- * Model Announcement
+ * Model TradeLicenseApplication
  * 
  */
-export type Announcement = Prisma.AnnouncementModel
+export type TradeLicenseApplication = Prisma.TradeLicenseApplicationModel
 /**
- * Model Notification
+ * Model TradeLicense
  * 
  */
-export type Notification = Prisma.NotificationModel
+export type TradeLicense = Prisma.TradeLicenseModel
 /**
- * Model ExamAnalytics
+ * Model CertificateApplication
  * 
  */
-export type ExamAnalytics = Prisma.ExamAnalyticsModel
+export type CertificateApplication = Prisma.CertificateApplicationModel
 /**
- * Model StudentAnalytics
+ * Model SuccessionApplication
  * 
  */
-export type StudentAnalytics = Prisma.StudentAnalyticsModel
+export type SuccessionApplication = Prisma.SuccessionApplicationModel
 /**
- * Model AcademicYear
+ * Model Heir
  * 
  */
-export type AcademicYear = Prisma.AcademicYearModel
-/**
- * Model Counter
- * 
- */
-export type Counter = Prisma.CounterModel
-/**
- * Model AdmissionFee
- * 
- */
-export type AdmissionFee = Prisma.AdmissionFeeModel
-/**
- * Model MonthlyFee
- * 
- */
-export type MonthlyFee = Prisma.MonthlyFeeModel
+export type Heir = Prisma.HeirModel

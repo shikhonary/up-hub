@@ -223,3 +223,28 @@ export type QuestionPaperSubjectMarkDistribution = Prisma.QuestionPaperSubjectMa
  * 
  */
 export type QuestionPaperQuestion = Prisma.QuestionPaperQuestionModel
+/**
+ * Model Division
+ * 
+ */
+export type Division = Prisma.DivisionModel
+/**
+ * Model District
+ * 
+ */
+export type District = Prisma.DistrictModel
+/**
+ * Model Upazila
+ * 
+ */
+export type Upazila = Prisma.UpazilaModel
+/**
+ * Model Union
+ * 
+ */
+export type Union = Prisma.UnionModel
+/**
+ * Model PostOffice
+ * 
+ */
+export type PostOffice = Prisma.PostOfficeModel

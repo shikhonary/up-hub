@@ -19,7 +19,13 @@ export type DeleteEntityType =
   | "monthlyFee"
   | "student"
   | "ward"
-  | "village";
+  | "village"
+  | "assessment"
+  | "citizenApplication"
+  | "fiscalYear"
+  | "category"
+  | "trade-license-application";
+
 
 interface DeleteModalState {
   isOpen: boolean;

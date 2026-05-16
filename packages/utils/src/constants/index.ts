@@ -10,3 +10,6 @@ export * from "./attendance";
 export * from "./notification";
 export * from "./invoice";
 export * from "./citizen";
+export * from "./family";
+export * from "./certificate";
+export * from "./trade-license";

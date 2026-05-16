@@ -63,7 +63,7 @@ export const VillagesView = () => {
               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                 <Plus className="w-4 h-4 text-primary" strokeWidth={3} />
               </div>
-              Create New Village
+              নতুন গ্রাম তৈরি করুন
             </DialogTitle>
           </DialogHeader>
           <VillageForm
@@ -86,7 +86,7 @@ export const VillagesView = () => {
               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                 <Save className="w-4 h-4 text-primary" />
               </div>
-              Edit Village Details
+              গ্রামের তথ্য আপডেট করুন
             </DialogTitle>
           </DialogHeader>
           <VillageForm

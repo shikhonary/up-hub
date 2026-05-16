@@ -18,6 +18,7 @@ import { useTenantById, useUpdateTenant } from "@workspace/api-client";
 import { BasicInfoStep } from "../components/basic-info-step";
 import { ContactInfoStep } from "../components/contact-info-step";
 import { DomainConfigStep } from "../components/domain-config-step";
+import { AdministrativeGeographyStep } from "../components/administrative-geography-step";
 
 import { UsageLimitsStep } from "../components/usage-limit-step";
 import {
@@ -69,13 +70,18 @@ export function EditTenantForm({ tenantId }: EditTenantFormProps) {
         customAdminLimit: tenant.customAdminLimit ?? undefined,
         customRecordLimit: tenant.customRecordLimit ?? undefined,
         customStorageLimit: tenant.customStorageLimit ?? undefined,
+        divisionId: tenant.divisionId ?? "",
+        districtId: tenant.districtId ?? "",
+        upazilaId: tenant.upazilaId ?? "",
+        unionId: tenant.unionId ?? "",
+        geoCode: tenant.geoCode ?? "",
       });
     }
   }, [tenant, form]);
 
   const onSubmit = (data: TenantFormValues) => {
     if (currentStep === steps.length + 1) {
-      updateTenant({ id: tenantId, data });
+      updateTenant({ id: tenantId, ...data });
       router.push("/tenants");
     } else {
       handleNext();
@@ -145,6 +151,12 @@ export function EditTenantForm({ tenantId }: EditTenantFormProps) {
                 Basic Info
               </TabsTrigger>
               <TabsTrigger
+                value="geography"
+                className="rounded-xl px-4 py-2.5 font-bold text-xs uppercase tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-glow transition-all"
+              >
+                Geography
+              </TabsTrigger>
+              <TabsTrigger
                 value="contact"
                 className="rounded-xl px-4 py-2.5 font-bold text-xs uppercase tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-glow transition-all"
               >
@@ -176,6 +188,12 @@ export function EditTenantForm({ tenantId }: EditTenantFormProps) {
                   className="mt-0 animate-in fade-in slide-in-from-left-4 duration-500"
                 >
                   <BasicInfoStep form={form} />
+                </TabsContent>
+                <TabsContent
+                  value="geography"
+                  className="mt-0 animate-in fade-in slide-in-from-left-4 duration-500"
+                >
+                  <AdministrativeGeographyStep form={form} />
                 </TabsContent>
                 <TabsContent
                   value="contact"

@@ -33,9 +33,9 @@ export enum RELIGION {
 }
 
 export const genderOptions = [
-  { value: GENDER.MALE, label: "Male" },
-  { value: GENDER.FEMALE, label: "Female" },
-  { value: GENDER.OTHER, label: "Other" },
+  { value: GENDER.MALE, labelEn: "Male", labelBn: "পুরুষ" },
+  { value: GENDER.FEMALE, labelEn: "Female", labelBn: "মহিলা" },
+  { value: GENDER.OTHER, labelEn: "Other", labelBn: "অন্যান্য" },
 ] as const;
 
 export const bloodGroupOptions = [
@@ -50,11 +50,11 @@ export const bloodGroupOptions = [
 ] as const;
 
 export const religionOptions = [
-  { value: RELIGION.ISLAM, label: "Islam" },
-  { value: RELIGION.HINDUISM, label: "Hinduism" },
-  { value: RELIGION.CHRISTIANITY, label: "Christianity" },
-  { value: RELIGION.BUDDHISM, label: "Buddhism" },
-  { value: RELIGION.OTHER, label: "Other" },
+  { value: RELIGION.ISLAM, labelEn: "Islam", labelBn: "ইসলাম" },
+  { value: RELIGION.HINDUISM, labelEn: "Hinduism", labelBn: "সনাতন" },
+  { value: RELIGION.CHRISTIANITY, labelEn: "Christianity", labelBn: "খ্রিস্টান" },
+  { value: RELIGION.BUDDHISM, labelEn: "Buddhism", labelBn: "বৌদ্ধ" },
+  { value: RELIGION.OTHER, labelEn: "Other", labelBn: "অন্যান্য" },
 ] as const;
 
 export const nationalityOptions = [

@@ -44,4 +44,9 @@ export const citizenRouter = createTRPCRouter({
       const service = new CitizenService(ctx.tenantClient);
       return await service.update(id, data);
     }),
+
+  getStats: tenantProcedure.query(async ({ ctx }) => {
+    const service = new CitizenService(ctx.tenantClient);
+    return await service.getStats();
+  }),
 } satisfies TRPCRouterRecord);

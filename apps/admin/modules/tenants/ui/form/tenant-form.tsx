@@ -22,6 +22,7 @@ import { FormNavigation } from "../components/form-navigation";
 import { BasicInfoStep } from "../components/basic-info-step";
 import { ContactInfoStep } from "../components/contact-info-step";
 import { DomainConfigStep } from "../components/domain-config-step";
+import { AdministrativeGeographyStep } from "../components/administrative-geography-step";
 
 import { UsageLimitsStep } from "../components/usage-limit-step";
 import { useMultiStepForm } from "../hooks/use-multi-step-form";
@@ -250,9 +251,9 @@ function ProvisioningScreen({
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               )}
-                <p className="text-xs text-muted-foreground italic">
-                  Please wait — establishing the union portal…
-                </p>
+              <p className="text-xs text-muted-foreground italic">
+                Please wait — establishing the union portal…
+              </p>
             </div>
           </div>
         </CardContent>
@@ -331,10 +332,12 @@ export function TenantForm() {
       case 1:
         return <BasicInfoStep form={form} />;
       case 2:
-        return <ContactInfoStep form={form} />;
+        return <AdministrativeGeographyStep form={form} />;
       case 3:
-        return <DomainConfigStep form={form} />;
+        return <ContactInfoStep form={form} />;
       case 4:
+        return <DomainConfigStep form={form} />;
+      case 5:
         return <UsageLimitsStep form={form} />;
       default:
         return null;

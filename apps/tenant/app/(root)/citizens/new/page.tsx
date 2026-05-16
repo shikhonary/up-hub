@@ -5,7 +5,6 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@workspace/ui/components/button";
 import { NewCitizenForm } from "@/modules/citizen/ui/components/desktop/form/new-citizen-form";
 
 export default function NewCitizenPage() {
@@ -20,14 +19,14 @@ export default function NewCitizenPage() {
         <div className="relative animate-in fade-in slide-in-from-top-4 duration-700">
           <Link href="/citizens" className="inline-flex items-center gap-2 text-xs font-black text-primary hover:text-primary/80 transition-colors uppercase tracking-widest mb-4 group">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-            Back to Citizen List
+            নাগরিক তালিকায় ফিরে যান
           </Link>
           <h1 className="text-4xl leading-[1.15] font-extrabold tracking-[-0.03em] text-on-surface font-headline flex items-center gap-4">
-            New Citizen Entry
+            নতুন নাগরিক নিবন্ধন
           </h1>
           <div className="mt-2 mb-4 h-0.5 w-20 rounded-full bg-gradient-to-r from-primary to-primary-container" />
           <p className="text-sm leading-6 text-on-surface-variant max-w-lg italic font-medium">
-            Register a new citizen in the Union Parishad database with their identity and residence details.
+            নাগরিকের পরিচয় এবং ঠিকানার বিবরণ দিয়ে ইউনিয়ন পরিষদ ডাটাবেসে নতুন নাগরিক নিবন্ধন করুন।
           </p>
         </div>
 

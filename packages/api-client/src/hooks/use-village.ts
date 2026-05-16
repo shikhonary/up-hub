@@ -172,3 +172,13 @@ export function useVillagesForSelection() {
     select: (data) => data.data,
   });
 }
+/**
+ * Hook for getting villages by ward ID
+ */
+export function useVillagesByWardId(wardId?: string) {
+  const trpc = useTRPC();
+  return useQuery({
+    ...trpc.village.getByWardId.queryOptions(wardId),
+    select: (data) => data.data || [],
+  });
+}

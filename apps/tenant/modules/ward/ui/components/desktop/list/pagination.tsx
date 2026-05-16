@@ -5,6 +5,7 @@ import { Button } from "@workspace/ui/components/button";
 import { useWardFilters } from "@workspace/api-client";
 import { cn } from "@workspace/ui/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { enToBnNumber } from "@workspace/utils";
 
 interface PaginationProps {
   total: number;
@@ -13,8 +14,8 @@ interface PaginationProps {
 export function Pagination({ total }: PaginationProps) {
   const [filters, setFilters] = useWardFilters();
 
-  const currentPage = filters.page;
-  const pageSize = filters.limit;
+  const currentPage = filters.page || 1;
+  const pageSize = filters.limit || 10;
   const totalPages = Math.ceil(total / pageSize);
 
   const handlePageChange = (page: number) => {
@@ -32,9 +33,9 @@ export function Pagination({ total }: PaginationProps) {
       <div className="flex items-center gap-3">
         <div className="px-3 py-1 bg-slate-50 border border-slate-100 rounded-lg">
           <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-            Showing <span className="text-primary">{startRange}</span> -{" "}
-            <span className="text-primary">{endRange}</span> of{" "}
-            <span className="text-slate-600">{total}</span>
+            মোট <span className="text-slate-600 font-black">{enToBnNumber(total)}</span> টি ওয়ার্ডের মধ্যে{" "}
+            <span className="text-primary font-black">{enToBnNumber(startRange)}</span> -{" "}
+            <span className="text-primary font-black">{enToBnNumber(endRange)}</span> দেখাচ্ছে
           </p>
         </div>
       </div>
@@ -45,10 +46,10 @@ export function Pagination({ total }: PaginationProps) {
           size="sm"
           disabled={currentPage <= 1}
           onClick={() => handlePageChange(currentPage - 1)}
-          className="h-9 px-3 text-slate-500 hover:text-primary hover:bg-primary/5 rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent font-bold text-xs gap-1"
+          className="h-9 px-3 text-slate-500 hover:text-primary hover:bg-primary/5 rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent font-bold text-xs gap-1.5"
         >
           <ChevronLeft className="w-4 h-4" />
-          Previous
+          পূর্ববর্তী
         </Button>
 
         <div className="flex items-center gap-1 mx-2">
@@ -67,7 +68,7 @@ export function Pagination({ total }: PaginationProps) {
                     : "text-slate-400 hover:text-slate-600 hover:bg-slate-50",
                 )}
               >
-                {pageNum}
+                {enToBnNumber(pageNum)}
               </Button>
             );
           })}
@@ -78,9 +79,9 @@ export function Pagination({ total }: PaginationProps) {
           size="sm"
           disabled={currentPage >= totalPages}
           onClick={() => handlePageChange(currentPage + 1)}
-          className="h-9 px-3 text-slate-500 hover:text-primary hover:bg-primary/5 rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent font-bold text-xs gap-1"
+          className="h-9 px-3 text-slate-500 hover:text-primary hover:bg-primary/5 rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent font-bold text-xs gap-1.5"
         >
-          Next
+          পরবর্তী
           <ChevronRight className="w-4 h-4" />
         </Button>
       </div>

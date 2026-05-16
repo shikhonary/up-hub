@@ -24,7 +24,7 @@ export function Header({ title, description, onAdd }: HeaderProps) {
 
         <div className="mt-2 mb-4 h-0.5 w-14 rounded-full bg-gradient-to-r from-primary to-primary-container" />
 
-        <p className="text-sm leading-6 text-on-surface-variant max-w-lg">
+        <p className="text-sm leading-6 text-on-surface-variant max-w-lg font-medium italic opacity-70">
           {description}
         </p>
       </div>
@@ -36,14 +36,15 @@ export function Header({ title, description, onAdd }: HeaderProps) {
             group relative overflow-hidden
             inline-flex items-center gap-2
             bg-gradient-to-br from-primary to-primary-container
-            text-on-primary font-bold text-sm
+            text-on-primary font-black text-sm
             px-5 py-2.5 rounded-2xl
             border-0
             shadow-[0_4px_20px_-4px] shadow-primary/40
-            hover:shadow-[0_6px_28px_-4px] hover:shadow-primary/60
+            hover:shadow-[0_6_28px_-4px] hover:shadow-primary/60
             hover:scale-[1.03]
             active:scale-[0.97]
             transition-all duration-200 ease-out
+            h-auto
           "
         >
           <span
@@ -60,7 +61,7 @@ export function Header({ title, description, onAdd }: HeaderProps) {
           <span className="relative flex items-center justify-center rounded-lg bg-white/20 p-0.5">
             <Plus size={16} strokeWidth={3} />
           </span>
-          <span className="relative">Add Ward</span>
+          <span className="relative">ওয়ার্ড যোগ করুন</span>
         </Button>
       </div>
     </div>

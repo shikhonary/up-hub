@@ -17,6 +17,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu";
+import { enToBnNumber } from "@workspace/utils";
 
 interface WardTableProps {
   wards: TenantTypes.Ward[];
@@ -40,16 +41,16 @@ export const WardTable = ({
             <thead>
               <tr className="bg-surface-container-low/50">
                 <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant border-b border-outline/5">
-                  Ward Name
+                  ওয়ার্ডের নাম
                 </th>
                 <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant border-b border-outline/5">
-                  Display Name
+                  প্রদর্শিত নাম
                 </th>
                 <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant border-b border-outline/5">
-                  Status
+                  অবস্থা
                 </th>
                 <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant text-right border-b border-outline/5">
-                  Actions
+                  অ্যাকশন
                 </th>
               </tr>
             </thead>
@@ -90,11 +91,10 @@ export const WardTable = ({
         </div>
         <div className="space-y-1">
           <h3 className="text-xl font-black text-on-surface tracking-tight">
-            No wards found
+            কোনো ওয়ার্ড পাওয়া যায়নি
           </h3>
-          <p className="text-on-surface-variant/70 max-w-xs mx-auto text-sm leading-relaxed font-medium italic">
-            There are no wards matching your criteria. Try adjusting your
-            filters or add a new one.
+          <p className="text-on-surface-variant/70 max-w-xs mx-auto text-sm leading-relaxed font-bold italic">
+            আপনার ফিল্টার অনুযায়ী কোনো ওয়ার্ড পাওয়া যায়নি। অনুগ্রহ করে অন্যভাবে চেষ্টা করুন।
           </p>
         </div>
       </div>
@@ -108,16 +108,16 @@ export const WardTable = ({
           <thead>
             <tr className="bg-surface-container-low/50">
               <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant border-b border-outline/5">
-                Ward Name
+                ওয়ার্ডের নাম
               </th>
               <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant border-b border-outline/5">
-                Display Name
+                প্রদর্শিত নাম
               </th>
               <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant border-b border-outline/5">
-                Status
+                অবস্থা
               </th>
               <th className="py-3 px-6 font-bold text-[11px] uppercase tracking-widest text-on-surface-variant text-right border-b border-outline/5">
-                Actions
+                অ্যাকশন
               </th>
             </tr>
           </thead>
@@ -138,7 +138,7 @@ export const WardTable = ({
                       <MapPin size={20} strokeWidth={2.5} />
                     </div>
                     <span className="text-base font-black text-on-surface tracking-tight">
-                      {ward.name}
+                      {enToBnNumber(ward.name)}
                     </span>
                   </div>
                 </td>
@@ -156,7 +156,7 @@ export const WardTable = ({
                         : "bg-slate-50 text-slate-400 border-slate-100",
                     )}
                   >
-                    {ward.isActive ? "Active" : "Inactive"}
+                    {ward.isActive ? "সক্রিয়" : "নিষ্ক্রিয়"}
                   </span>
                 </td>
                 <td className="py-5 px-6 text-right">
@@ -171,19 +171,19 @@ export const WardTable = ({
                           <MoreHorizontal className="w-5 h-5" />
                         </Button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end" className="w-40 rounded-xl border-outline/10 shadow-ambient">
+                      <DropdownMenuContent align="end" className="w-48 rounded-xl border-outline/10 shadow-ambient">
                         <DropdownMenuItem 
                           onClick={() => onEdit(ward)}
                           className="cursor-pointer font-bold text-on-surface-variant hover:text-primary transition-colors py-2.5 px-3 rounded-lg"
                         >
-                          <Edit className="w-4 h-4 mr-2" /> Edit Ward
+                          <Edit className="w-4 h-4 mr-2" /> ওয়ার্ড এডিট করুন
                         </DropdownMenuItem>
                         <DropdownMenuSeparator className="bg-outline/5" />
                         <DropdownMenuItem
                           className="text-rose-600 focus:text-rose-700 focus:bg-rose-50 cursor-pointer font-bold py-2.5 px-3 rounded-lg"
                           onClick={() => onDelete(ward.id, ward.name)}
                         >
-                          <Trash2 className="w-4 h-4 mr-2" /> Delete Ward
+                          <Trash2 className="w-4 h-4 mr-2" /> ওয়ার্ড ডিলিট করুন
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>

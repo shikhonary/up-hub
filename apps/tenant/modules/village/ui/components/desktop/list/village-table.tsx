@@ -27,8 +27,10 @@ import { Button } from "@workspace/ui/components/button";
 import { Badge } from "@workspace/ui/components/badge";
 import { TenantTypes } from "@workspace/db";
 import { format } from "date-fns";
+import { bn } from "date-fns/locale";
 import { cn } from "@workspace/ui/lib/utils";
 import { Skeleton } from "@workspace/ui/components/skeleton";
+import { enToBnNumber } from "@workspace/utils";
 
 interface VillageTableProps {
   villages: (TenantTypes.Village & {
@@ -53,17 +55,17 @@ export function VillageTable({
         <Table>
           <TableHeader>
             <TableRow className="hover:bg-transparent border-outline/5 h-14">
-              <TableHead className="w-[300px] text-[10px] font-black uppercase tracking-widest pl-6">
-                Village Details
+              <TableHead className="w-[300px] text-[10px] font-black uppercase tracking-widest pl-6 text-on-surface-variant/70">
+                গ্রামের বিস্তারিত
               </TableHead>
-              <TableHead className="text-[10px] font-black uppercase tracking-widest">
-                Ward Information
+              <TableHead className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant/70">
+                ওয়ার্ডের তথ্য
               </TableHead>
-              <TableHead className="text-[10px] font-black uppercase tracking-widest">
-                Status
+              <TableHead className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant/70">
+                অবস্থা
               </TableHead>
-              <TableHead className="text-[10px] font-black uppercase tracking-widest">
-                Created Date
+              <TableHead className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant/70">
+                তৈরির তারিখ
               </TableHead>
               <TableHead className="w-[100px] text-right pr-6"></TableHead>
             </TableRow>
@@ -107,11 +109,10 @@ export function VillageTable({
           <Building2 className="w-10 h-10 text-primary/20" />
         </div>
         <h3 className="text-xl font-black text-on-surface tracking-tight">
-          No Villages Found
+          কোনো গ্রাম পাওয়া যায়নি
         </h3>
-        <p className="text-on-surface-variant font-medium text-sm mt-2 max-w-[300px] text-center leading-relaxed italic">
-          Try adjusting your search or filters to find what you&apos;re looking
-          for.
+        <p className="text-on-surface-variant font-bold text-sm mt-2 max-w-[300px] text-center leading-relaxed italic">
+          আপনার সার্চ অথবা ফিল্টার পরিবর্তন করে পুনরায় চেষ্টা করুন।
         </p>
       </div>
     );
@@ -122,17 +123,17 @@ export function VillageTable({
       <Table>
         <TableHeader>
           <TableRow className="hover:bg-transparent border-outline/5 h-14">
-            <TableHead className="w-[300px] text-[10px] font-black uppercase tracking-widest pl-6">
-              Village Details
+            <TableHead className="w-[300px] text-[10px] font-black uppercase tracking-widest pl-6 text-on-surface-variant/70">
+              গ্রামের বিস্তারিত
             </TableHead>
-            <TableHead className="text-[10px] font-black uppercase tracking-widest">
-              Ward Information
+            <TableHead className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant/70">
+              ওয়ার্ডের তথ্য
             </TableHead>
-            <TableHead className="text-[10px] font-black uppercase tracking-widest">
-              Status
+            <TableHead className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant/70">
+              অবস্থা
             </TableHead>
-            <TableHead className="text-[10px] font-black uppercase tracking-widest">
-              Created Date
+            <TableHead className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant/70">
+              তৈরির তারিখ
             </TableHead>
             <TableHead className="w-[100px] text-right pr-6"></TableHead>
           </TableRow>
@@ -161,11 +162,11 @@ export function VillageTable({
 
               <TableCell>
                 <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+                  <div className="w-6 h-6 rounded-lg bg-accent/10 flex items-center justify-center text-accent shadow-sm">
                     <MapPin className="w-3 h-3" />
                   </div>
                   <span className="text-xs font-black text-on-surface-variant tracking-tight">
-                    {village.ward?.name || "N/A"}
+                    {enToBnNumber(village.ward?.name) || "সংযুক্ত নেই"}
                   </span>
                 </div>
               </TableCell>
@@ -174,13 +175,13 @@ export function VillageTable({
                 <Badge
                   variant="secondary"
                   className={cn(
-                    "rounded-lg px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider border transition-all duration-500",
+                    "rounded-lg px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider border transition-all duration-500 shadow-sm",
                     village.isActive
-                      ? "bg-emerald-50 text-emerald-600 border-emerald-100 shadow-sm"
+                      ? "bg-emerald-50 text-emerald-600 border-emerald-100"
                       : "bg-slate-50 text-slate-400 border-slate-100",
                   )}
                 >
-                  {village.isActive ? "Active" : "Inactive"}
+                  {village.isActive ? "সক্রিয়" : "নিষ্ক্রিয়"}
                 </Badge>
               </TableCell>
 
@@ -188,7 +189,7 @@ export function VillageTable({
                 <div className="flex items-center gap-2 text-on-surface-variant/60">
                   <Calendar className="w-3.5 h-3.5" />
                   <span className="text-xs font-bold tracking-tight italic">
-                    {format(new Date(village.createdAt), "MMM d, yyyy")}
+                    {enToBnNumber(format(new Date(village.createdAt), "d MMMM, yyyy", { locale: bn }))}
                   </span>
                 </div>
               </TableCell>
@@ -213,21 +214,21 @@ export function VillageTable({
                       className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-bold text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-all cursor-pointer"
                     >
                       <Edit className="w-4 h-4" />
-                      Edit Details
+                      তথ্য এডিট করুন
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       onClick={() => onToggleActive(village.id)}
                       className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-bold text-on-surface-variant hover:text-emerald-600 hover:bg-emerald-50 transition-all cursor-pointer"
                     >
                       <Power className="w-4 h-4" />
-                      {village.isActive ? "Deactivate" : "Activate"}
+                      {village.isActive ? "নিষ্ক্রিয় করুন" : "সক্রিয় করুন"}
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       onClick={() => onDelete(village.id, village.name)}
                       className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-bold text-rose-500 hover:bg-rose-50 transition-all cursor-pointer"
                     >
                       <Trash2 className="w-4 h-4" />
-                      Delete Village
+                      গ্রাম মুছে ফেলুন
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>

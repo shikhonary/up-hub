@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient, useSuspenseQuery } from "@tansta
 import { useTRPC } from "../client";
 import { toast } from "@workspace/ui/components/sonner";
 import { useQueryState, parseAsString } from "nuqs";
+import { useCitizenApplicationFilters } from "../filters/client";
 
 // ============================================================================
 // CITIZEN APPLICATION MUTATIONS
@@ -155,13 +156,10 @@ export function useRejectCitizenApplication() {
 /**
  * Hook for listing citizen applications with filters
  */
-export function useCitizenApplications(
-  filters: Parameters<
-    ReturnType<typeof useTRPC>["citizenApplication"]["list"]["queryOptions"]
-  >[0]
-) {
+export function useCitizenApplications() {
   const trpc = useTRPC();
-  return useQuery(trpc.citizenApplication.list.queryOptions(filters as any));
+  const [filters] = useCitizenApplicationFilters();
+  return useQuery(trpc.citizenApplication.list.queryOptions(filters));
 }
 
 export function useCitizenApplicationById(id: string) {

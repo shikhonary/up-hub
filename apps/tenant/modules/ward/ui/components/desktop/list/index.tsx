@@ -8,7 +8,7 @@ import { WardTable } from "./ward-table";
 import { Pagination } from "./pagination";
 import { TenantTypes } from "@workspace/db";
 
-export type ViewMode = "table" | "grid";
+type ViewMode = "table" | "grid";
 
 interface WardListProps {
   wards: TenantTypes.Ward[];
@@ -45,8 +45,8 @@ export const List = ({
 
       <main className="container mx-auto px-6 py-12 lg:px-12 max-w-7xl relative z-10">
         <Header
-          title="Union Wards"
-          description="Manage administrative wards within the Union Parishad. Define boundaries and oversight for each ward."
+          title="ইউনিয়ন ওয়ার্ডসমূহ"
+          description="ইউনিয়ন পরিষদের প্রশাসনিক ওয়ার্ডসমূহ পরিচালনা করুন। প্রতিটি ওয়ার্ডের সীমানা এবং তদারকি নিশ্চিত করুন।"
           onAdd={onAdd}
         />
 
@@ -67,12 +67,12 @@ export const List = ({
                 onDelete={onDelete}
               />
             ) : (
-              <div className="p-8 bg-surface-container-lowest border-t border-outline/5 min-h-[400px] flex items-center justify-center text-on-surface-variant/50 font-black uppercase tracking-widest italic">
+              <div className="p-8 text-center text-on-surface-variant font-medium italic opacity-60">
                 Grid view coming soon...
               </div>
             )}
           </div>
-          
+
           <Pagination total={total} />
         </div>
       </main>

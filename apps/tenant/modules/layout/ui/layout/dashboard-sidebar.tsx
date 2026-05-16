@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@workspace/ui/components/accordion";
-import { ChevronDown } from "lucide-react";
+import { Calculator, ChevronDown } from "lucide-react";
 import {
   LayoutDashboard,
   Users,
@@ -76,73 +76,121 @@ interface NavSection {
 
 const navSections: NavSection[] = [
   {
-    label: "Core",
+    label: "মূল কার্যক্রম",
     items: [
-      { title: "Dashboard", url: "/", icon: LayoutDashboard },
+      { title: "ড্যাশবোর্ড", url: "/", icon: LayoutDashboard },
       {
-        title: "Household Survey",
+        title: "খানা জরিপ",
         url: "/household-dashboard",
         icon: BarChart3,
       },
     ],
   },
   {
-    label: "Geographic",
+    label: "ভৌগোলিক তথ্য",
     items: [
-      { title: "Wards", url: "/wards", icon: MapPin },
-      { title: "Villages", url: "/villages", icon: Building2 },
+      { title: "ওয়ার্ডসমূহ", url: "/wards", icon: MapPin },
+      { title: "গ্রামসমূহ", url: "/villages", icon: Building2 },
     ],
   },
   {
-    label: "Citizen Services",
+    label: "নাগরিক সেবা",
     items: [
       {
-        title: "Citizens",
+        title: "নাগরিক ব্যবস্থাপনা",
         url: "/citizens",
         icon: Users,
         subItems: [
-          { title: "Citizen List", url: "/citizens", icon: ClipboardList },
-          { title: "Applications", url: "/citizens/applications", icon: FileEdit },
-          { title: "New Citizen", url: "/citizens/new", icon: UserPlus },
+          { title: "নতুন আবেদন", url: "/citizens/applications/apply", icon: UserPlus },
+          { title: "আবেদনসমূহ", url: "/citizens/applications", icon: FileEdit },
+          { title: "নাগরিক তালিকা", url: "/citizens", icon: ClipboardList },
         ],
       },
       {
-        title: "Holding Tax",
+        title: "হোল্ডিং ট্যাক্স ব্যবস্থাপনা",
         url: "/holding-tax",
         icon: Building2,
+        subItems: [
+          { title: "ট্যাক্স ডাটা", url: "/holding-tax/records", icon: ClipboardList },
+          {
+            title: "খানা জরিপ ফর্ম",
+            url: "/holding-tax/assessments/apply",
+            icon: UserPlus,
+          },
+          {
+            title: "খানা জরিপ তালিকা",
+            url: "/holding-tax/assessments",
+            icon: FileSpreadsheet,
+          },
+          {
+            title: "ট্যাক্স জেনারেট",
+            url: "/holding-tax/assessments/bulk-generate",
+            icon: Calculator,
+          },
+          {
+            title: "রিপোর্ট ও অ্যানালিটিক্স",
+            url: "/holding-tax/analytics",
+            icon: BarChart3,
+          },
+        ],
       },
       {
-        title: "Trade License",
+        title: "ট্রেড লাইসেন্স",
         url: "/trade-license",
         icon: Briefcase,
+        subItems: [
+          { title: "নতুন আবেদন", url: "/trade-license/applications/apply", icon: UserPlus },
+          { title: "আবেদন তালিকা", url: "/trade-license/applications", icon: FileEdit },
+          { title: "লাইসেন্স তালিকা", url: "/trade-license/list", icon: ClipboardList },
+          { title: "লাইসেন্স ক্যাটাগরি", url: "/administrative/trade-license-categories", icon: Hash },
+        ],
       },
-      { title: "Inheritance", url: "/inheritance", icon: GraduationCap },
-      { title: "Family Management", url: "/family", icon: UserCheck },
-      { title: "Certificates", url: "/certificates", icon: FileText },
+      {
+        title: "উত্তরাধিকার সনদ",
+        url: "/succession",
+        icon: GraduationCap,
+        subItems: [
+          { title: "নতুন আবেদন", url: "/succession/applications/apply", icon: UserPlus },
+          { title: "আবেদন তালিকা", url: "/succession/applications", icon: FileEdit },
+        ],
+      },
+      { title: "পারিবারিক তথ্য", url: "/family", icon: UserCheck },
+      { title: "সনদপত্র", url: "/certificates", icon: FileText },
     ],
   },
   {
-    label: "Administration",
+    label: "প্রশাসন",
     items: [
-      { title: "HR Management", url: "/hr", icon: Briefcase },
-      { title: "Attendance", url: "/attendance", icon: CalendarDays },
-      { title: "Registers", url: "/registers", icon: ClipboardList },
-      { title: "Duty Allocation", url: "/duty-allocation", icon: Shield },
+      { title: "জনবল ব্যবস্থাপনা", url: "/hr", icon: Briefcase },
+      { title: "উপস্থিতি", url: "/attendance", icon: CalendarDays },
+      { title: "রেজিস্টার খাতা", url: "/registers", icon: ClipboardList },
+      { title: "দায়িত্ব বন্টন", url: "/duty-allocation", icon: Shield },
+      { title: "অর্থবছর", url: "/administrative/fiscal-years", icon: Calendar },
     ],
   },
   {
-    label: "Finance",
+    label: "ইউটিলিটি",
     items: [
-      { title: "Accounts", url: "/accounts", icon: DollarSign },
-      { title: "Payments", url: "/payments", icon: CreditCard },
+      {
+        title: "সনদপত্র কাউন্টার",
+        url: "/administrative/certificate-counters",
+        icon: Hash,
+      },
     ],
   },
   {
-    label: "System",
+    label: "অর্থ ও বাজেট",
     items: [
-      { title: "Complaints", url: "/complaints", icon: Megaphone },
-      { title: "Announcements", url: "/announcements", icon: Bell },
-      { title: "Settings", url: "/settings", icon: Settings },
+      { title: "হিসাব রক্ষণ", url: "/accounts", icon: DollarSign },
+      { title: "পেমেন্ট", url: "/payments", icon: CreditCard },
+    ],
+  },
+  {
+    label: "সিস্টেম",
+    items: [
+      { title: "অভিযোগ", url: "/complaints", icon: Megaphone },
+      { title: "নোটিশবোর্ড", url: "/announcements", icon: Bell },
+      { title: "সেটিংস", url: "/settings", icon: Settings },
     ],
   },
 ];
@@ -185,8 +233,8 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
               <span className="font-display text-lg font-bold text-foreground">
                 Shikhonary
               </span>
-              <span className="text-xs text-muted-foreground -mt-0.5">
-                Tenant Portal
+              <span className="text-xs text-muted-foreground -mt-0.5 font-bold">
+                ইউনিয়ন পরিষদ পোর্টাল
               </span>
             </div>
           )}
@@ -209,7 +257,7 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
           {navSections.map((section) => (
             <div key={section.label}>
               {!collapsed && (
-                <p className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                <p className="px-3 mb-2 text-[10px] font-black text-muted-foreground uppercase tracking-widest opacity-60">
                   {section.label}
                 </p>
               )}
@@ -229,7 +277,7 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
                         <AccordionItem value={item.title} className="border-none">
                           <AccordionTrigger
                             className={cn(
-                              "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:no-underline",
+                              "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-bold transition-colors hover:no-underline",
                               isSectionActive
                                 ? "bg-primary/5 text-primary"
                                 : "text-muted-foreground hover:text-foreground hover:bg-muted",
@@ -247,7 +295,7 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
                                   key={subItem.title}
                                   href={subItem.url}
                                   className={cn(
-                                    "flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-colors",
+                                    "flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-bold transition-colors",
                                     pathname === subItem.url
                                       ? "text-primary bg-primary/10"
                                       : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
@@ -269,7 +317,7 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
                       key={item.title}
                       href={item.url}
                       className={cn(
-                        "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                        "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-bold transition-colors",
                         isActive(item.url)
                           ? "bg-primary text-primary-foreground"
                           : "text-muted-foreground hover:text-foreground hover:bg-muted",
@@ -285,7 +333,7 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
                     return (
                       <Tooltip key={item.title}>
                         <TooltipTrigger asChild>{linkContent}</TooltipTrigger>
-                        <TooltipContent side="right" className="font-medium">
+                        <TooltipContent side="right" className="font-bold text-xs">
                           {item.title}
                         </TooltipContent>
                       </Tooltip>
@@ -305,15 +353,15 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
         {!collapsed && (
           <div className="flex items-center gap-3 px-3 py-2">
             <Avatar className="h-8 w-8">
-              <AvatarFallback className="bg-primary/10 text-primary text-xs font-medium">
-                TA
+              <AvatarFallback className="bg-primary/10 text-primary text-xs font-black">
+                ইউপি
               </AvatarFallback>
             </Avatar>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-foreground truncate">
-                Tenant Admin
+              <p className="text-sm font-black text-foreground truncate">
+                ইউপি অ্যাডমিন
               </p>
-              <p className="text-xs text-muted-foreground truncate">
+              <p className="text-[10px] text-muted-foreground truncate font-bold">
                 {user.email}
               </p>
             </div>
@@ -322,12 +370,12 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
         <button
           onClick={handleLogout}
           className={cn(
-            "flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors",
+            "flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-bold text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors",
             collapsed && "justify-center",
           )}
         >
           <LogOut className="w-5 h-5 flex-shrink-0" />
-          {!collapsed && <span>Logout</span>}
+          {!collapsed && <span>লগ আউট</span>}
         </button>
       </div>
     </div>

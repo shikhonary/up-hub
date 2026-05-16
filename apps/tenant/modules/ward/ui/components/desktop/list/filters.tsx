@@ -59,8 +59,8 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
         <div className="relative flex-grow min-w-[300px]">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-on-surface-variant/50" />
           <Input
-            className="w-full bg-surface-container-low py-2.5 pl-10 pr-4 rounded-xl border-none focus-visible:ring-2 focus-visible:ring-primary/40 text-sm text-on-surface placeholder:text-on-surface-variant/40 h-10 transition-all"
-            placeholder="Search wards..."
+            className="w-full bg-surface-container-low py-2.5 pl-10 pr-4 rounded-xl border-none focus-visible:ring-2 focus-visible:ring-primary/40 text-sm font-bold text-on-surface placeholder:text-on-surface-variant/40 h-10 transition-all"
+            placeholder="ওয়ার্ড খুঁজুন..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -72,39 +72,39 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
             size="sm"
             onClick={() => handleStatusChange("all")}
             className={cn(
-              "h-8 px-4 rounded-lg text-xs font-bold transition-all duration-200",
+              "h-8 px-4 rounded-lg text-xs font-black transition-all duration-200",
               filters.isActive === null
                 ? "bg-surface-container-lowest text-primary shadow-sm"
                 : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/50",
             )}
           >
-            All
+            সব
           </Button>
           <Button
             variant="ghost"
             size="sm"
             onClick={() => handleStatusChange("active")}
             className={cn(
-              "h-8 px-4 rounded-lg text-xs font-bold transition-all duration-200",
+              "h-8 px-4 rounded-lg text-xs font-black transition-all duration-200",
               filters.isActive === true
                 ? "bg-surface-container-lowest text-primary shadow-sm"
                 : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/50",
             )}
           >
-            Active
+            সক্রিয়
           </Button>
           <Button
             variant="ghost"
             size="sm"
             onClick={() => handleStatusChange("inactive")}
             className={cn(
-              "h-8 px-4 rounded-lg text-xs font-bold transition-all duration-200",
+              "h-8 px-4 rounded-lg text-xs font-black transition-all duration-200",
               filters.isActive === false
                 ? "bg-surface-container-lowest text-primary shadow-sm"
                 : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/50",
             )}
           >
-            Inactive
+            নিষ্ক্রিয়
           </Button>
         </div>
 
@@ -153,7 +153,7 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
                   className="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline/10 text-xs text-primary shadow-sm rounded-lg hover:bg-surface-container-lowest"
                 >
                   <span className="font-black text-[10px] uppercase opacity-50 mr-1">
-                    Search:
+                    সার্চ:
                   </span>
                   <span className="font-bold text-[11px]">
                     {filters.search}
@@ -176,10 +176,10 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
                   className="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline/10 text-xs text-primary shadow-sm rounded-lg hover:bg-surface-container-lowest"
                 >
                   <span className="font-black text-[10px] uppercase opacity-50 mr-1">
-                    Status:
+                    অবস্থা:
                   </span>
                   <span className="font-bold text-[11px]">
-                    {filters.isActive ? "Active" : "Inactive"}
+                    {filters.isActive ? "সক্রিয়" : "নিষ্ক্রিয়"}
                   </span>
                   <button
                     onClick={() => setFilters({ ...filters, isActive: null })}
@@ -197,7 +197,7 @@ export function Filters({ viewMode, onViewModeChange }: FiltersProps) {
                 className="ml-auto text-[10px] font-black text-on-surface-variant/80 hover:text-rose-600 hover:bg-rose-50 transition-all flex items-center gap-1.5 px-3 h-8 rounded-lg"
               >
                 <RotateCcw className="w-3 h-3" />
-                Reset All
+                সব রিসেট করুন
               </Button>
             </div>
           </motion.div>

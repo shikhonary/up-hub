@@ -21,6 +21,15 @@ import {
   wardFilterSchema,
   villageFilterSchema,
   citizenApplicationFilterSchema,
+  citizenFilterSchema,
+  assessmentFilterSchema,
+  fiscalYearFilterSchema,
+  holdingTaxFilterSchema,
+  certificateCounterFilterSchema,
+  tradeLicenseCategoryFilterSchema,
+  tradeLicenseApplicationFilterSchema,
+  tradeLicenseFilterSchema,
+  successionApplicationFilterSchema,
 } from "./schema";
 
 export const useAcademicClassFilters = () =>
@@ -54,3 +63,20 @@ export const useWardFilters = () => useQueryStates(wardFilterSchema);
 export const useVillageFilters = () => useQueryStates(villageFilterSchema);
 export const useCitizenApplicationFilters = () =>
   useQueryStates(citizenApplicationFilterSchema);
+export const useCitizenFilters = () => useQueryStates(citizenFilterSchema);
+export const useAssessmentFilters = () =>
+  useQueryStates(assessmentFilterSchema);
+export const useFiscalYearFilters = () =>
+  useQueryStates(fiscalYearFilterSchema);
+export const useHoldingTaxFilters = () =>
+  useQueryStates(holdingTaxFilterSchema);
+export const useCertificateCounterFilters = () =>
+  useQueryStates(certificateCounterFilterSchema);
+export const useTradeLicenseCategoryFilters = () =>
+  useQueryStates(tradeLicenseCategoryFilterSchema);
+export const useTradeLicenseApplicationFilters = () =>
+  useQueryStates(tradeLicenseApplicationFilterSchema);
+export const useTradeLicenseFilters = () =>
+  useQueryStates(tradeLicenseFilterSchema);
+export const useSuccessionApplicationFilters = () =>
+  useQueryStates(successionApplicationFilterSchema);

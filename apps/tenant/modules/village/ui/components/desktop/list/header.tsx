@@ -2,6 +2,7 @@
 
 import { Plus } from "lucide-react";
 import { Button } from "@workspace/ui/components/button";
+import { enToBnNumber } from "@workspace/utils";
 
 interface HeaderProps {
   title: string;
@@ -24,15 +25,15 @@ export function Header({ title, subtitle, count, onAdd, addLabel = "Add Item", i
         <h1 className="text-4xl leading-[1.15] font-extrabold tracking-[-0.03em] text-on-surface font-headline">
           {title}
           {count !== undefined && (
-            <span className="ml-3 text-2xl font-bold text-primary/40 tabular-nums">
-              {count}
+            <span className="ml-3 text-2xl font-black text-primary/40 tabular-nums">
+              {enToBnNumber(count)}
             </span>
           )}
         </h1>
 
         <div className="mt-2 mb-4 h-0.5 w-14 rounded-full bg-gradient-to-r from-primary to-primary-container" />
 
-        <p className="text-sm leading-6 text-on-surface-variant max-w-lg">
+        <p className="text-sm leading-6 text-on-surface-variant max-w-lg font-medium opacity-80">
           {subtitle}
         </p>
       </div>
@@ -44,7 +45,7 @@ export function Header({ title, subtitle, count, onAdd, addLabel = "Add Item", i
             group relative overflow-hidden
             inline-flex items-center gap-2
             bg-gradient-to-br from-primary to-primary-container
-            text-on-primary font-bold text-sm
+            text-on-primary font-black text-sm
             px-5 py-2.5 rounded-2xl
             border-0
             shadow-[0_4px_20px_-4px] shadow-primary/40

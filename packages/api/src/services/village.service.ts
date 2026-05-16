@@ -144,9 +144,30 @@ export class VillageService {
   async forSelection(wardId?: string) {
     try {
       return await this.db.village.findMany({
-        where: { 
+        where: {
           isActive: true,
           ...(wardId ? { wardId } : {}),
+        },
+        select: {
+          id: true,
+          name: true,
+          displayName: true,
+          wardId: true,
+        },
+      });
+    } catch (error) {
+      handlePrismaError(error);
+    }
+  }
+
+  async getByWardId(wardId?: string) {
+    try {
+      if (!wardId) return [];
+
+      return await this.db.village.findMany({
+        where: { 
+          isActive: true,
+          wardId: wardId,
         },
         select: {
           id: true,

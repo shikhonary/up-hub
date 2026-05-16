@@ -21,13 +21,19 @@ model CitizenApplication {
     fatherNameBn        String
     motherNameEn        String?
     motherNameBn        String
-    occupation          String?
+    occupationEn        String?
+    occupationBn        String
 
-    residentStatus           String
-    educationalQualification String?
-    religion                 String
-    gender                   String
-    maritalStatus            String
+    residentStatusEn           String?
+    residentStatusBn           String
+    educationalQualificationEn String?
+    educationalQualificationBn String?
+    religionEn                 String?
+    religionBn                 String
+    genderEn                   String?
+    genderBn                   String
+    maritalStatusEn            String?
+    maritalStatusBn            String
 
     // Present Address
     presentVillageEn         String?
@@ -36,9 +42,12 @@ model CitizenApplication {
     presentRoadBlockSectorBn String?
     presentHoldingNo         String?
     presentWardNo            Int
-    presentDistrict          String
-    presentUpazila           String
-    presentPostOffice        String
+    presentDistrictEn        String?
+    presentDistrictBn        String
+    presentUpazilaEn         String?
+    presentUpazilaBn         String
+    presentPostOfficeEn      String?
+    presentPostOfficeBn      String
 
     // Permanent Address
     permanentVillageEn         String?
@@ -47,9 +56,12 @@ model CitizenApplication {
     permanentRoadBlockSectorBn String?
     permanentHoldingNo         String?
     permanentWardNo            Int
-    permanentDistrict          String
-    permanentUpazila           String
-    permanentPostOffice        String
+    permanentDistrictEn        String?
+    permanentDistrictBn        String
+    permanentUpazilaEn         String?
+    permanentUpazilaBn         String
+    permanentPostOfficeEn      String?
+    permanentPostOfficeBn      String
 
     // Contact
     mobile     String
@@ -80,13 +92,19 @@ model Citizen {
     fatherNameBn        String
     motherNameEn        String?
     motherNameBn        String
-    occupation          String?
+    occupationEn        String?
+    occupationBn        String
 
-    residentStatus           String
-    educationalQualification String?
-    religion                 String
-    gender                   String
-    maritalStatus            String
+    residentStatusEn           String?
+    residentStatusBn           String
+    educationalQualificationEn String?
+    educationalQualificationBn String?
+    religionEn                 String?
+    religionBn                 String
+    genderEn                   String?
+    genderBn                   String
+    maritalStatusEn            String?
+    maritalStatusBn            String
 
     // Present Address
     presentVillageEn         String?
@@ -95,9 +113,12 @@ model Citizen {
     presentRoadBlockSectorBn String?
     presentHoldingNo         String?
     presentWardNo            Int
-    presentDistrict          String
-    presentUpazila           String
-    presentPostOffice        String
+    presentDistrictEn        String?
+    presentDistrictBn        String
+    presentUpazilaEn         String?
+    presentUpazilaBn         String
+    presentPostOfficeEn      String?
+    presentPostOfficeBn      String
 
     // Permanent Address
     permanentVillageEn         String?
@@ -106,19 +127,30 @@ model Citizen {
     permanentRoadBlockSectorBn String?
     permanentHoldingNo         String?
     permanentWardNo            Int
-    permanentDistrict          String
-    permanentUpazila           String
-    permanentPostOffice        String
+    permanentDistrictEn        String?
+    permanentDistrictBn        String
+    permanentUpazilaEn         String?
+    permanentUpazilaBn         String
+    permanentPostOfficeEn      String?
+    permanentPostOfficeBn      String
 
     // Contact
     mobile String
     email  String?
 
+    commentsEn String?
+    commentsBn String?
+
     isActive  Boolean  @default(true)
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    applications CitizenApplication[]
+    applications            CitizenApplication[]
+    familyApplications      FamilyApplication[]
+    asFamilyMember          FamilyMember[]
+    holdingTaxes            HoldingTax[]
+    assessments             AssessmentApplication[]
+    certificateApplications CertificateApplication[]
 
     @@map("citizen")
 }
@@ -151,366 +183,162 @@ model Village {
     @@map("village")
 }
 
-model Student {
-    id               String    @id @default(uuid())
-    studentId        String
-    name             String
-    email            String?
-    academicClassId  String
-    className        String
-    batchId          String?
-    batch            Batch?    @relation(fields: [batchId], references: [id])
-    institute        String
-    roll             String
-    group            String?
-    shift            String?
-    section          String?
-    fatherName       String
-    motherName       String
-    dateOfBirth      DateTime?
-    gender           String
-    bloodGroup       String?
-    nationality      String
-    religion         String
-    imageUrl         String?
-    primaryPhone     String
-    secondaryPhone   String?
-    presentAddress   String
-    permanentAddress String
-    isActive         Boolean   @default(true)
-    admissionFee     Float     @default(0)
-    monthlyFee       Float     @default(0)
+model FamilyApplication {
+    id            String   @id @default(uuid())
+    applicantName String
+    status        String   @default("PENDING") // PENDING, APPROVED, REJECTED
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
 
-    createdAt DateTime  @default(now())
-    updatedAt DateTime  @updatedAt
-    deletedAt DateTime?
+    citizenId String
+    citizen   Citizen @relation(fields: [citizenId], references: [id])
 
-    attempts      ExamAttempt[]
-    attendance    Attendance[]
-    answerHistory AnswerHistory[]
+    members FamilyMember[]
 
-    academicYearId String
-    academicYear   AcademicYear @relation(fields: [academicYearId], references: [id])
-
-    @@index([academicClassId])
-    @@index([batchId])
-    @@index([isActive])
-    @@index([name])
-    @@index([studentId])
-    @@map("student")
+    @@map("family_application")
 }
 
-model Batch {
-    id              String   @id @default(uuid())
-    name            String
-    academicClassId String
-    className       String
-    capacity        Int      @default(50)
-    currentSize     Int      @default(0)
-    isActive        Boolean  @default(true)
-    createdAt       DateTime @default(now())
-    updatedAt       DateTime @updatedAt
+model FamilyMember {
+    id String @id @default(uuid())
 
-    academicYearId String
-    academicYear   AcademicYear @relation(fields: [academicYearId], references: [id])
+    // Basic Information
+    nameBengali String // নাম (বাংলায়)
+    nameEnglish String? // নাম (ইংরেজিতে)
 
-    students Student[]
-    exams    Exam[]
+    // Relationship
+    relationBengali String // সম্পর্ক (বাংলায়)
+    relationEnglish String? // সম্পর্ক (ইংরেজিতে)
 
-    @@index([academicClassId])
-    @@index([isActive])
-    @@map("batch")
+    // Identification & Vital Dates
+    dateOrAge String // বয়স/ জন্ম তারিখ/ মৃত্যু তারিখ
+
+    // Identification Number (NID, Birth Reg, or Death Reg)
+    identityNumber String // জাতীয় পরিচয় পত্র নং/জন্ম নিবন্ধন নং/ মৃত্যু নিবন্ধন নং
+
+    // Status (Stored as String as requested)
+    maritalStatus String // বৈবাহিক অবস্থা
+    vitalStatus   String // জীবিত/মৃত
+
+    // Relation to the main application
+    applicationId String
+    application   FamilyApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+    citizenId String?
+    citizen   Citizen? @relation(fields: [citizenId], references: [id])
+
+    @@map("family_member")
 }
 
-model Teacher {
-    id          String    @id @default(uuid())
-    userId      String?   @unique
-    name        String
-    email       String    @unique
-    phone       String?
-    imageUrl    String?
-    subjectIds  String[]  @default([])
-    designation String?
-    department  String?
-    joinDate    DateTime?
-    isActive    Boolean   @default(true)
-    createdAt   DateTime  @default(now())
-    updatedAt   DateTime  @updatedAt
-    deletedAt   DateTime?
+model AssessmentApplication {
+    id String @id @default(uuid())
 
-    exams Exam[]
+    // --- Relation to Citizen (Optional) ---
+    citizenId String?
+    citizen   Citizen? @relation(fields: [citizenId], references: [id])
 
-    @@index([email])
-    @@index([isActive])
-    @@index([userId])
-    @@map("teacher")
-}
+    // --- Personal Information (Required per user request) ---
+    fullNameBn      String // নাম (বাংলায়)
+    genderBn        String // লিঙ্গ (Choice: পুরুষ/মহিলা/তৃতীয় লিঙ্গ)
+    genderEn        String?
+    maritalStatusBn String // বৈবাহিক অবস্থা
 
-model Exam {
-    id           String  @id @default(uuid())
-    title        String
-    description  String?
-    instructions String?
-    type         String
-    status       String  @default("Pending")
+    // --- Other Personal Information (Optional/Snapshot) ---
+    mobile                     String?
+    nid                        String?
+    birthRegistrationNo        String?
+    passportNo                 String?
+    dateOfBirth                DateTime?
+    fatherNameBn               String?
+    motherNameBn               String?
+    occupationBn               String?
+    residentType               String? // বাসিন্দা (অস্থায়ী/স্থায়ী)
+    educationalQualificationBn String?
+    religionBn                 String?
 
-    academicClassId String?
-    subjectIds      String[] @default([])
-    chapterIds      String[] @default([])
-    topicIds        String[] @default([])
+    // --- Permanent Address (Required per user request) ---
+    holdingNo    String // হোল্ডিং/এসেসমেন্ট নং (Unique identification)
+    wardNo       Int // ওয়ার্ড নং (1-9)
+    villageBn    String // গ্রাম/মহল্লা/পাড়া
+    districtBn   String // জেলা
+    upazilaBn    String // উপজেলা/থানা
+    postOfficeBn String // পোষ্ট অফিস
 
-    startDate DateTime? // Match introspected "startDate"
-    endDate   DateTime? // Match introspected "endDate"
-    duration  Int?      @default(0)
+    roadBlockSectorBn String? // রোড/ব্লক/সেক্টর
 
-    mcqCount Int?     @map("mcq")
-    cqCount  Int?     @map("cq")
-    mcqIds   String[] @default([])
-    cqIds    String[] @default([])
+    // --- Survey Data (Required per user request) ---
+    maleCount   Int // পুরুষ
+    femaleCount Int // মহিলা
 
-    totalMarks   Float @default(0)
-    passingMarks Float @default(0)
+    // --- Other Survey Data (Optional) ---
+    childCount                 Int?    @default(0)
+    disabledCount              Int?    @default(0)
+    earningMembers             Int?
+    dependentMembers           Int?
+    jobSeekersSscPlus          Int?
+    entrepreneurSeekersSscPlus Int?
+    landOwnership              String?
+    annualIncomeSource         String?
+    annualIncome               Float?
+    hasTubewell                Boolean @default(false)
+    majorExpenditureSectors    String?
+    remittanceSenders          Int?
+    sanitationStatus           String? // স্যানিটেশন অবস্থা (কাঁচা/পাকা)
+    hasUtilities               Boolean @default(false)
+    isSocialSafetyNetCovered   Boolean @default(false)
 
-    isPublished Boolean @default(false)
-    isPublic    Boolean @default(false)
-    isActive    Boolean @default(true)
+    // --- Housing Details (Optional) ---
+    multiStoriedBuildingCount Int? @default(0)
+    pakaBuildingCount         Int? @default(0)
+    semiPakaBuildingCount     Int? @default(0)
+    tinShedCount              Int? @default(0)
+    kachaHouseCount           Int? @default(0)
 
-    hasNegativeMark Boolean @default(false)
-    negativeMark    Float   @default(0)
-    hasRandom       Boolean @default(false)
-    hasShuffle      Boolean @default(false)
+    // --- Tax & Assessment (Required per user request) ---
+    annualValuation Float // বার্ষিক মূল্যায়ন
+    taxRatePercent  Float // ধার্যকৃত কর % (1-7%)
+    totalTax        Float // Calculated Total Tax
 
-    batchId   String?
-    batch     Batch?   @relation(fields: [batchId], references: [id])
-    teacherId String?
-    teacher   Teacher? @relation(fields: [teacherId], references: [id])
-
-    targetStudentIds String[] @default([])
-    totalQuestions   Int?     @map("total")
-
-    createdAt DateTime  @default(now())
-    updatedAt DateTime  @updatedAt
-    deletedAt DateTime?
-
-    attempts ExamAttempt[]
-
-    @@index([batchId])
-    @@index([createdAt])
-    @@index([isActive])
-    @@index([isPublic])
-    @@index([isPublished])
-    @@index([status])
-    @@index([teacherId])
-    @@map("exam")
-}
-
-model ExamAttempt {
-    id        String  @id @default(uuid())
-    examId    String
-    exam      Exam    @relation(fields: [examId], references: [id], onDelete: Cascade)
-    studentId String
-    student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
-
-    status    String    @default("Not Started")
-    startTime DateTime?
-    endTime   DateTime?
-
-    score      Float  @default(0)
-    percentage Float  @default(0)
-    rank       Int?
-    percentile Float?
-
-    correctAnswers   Int @default(0)
-    wrongAnswers     Int @default(0)
-    skippedQuestions Int @default(0) // Match introspected "skippedQuestions"
-    totalQuestions   Int @default(0)
-
-    duration      Int? @default(0)
-    totalDuration Int?
-
-    isGraded Boolean   @default(false)
-    gradedBy String?
-    gradedAt DateTime?
-
-    tabSwitches    Int        @default(0)
-    tabSwitchTimes DateTime[] @default([])
-    ipAddress      String?
-    userAgent      String?
-
-    bestStreak    Int @default(0)
-    currentStreak Int @default(0)
-    answeredCount Int @default(0)
-
-    feedbackStatus String  @default("Pending")
-    reviewNotes    String?
-    teacherRemarks String?
-
-    answers          Json[] @default([])
-    warnings         Json[] @default([])
-    flaggedQuestions Int[]  @default([])
-
-    type String
-
-    submissionType String?
-    lastActivityAt DateTime?
-
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    answerHistory AnswerHistory[]
-
-    @@unique([examId, studentId])
-    @@index([examId])
-    @@index([studentId])
-    @@index([status])
-    @@map("exam_attempt")
-}
-
-model AnswerHistory {
-    id        String      @id @default(uuid())
-    attemptId String      @map("attemptId")
-    attempt   ExamAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-    studentId String      @map("studentId")
-    student   Student     @relation(fields: [studentId], references: [id], onDelete: Cascade)
-
-    mcqId          String
-    questionNumber Int
-    selectedOption String
-    correctAnswer  String
-    isCorrect      Boolean
-    answeredAt     DateTime @default(now())
-    timeSpent      Int?
-
-    previousAnswer String?
-    isChanged      Boolean @default(false)
-    changeCount    Int     @default(0)
-
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    @@index([attemptId])
-    @@index([studentId])
-    @@index([mcqId])
-    @@map("answer_history")
-}
-
-model Attendance {
-    id        String   @id @default(uuid())
-    studentId String
-    student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
-    batchId   String?
-    date      DateTime
-    status    String
     remarks   String?
-    markedBy  String?
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    taxes HoldingTax[]
+
+    @@map("assessment_application")
+}
+
+model HoldingTax {
+    id String @id @default(uuid())
+
+    assessmentId String
+    assessment   AssessmentApplication @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+
+    fiscalYearId String
+    fiscalYear   FiscalYear @relation(fields: [fiscalYearId], references: [id])
+
+    citizenId String?
+    citizen   Citizen? @relation(fields: [citizenId], references: [id])
+
+    totalAmount Float
+    paidAmount  Float  @default(0)
+    dueAmount   Float
+    status      String @default("UNPAID") // UNPAID, PARTIAL, PAID
+
+    collectedById   String? // User ID from master DB (track who collected)
+    collectedByName String?
+    paidAt          DateTime?
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    @@unique([studentId, date])
-    @@index([studentId])
-    @@index([batchId])
-    @@map("attendance")
+    @@unique([assessmentId, fiscalYearId])
+    @@map("holding_tax")
 }
 
-model Announcement {
-    id          String    @id @default(uuid())
-    title       String
-    content     String
-    publishAt   DateTime?
-    expiresAt   DateTime?
-    isPublished Boolean   @default(false)
-    isPinned    Boolean   @default(false)
-    createdBy   String
-    priority    String    @default("NORMAL")
-    targetIds   String[]  @default([])
-    targetType  String
-
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    @@index([isPublished])
-    @@index([isPinned])
-    @@map("announcement")
-}
-
-model Notification {
-    id                String    @id @default(uuid())
-    recipientId       String
-    recipientType     String
-    title             String
-    message           String
-    type              String
-    isRead            Boolean   @default(false)
-    readAt            DateTime?
-    relatedEntityType String?
-    relatedEntityId   String?
-    metadata          Json      @default("{}")
-
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    @@index([recipientId])
-    @@index([isRead])
-    @@map("notification")
-}
-
-model ExamAnalytics {
-    id                String   @id @default(uuid())
-    examId            String   @unique
-    totalStudents     Int      @default(0)
-    attemptedStudents Int      @default(0)
-    participationRate Float    @default(0)
-    averageScore      Float    @default(0)
-    averagePercentage Float    @default(0)
-    highestScore      Float    @default(0)
-    lowestScore       Float    @default(0)
-    medianScore       Float    @default(0)
-    scoreDistribution Json     @default("{}")
-    gradeDistribution Json     @default("{}")
-    questionAnalysis  Json[]   @default([])
-    topPerformers     String[] @default([])
-    averageTimeTaken  Float    @default(0)
-    completionRate    Float    @default(0)
-    lastCalculated    DateTime @default(now())
-    createdAt         DateTime @default(now())
-    updatedAt         DateTime @updatedAt
-
-    @@index([examId])
-    @@map("exam_analytics")
-}
-
-model StudentAnalytics {
-    id                     String   @id @default(uuid())
-    studentId              String   @unique
-    totalExamsAttempted    Int      @default(0)
-    currentStreak          Int      @default(0)
-    bestStreak             Int      @default(0)
-    classRank              Int?
-    batchRank              Int?
-    overallRank            Int?
-    attendancePercentage   Float    @default(0)
-    averageScore           Float    @default(0)
-    averagePercentage      Float    @default(0)
-    averageTimePerQuestion Float    @default(0)
-    subjectPerformance     Json     @default("{}")
-    strongSubjects         String[] @default([])
-    weakSubjects           String[] @default([])
-    strongTopics           String[] @default([])
-    weakTopics             String[] @default([])
-    totalClassesAttended   Int      @default(0)
-    totalClassesConducted  Int      @default(0)
-    lastCalculated         DateTime @default(now())
-    createdAt              DateTime @default(now())
-    updatedAt              DateTime @updatedAt
-
-    @@index([studentId])
-    @@map("student_analytics")
-}
-
-model AcademicYear {
+model FiscalYear {
     id        String   @id @default(uuid())
-    name      String   @unique
+    name      String
+    nameBn    String
     startDate DateTime
     endDate   DateTime
     isCurrent Boolean  @default(false)
@@ -518,59 +346,301 @@ model AcademicYear {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    batches       Batch[]
-    students      Student[]
-    counters      Counter[]
-    admissionFees AdmissionFee[]
-    monthlyFees   MonthlyFee[]
+    taxes                    HoldingTax[]
+    tradeLicenseApplications TradeLicenseApplication[]
+    tradeLicenses            TradeLicense[]
 
-    @@map("academic_year")
+    @@map("fiscal_year")
 }
 
-model Counter {
-    id             String       @id @default(uuid())
-    academicYearId String
-    academicYear   AcademicYear @relation(fields: [academicYearId], references: [id])
-
-    academicClassId String
-    className       String
-
-    value Int @default(0)
+model CertificateCounter {
+    id     String @id @default(uuid())
+    typeEn String @unique // e.g. "CITIZEN_CERTIFICATE"
+    typeBn String // e.g. "নাগরিকত্ব সনদ"
+    count  Int    @default(0)
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    @@map("counter")
+    @@map("certificate_counter")
 }
 
-model AdmissionFee {
-    id             String       @id @default(uuid())
-    academicYearId String
-    academicYear   AcademicYear @relation(fields: [academicYearId], references: [id])
-
-    academicClassId String
-    className       String
-
-    amount Float @default(0)
+model TradeLicenseCategory {
+    id     String @id @default(uuid())
+    typeEn String @unique // e.g. "WHOLESALE_BUSINESS"
+    typeBn String // e.g. "পাইকারি ব্যবসা"
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    @@map("admission_fee")
+    applications TradeLicenseApplication[]
+
+    @@map("trade_license_category")
 }
 
-model MonthlyFee {
-    id             String       @id @default(uuid())
-    academicYearId String
-    academicYear   AcademicYear @relation(fields: [academicYearId], references: [id])
+model TradeLicenseApplication {
+    id         String @id @default(uuid())
+    trackingId String @unique // User-friendly numeric ID: e.g., 24051310452382
 
-    academicClassId String
-    className       String
+    // --- Organization Info ---
+    orgNameEn       String?
+    orgNameBn       String
+    ownershipTypeBn String // Enum: Private, Partnership, Joint Venture, etc.
+    ownershipTypeEn String?
 
-    amount Float @default(0)
+    // --- Owner Info ---
+    fullNameEn          String?
+    fullNameBn          String
+    tinBn               String?
+    tinEn               String?
+    binBn               String?
+    binEn               String?
+    fatherNameEn        String?
+    fatherNameBn        String
+    motherNameEn        String?
+    motherNameBn        String
+    nidBn               String?
+    nidEn               String?
+    birthRegistrationBn String?
+    birthRegistrationEn String?
+    passportBn          String?
+    passportEn          String?
+
+    // --- Present Address ---
+    presentVillageEn    String?
+    presentVillageBn    String
+    presentRoadBlockEn  String?
+    presentRoadBlockBn  String?
+    presentDivisionEn   String?
+    presentDivisionBn   String?
+    presentHoldingNoBn  String?
+    presentHoldingNoEn  String?
+    presentWardNo       Int
+    presentDistrictEn   String?
+    presentDistrictBn   String
+    presentUpazilaEn    String?
+    presentUpazilaBn    String
+    presentPostOfficeEn String?
+    presentPostOfficeBn String
+
+    // --- Permanent Address ---
+    permanentIsSameAsPresent Boolean @default(false)
+    permanentVillageEn       String?
+    permanentVillageBn       String
+    permanentRoadBlockEn     String?
+    permanentRoadBlockBn     String?
+    permanentDivisionEn      String?
+    permanentDivisionBn      String?
+    permanentHoldingNoBn     String?
+    permanentHoldingNoEn     String?
+    permanentWardNo          Int
+    permanentDistrictEn      String?
+    permanentDistrictBn      String
+    permanentUpazilaEn       String?
+    permanentUpazilaBn       String
+    permanentPostOfficeEn    String?
+    permanentPostOfficeBn    String
+
+    // --- Business Details ---
+    vatIdBn           String?
+    vatIdEn           String?
+    taxIdBn           String?
+    taxIdEn           String?
+    paidUpCapital     Float?
+    businessStartDate DateTime?
+    ownershipStatusBn String?
+    ownershipStatusEn String?
+    signboardSize     Float?
+
+    // Relations
+    tradeLicenseCategoryId String
+    tradeLicenseCategory   TradeLicenseCategory @relation(fields: [tradeLicenseCategoryId], references: [id])
+
+    fiscalYearId String
+    fiscalYear   FiscalYear @relation(fields: [fiscalYearId], references: [id])
+
+    // --- Business Address ---
+    businessVillageEn    String?
+    businessVillageBn    String
+    businessRoadBlockEn  String?
+    businessRoadBlockBn  String?
+    businessDivisionEn   String?
+    businessDivisionBn   String
+    businessHoldingNoBn  String?
+    businessHoldingNoEn  String?
+    businessWardNo       Int
+    businessDistrictEn   String?
+    businessDistrictBn   String
+    businessUpazilaEn    String?
+    businessUpazilaBn    String
+    businessPostOfficeEn String?
+    businessPostOfficeBn String
+
+    // --- Contact Info ---
+    mobileBn        String
+    mobileEn        String?
+    email           String?
+    applicantNameEn String?
+    applicantNameBn String
+    phoneBn         String?
+    phoneEn         String?
+
+    // --- Lifecycle ---
+    status    String   @default("PENDING") // PENDING, APPROVED, REJECTED
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    tradeLicense TradeLicense?
+
+    @@map("trade_license_application")
+}
+
+model TradeLicense {
+    id String @id @default(uuid())
+
+    // --- Identification ---
+    licenseNo  String? @unique
+    trackingNo String  @unique
+
+    // --- Relations ---
+    applicationId String                  @unique
+    application   TradeLicenseApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+    fiscalYearId String
+    fiscalYear   FiscalYear @relation(fields: [fiscalYearId], references: [id])
+
+    // --- Financial Details ---
+    licenseFee        Float   @default(0)
+    arrears           Float   @default(0)
+    arrearsFiscalYear String?
+    discount          Float   @default(0)
+    vatAmount         Float   @default(0) // 15% VAT
+    signboardTax      Float   @default(0)
+    professionalTax   Float   @default(0)
+    subCharge         Float   @default(0)
+    totalAmount       Float
+
+    // --- Payment Information ---
+    paymentStatus String    @default("UNPAID") // UNPAID, PAID
+    paymentType   String? // Cash, Cheque, Bank, etc.
+    paymentDate   DateTime?
+
+    // --- Validity ---
+    issueDate  DateTime @default(now())
+    expiryDate DateTime // End of fiscal year
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    @@map("monthly_fee")
+    @@map("trade_license")
+}
+
+model CertificateApplication {
+    id String @id @default(uuid())
+
+    // --- Certificate Type ---
+    certificateTypeEn String // e.g. "CHARACTER_CERTIFICATE"
+    certificateTypeBn String // e.g. "চারিত্রিক সনদ"
+
+    // --- Link to Citizen (Core Details source of truth) ---
+    citizenId String
+    citizen   Citizen @relation(fields: [citizenId], references: [id])
+
+    // --- Specific Data (Typed via JSON) ---
+    // Instead of duplicating fields, specific data like income amount or character known duration goes here.
+    // The application logic should enforce that inside this JSON, every string field has an En and Bn key 
+    // (e.g., { "incomeSourceEn": "Business", "incomeSourceBn": "ব্যবসা" })
+    specificData Json?
+
+    // --- Lifecycle ---
+    status   String    @default("PENDING") // PENDING, APPROVED, REJECTED
+    issuedAt DateTime?
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("certificate_application")
+}
+
+model SuccessionApplication {
+    id         String @id @default(uuid())
+    trackingId String @unique // User-friendly numeric ID
+
+    // --- Deceased Info ---
+    nameEn         String?
+    nameBn         String
+    nidNo          String?
+    deathDate      DateTime?
+    fatherNameEn   String?
+    fatherNameBn   String
+    motherNameEn   String?
+    motherNameBn   String
+    residentStatus String // Enum: Temporary, Permanent
+    religion       String // Enum: Islam, Hindu, Buddhism, Christianity, Others
+    gender         String // Enum: Male, Female, Third Gender
+    maritalStatus  String // Enum: Unmarried, Married, Divorced, Widow, Others
+
+    // --- Applicant Info ---
+    applicantNameEn         String?
+    applicantNameBn         String
+    applicantGuardianNameEn String?
+    applicantGuardianNameBn String
+    attachmentFile          Bytes?
+    deceasedPreWarish       String? // Pre-deceased Heir info
+
+    // --- Present Address ---
+    presentVillageEn         String?
+    presentVillageBn         String
+    presentRoadBlockSectorEn String?
+    presentRoadBlockSectorBn String?
+    presentHoldingNo         String?
+    presentWardNo            Int
+    presentDistrictEn        String?
+    presentDistrictBn        String
+    presentUpazilaEn         String?
+    presentUpazilaBn         String
+    presentPostOfficeEn      String?
+    presentPostOfficeBn      String
+
+    // --- Permanent Address ---
+    permanentVillageEn         String?
+    permanentVillageBn         String
+    permanentRoadBlockSectorEn String?
+    permanentRoadBlockSectorBn String?
+    permanentHoldingNo         String?
+    permanentWardNo            Int
+    permanentDistrictEn        String?
+    permanentDistrictBn        String
+    permanentUpazilaEn         String?
+    permanentUpazilaBn         String
+    permanentPostOfficeEn      String?
+    permanentPostOfficeBn      String
+
+    // --- Lifecycle ---
+    status    String   @default("PENDING") // PENDING, APPROVED, REJECTED
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    heirs Heir[]
+
+    @@map("succession_application")
+}
+
+model Heir {
+    id String @id @default(uuid())
+
+    serialNo      Int?
+    heirNameBn    String
+    heirNameEn    String?
+    relationBn    String
+    relationEn    String?
+    ageDobDod     String?
+    idNo          String?
+    maritalStatus String?
+    isAlive       String?
+
+    applicationId String
+    application   SuccessionApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+    @@map("heir")
 }

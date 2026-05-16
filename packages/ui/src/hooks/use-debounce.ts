@@ -15,3 +15,22 @@ export function useDebounce<T>(value: T, delay?: number): T {
 
   return debouncedValue;
 }
+
+export function useDebounceCallback<T extends (...args: any[]) => any>(
+  callback: T,
+  delay: number = 500
+): (...args: Parameters<T>) => void {
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+
+  return (...args: Parameters<T>) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    const id = setTimeout(() => {
+      callback(...args);
+    }, delay);
+
+    setTimeoutId(id);
+  };
+}

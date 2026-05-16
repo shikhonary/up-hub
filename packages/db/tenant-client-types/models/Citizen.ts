@@ -48,32 +48,46 @@ export type CitizenMinAggregateOutputType = {
   fatherNameBn: string | null
   motherNameEn: string | null
   motherNameBn: string | null
-  occupation: string | null
-  residentStatus: string | null
-  educationalQualification: string | null
-  religion: string | null
-  gender: string | null
-  maritalStatus: string | null
+  occupationEn: string | null
+  occupationBn: string | null
+  residentStatusEn: string | null
+  residentStatusBn: string | null
+  educationalQualificationEn: string | null
+  educationalQualificationBn: string | null
+  religionEn: string | null
+  religionBn: string | null
+  genderEn: string | null
+  genderBn: string | null
+  maritalStatusEn: string | null
+  maritalStatusBn: string | null
   presentVillageEn: string | null
   presentVillageBn: string | null
   presentRoadBlockSectorEn: string | null
   presentRoadBlockSectorBn: string | null
   presentHoldingNo: string | null
   presentWardNo: number | null
-  presentDistrict: string | null
-  presentUpazila: string | null
-  presentPostOffice: string | null
+  presentDistrictEn: string | null
+  presentDistrictBn: string | null
+  presentUpazilaEn: string | null
+  presentUpazilaBn: string | null
+  presentPostOfficeEn: string | null
+  presentPostOfficeBn: string | null
   permanentVillageEn: string | null
   permanentVillageBn: string | null
   permanentRoadBlockSectorEn: string | null
   permanentRoadBlockSectorBn: string | null
   permanentHoldingNo: string | null
   permanentWardNo: number | null
-  permanentDistrict: string | null
-  permanentUpazila: string | null
-  permanentPostOffice: string | null
+  permanentDistrictEn: string | null
+  permanentDistrictBn: string | null
+  permanentUpazilaEn: string | null
+  permanentUpazilaBn: string | null
+  permanentPostOfficeEn: string | null
+  permanentPostOfficeBn: string | null
   mobile: string | null
   email: string | null
+  commentsEn: string | null
+  commentsBn: string | null
   isActive: boolean | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -91,32 +105,46 @@ export type CitizenMaxAggregateOutputType = {
   fatherNameBn: string | null
   motherNameEn: string | null
   motherNameBn: string | null
-  occupation: string | null
-  residentStatus: string | null
-  educationalQualification: string | null
-  religion: string | null
-  gender: string | null
-  maritalStatus: string | null
+  occupationEn: string | null
+  occupationBn: string | null
+  residentStatusEn: string | null
+  residentStatusBn: string | null
+  educationalQualificationEn: string | null
+  educationalQualificationBn: string | null
+  religionEn: string | null
+  religionBn: string | null
+  genderEn: string | null
+  genderBn: string | null
+  maritalStatusEn: string | null
+  maritalStatusBn: string | null
   presentVillageEn: string | null
   presentVillageBn: string | null
   presentRoadBlockSectorEn: string | null
   presentRoadBlockSectorBn: string | null
   presentHoldingNo: string | null
   presentWardNo: number | null
-  presentDistrict: string | null
-  presentUpazila: string | null
-  presentPostOffice: string | null
+  presentDistrictEn: string | null
+  presentDistrictBn: string | null
+  presentUpazilaEn: string | null
+  presentUpazilaBn: string | null
+  presentPostOfficeEn: string | null
+  presentPostOfficeBn: string | null
   permanentVillageEn: string | null
   permanentVillageBn: string | null
   permanentRoadBlockSectorEn: string | null
   permanentRoadBlockSectorBn: string | null
   permanentHoldingNo: string | null
   permanentWardNo: number | null
-  permanentDistrict: string | null
-  permanentUpazila: string | null
-  permanentPostOffice: string | null
+  permanentDistrictEn: string | null
+  permanentDistrictBn: string | null
+  permanentUpazilaEn: string | null
+  permanentUpazilaBn: string | null
+  permanentPostOfficeEn: string | null
+  permanentPostOfficeBn: string | null
   mobile: string | null
   email: string | null
+  commentsEn: string | null
+  commentsBn: string | null
   isActive: boolean | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -134,32 +162,46 @@ export type CitizenCountAggregateOutputType = {
   fatherNameBn: number
   motherNameEn: number
   motherNameBn: number
-  occupation: number
-  residentStatus: number
-  educationalQualification: number
-  religion: number
-  gender: number
-  maritalStatus: number
+  occupationEn: number
+  occupationBn: number
+  residentStatusEn: number
+  residentStatusBn: number
+  educationalQualificationEn: number
+  educationalQualificationBn: number
+  religionEn: number
+  religionBn: number
+  genderEn: number
+  genderBn: number
+  maritalStatusEn: number
+  maritalStatusBn: number
   presentVillageEn: number
   presentVillageBn: number
   presentRoadBlockSectorEn: number
   presentRoadBlockSectorBn: number
   presentHoldingNo: number
   presentWardNo: number
-  presentDistrict: number
-  presentUpazila: number
-  presentPostOffice: number
+  presentDistrictEn: number
+  presentDistrictBn: number
+  presentUpazilaEn: number
+  presentUpazilaBn: number
+  presentPostOfficeEn: number
+  presentPostOfficeBn: number
   permanentVillageEn: number
   permanentVillageBn: number
   permanentRoadBlockSectorEn: number
   permanentRoadBlockSectorBn: number
   permanentHoldingNo: number
   permanentWardNo: number
-  permanentDistrict: number
-  permanentUpazila: number
-  permanentPostOffice: number
+  permanentDistrictEn: number
+  permanentDistrictBn: number
+  permanentUpazilaEn: number
+  permanentUpazilaBn: number
+  permanentPostOfficeEn: number
+  permanentPostOfficeBn: number
   mobile: number
   email: number
+  commentsEn: number
+  commentsBn: number
   isActive: number
   createdAt: number
   updatedAt: number
@@ -189,32 +231,46 @@ export type CitizenMinAggregateInputType = {
   fatherNameBn?: true
   motherNameEn?: true
   motherNameBn?: true
-  occupation?: true
-  residentStatus?: true
-  educationalQualification?: true
-  religion?: true
-  gender?: true
-  maritalStatus?: true
+  occupationEn?: true
+  occupationBn?: true
+  residentStatusEn?: true
+  residentStatusBn?: true
+  educationalQualificationEn?: true
+  educationalQualificationBn?: true
+  religionEn?: true
+  religionBn?: true
+  genderEn?: true
+  genderBn?: true
+  maritalStatusEn?: true
+  maritalStatusBn?: true
   presentVillageEn?: true
   presentVillageBn?: true
   presentRoadBlockSectorEn?: true
   presentRoadBlockSectorBn?: true
   presentHoldingNo?: true
   presentWardNo?: true
-  presentDistrict?: true
-  presentUpazila?: true
-  presentPostOffice?: true
+  presentDistrictEn?: true
+  presentDistrictBn?: true
+  presentUpazilaEn?: true
+  presentUpazilaBn?: true
+  presentPostOfficeEn?: true
+  presentPostOfficeBn?: true
   permanentVillageEn?: true
   permanentVillageBn?: true
   permanentRoadBlockSectorEn?: true
   permanentRoadBlockSectorBn?: true
   permanentHoldingNo?: true
   permanentWardNo?: true
-  permanentDistrict?: true
-  permanentUpazila?: true
-  permanentPostOffice?: true
+  permanentDistrictEn?: true
+  permanentDistrictBn?: true
+  permanentUpazilaEn?: true
+  permanentUpazilaBn?: true
+  permanentPostOfficeEn?: true
+  permanentPostOfficeBn?: true
   mobile?: true
   email?: true
+  commentsEn?: true
+  commentsBn?: true
   isActive?: true
   createdAt?: true
   updatedAt?: true
@@ -232,32 +288,46 @@ export type CitizenMaxAggregateInputType = {
   fatherNameBn?: true
   motherNameEn?: true
   motherNameBn?: true
-  occupation?: true
-  residentStatus?: true
-  educationalQualification?: true
-  religion?: true
-  gender?: true
-  maritalStatus?: true
+  occupationEn?: true
+  occupationBn?: true
+  residentStatusEn?: true
+  residentStatusBn?: true
+  educationalQualificationEn?: true
+  educationalQualificationBn?: true
+  religionEn?: true
+  religionBn?: true
+  genderEn?: true
+  genderBn?: true
+  maritalStatusEn?: true
+  maritalStatusBn?: true
   presentVillageEn?: true
   presentVillageBn?: true
   presentRoadBlockSectorEn?: true
   presentRoadBlockSectorBn?: true
   presentHoldingNo?: true
   presentWardNo?: true
-  presentDistrict?: true
-  presentUpazila?: true
-  presentPostOffice?: true
+  presentDistrictEn?: true
+  presentDistrictBn?: true
+  presentUpazilaEn?: true
+  presentUpazilaBn?: true
+  presentPostOfficeEn?: true
+  presentPostOfficeBn?: true
   permanentVillageEn?: true
   permanentVillageBn?: true
   permanentRoadBlockSectorEn?: true
   permanentRoadBlockSectorBn?: true
   permanentHoldingNo?: true
   permanentWardNo?: true
-  permanentDistrict?: true
-  permanentUpazila?: true
-  permanentPostOffice?: true
+  permanentDistrictEn?: true
+  permanentDistrictBn?: true
+  permanentUpazilaEn?: true
+  permanentUpazilaBn?: true
+  permanentPostOfficeEn?: true
+  permanentPostOfficeBn?: true
   mobile?: true
   email?: true
+  commentsEn?: true
+  commentsBn?: true
   isActive?: true
   createdAt?: true
   updatedAt?: true
@@ -275,32 +345,46 @@ export type CitizenCountAggregateInputType = {
   fatherNameBn?: true
   motherNameEn?: true
   motherNameBn?: true
-  occupation?: true
-  residentStatus?: true
-  educationalQualification?: true
-  religion?: true
-  gender?: true
-  maritalStatus?: true
+  occupationEn?: true
+  occupationBn?: true
+  residentStatusEn?: true
+  residentStatusBn?: true
+  educationalQualificationEn?: true
+  educationalQualificationBn?: true
+  religionEn?: true
+  religionBn?: true
+  genderEn?: true
+  genderBn?: true
+  maritalStatusEn?: true
+  maritalStatusBn?: true
   presentVillageEn?: true
   presentVillageBn?: true
   presentRoadBlockSectorEn?: true
   presentRoadBlockSectorBn?: true
   presentHoldingNo?: true
   presentWardNo?: true
-  presentDistrict?: true
-  presentUpazila?: true
-  presentPostOffice?: true
+  presentDistrictEn?: true
+  presentDistrictBn?: true
+  presentUpazilaEn?: true
+  presentUpazilaBn?: true
+  presentPostOfficeEn?: true
+  presentPostOfficeBn?: true
   permanentVillageEn?: true
   permanentVillageBn?: true
   permanentRoadBlockSectorEn?: true
   permanentRoadBlockSectorBn?: true
   permanentHoldingNo?: true
   permanentWardNo?: true
-  permanentDistrict?: true
-  permanentUpazila?: true
-  permanentPostOffice?: true
+  permanentDistrictEn?: true
+  permanentDistrictBn?: true
+  permanentUpazilaEn?: true
+  permanentUpazilaBn?: true
+  permanentPostOfficeEn?: true
+  permanentPostOfficeBn?: true
   mobile?: true
   email?: true
+  commentsEn?: true
+  commentsBn?: true
   isActive?: true
   createdAt?: true
   updatedAt?: true
@@ -405,32 +489,46 @@ export type CitizenGroupByOutputType = {
   fatherNameBn: string
   motherNameEn: string | null
   motherNameBn: string
-  occupation: string | null
-  residentStatus: string
-  educationalQualification: string | null
-  religion: string
-  gender: string
-  maritalStatus: string
+  occupationEn: string | null
+  occupationBn: string
+  residentStatusEn: string | null
+  residentStatusBn: string
+  educationalQualificationEn: string | null
+  educationalQualificationBn: string | null
+  religionEn: string | null
+  religionBn: string
+  genderEn: string | null
+  genderBn: string
+  maritalStatusEn: string | null
+  maritalStatusBn: string
   presentVillageEn: string | null
   presentVillageBn: string
   presentRoadBlockSectorEn: string | null
   presentRoadBlockSectorBn: string | null
   presentHoldingNo: string | null
   presentWardNo: number
-  presentDistrict: string
-  presentUpazila: string
-  presentPostOffice: string
+  presentDistrictEn: string | null
+  presentDistrictBn: string
+  presentUpazilaEn: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn: string | null
+  presentPostOfficeBn: string
   permanentVillageEn: string | null
   permanentVillageBn: string
   permanentRoadBlockSectorEn: string | null
   permanentRoadBlockSectorBn: string | null
   permanentHoldingNo: string | null
   permanentWardNo: number
-  permanentDistrict: string
-  permanentUpazila: string
-  permanentPostOffice: string
+  permanentDistrictEn: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn: string | null
+  permanentPostOfficeBn: string
   mobile: string
   email: string | null
+  commentsEn: string | null
+  commentsBn: string | null
   isActive: boolean
   createdAt: Date
   updatedAt: Date
@@ -471,36 +569,55 @@ export type CitizenWhereInput = {
   fatherNameBn?: Prisma.StringFilter<"Citizen"> | string
   motherNameEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   motherNameBn?: Prisma.StringFilter<"Citizen"> | string
-  occupation?: Prisma.StringNullableFilter<"Citizen"> | string | null
-  residentStatus?: Prisma.StringFilter<"Citizen"> | string
-  educationalQualification?: Prisma.StringNullableFilter<"Citizen"> | string | null
-  religion?: Prisma.StringFilter<"Citizen"> | string
-  gender?: Prisma.StringFilter<"Citizen"> | string
-  maritalStatus?: Prisma.StringFilter<"Citizen"> | string
+  occupationEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  occupationBn?: Prisma.StringFilter<"Citizen"> | string
+  residentStatusEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  residentStatusBn?: Prisma.StringFilter<"Citizen"> | string
+  educationalQualificationEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  educationalQualificationBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  religionEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  religionBn?: Prisma.StringFilter<"Citizen"> | string
+  genderEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  genderBn?: Prisma.StringFilter<"Citizen"> | string
+  maritalStatusEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  maritalStatusBn?: Prisma.StringFilter<"Citizen"> | string
   presentVillageEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentVillageBn?: Prisma.StringFilter<"Citizen"> | string
   presentRoadBlockSectorEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentRoadBlockSectorBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentHoldingNo?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentWardNo?: Prisma.IntFilter<"Citizen"> | number
-  presentDistrict?: Prisma.StringFilter<"Citizen"> | string
-  presentUpazila?: Prisma.StringFilter<"Citizen"> | string
-  presentPostOffice?: Prisma.StringFilter<"Citizen"> | string
+  presentDistrictEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  presentDistrictBn?: Prisma.StringFilter<"Citizen"> | string
+  presentUpazilaEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  presentUpazilaBn?: Prisma.StringFilter<"Citizen"> | string
+  presentPostOfficeEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  presentPostOfficeBn?: Prisma.StringFilter<"Citizen"> | string
   permanentVillageEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentVillageBn?: Prisma.StringFilter<"Citizen"> | string
   permanentRoadBlockSectorEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentRoadBlockSectorBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentHoldingNo?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentWardNo?: Prisma.IntFilter<"Citizen"> | number
-  permanentDistrict?: Prisma.StringFilter<"Citizen"> | string
-  permanentUpazila?: Prisma.StringFilter<"Citizen"> | string
-  permanentPostOffice?: Prisma.StringFilter<"Citizen"> | string
+  permanentDistrictEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  permanentDistrictBn?: Prisma.StringFilter<"Citizen"> | string
+  permanentUpazilaEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  permanentUpazilaBn?: Prisma.StringFilter<"Citizen"> | string
+  permanentPostOfficeEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  permanentPostOfficeBn?: Prisma.StringFilter<"Citizen"> | string
   mobile?: Prisma.StringFilter<"Citizen"> | string
   email?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  commentsEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  commentsBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   isActive?: Prisma.BoolFilter<"Citizen"> | boolean
   createdAt?: Prisma.DateTimeFilter<"Citizen"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Citizen"> | Date | string
   applications?: Prisma.CitizenApplicationListRelationFilter
+  familyApplications?: Prisma.FamilyApplicationListRelationFilter
+  asFamilyMember?: Prisma.FamilyMemberListRelationFilter
+  holdingTaxes?: Prisma.HoldingTaxListRelationFilter
+  assessments?: Prisma.AssessmentApplicationListRelationFilter
+  certificateApplications?: Prisma.CertificateApplicationListRelationFilter
 }
 
 export type CitizenOrderByWithRelationInput = {
@@ -515,36 +632,55 @@ export type CitizenOrderByWithRelationInput = {
   fatherNameBn?: Prisma.SortOrder
   motherNameEn?: Prisma.SortOrderInput | Prisma.SortOrder
   motherNameBn?: Prisma.SortOrder
-  occupation?: Prisma.SortOrderInput | Prisma.SortOrder
-  residentStatus?: Prisma.SortOrder
-  educationalQualification?: Prisma.SortOrderInput | Prisma.SortOrder
-  religion?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  maritalStatus?: Prisma.SortOrder
+  occupationEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  occupationBn?: Prisma.SortOrder
+  residentStatusEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  residentStatusBn?: Prisma.SortOrder
+  educationalQualificationEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  educationalQualificationBn?: Prisma.SortOrderInput | Prisma.SortOrder
+  religionEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  religionBn?: Prisma.SortOrder
+  genderEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  genderBn?: Prisma.SortOrder
+  maritalStatusEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  maritalStatusBn?: Prisma.SortOrder
   presentVillageEn?: Prisma.SortOrderInput | Prisma.SortOrder
   presentVillageBn?: Prisma.SortOrder
   presentRoadBlockSectorEn?: Prisma.SortOrderInput | Prisma.SortOrder
   presentRoadBlockSectorBn?: Prisma.SortOrderInput | Prisma.SortOrder
   presentHoldingNo?: Prisma.SortOrderInput | Prisma.SortOrder
   presentWardNo?: Prisma.SortOrder
-  presentDistrict?: Prisma.SortOrder
-  presentUpazila?: Prisma.SortOrder
-  presentPostOffice?: Prisma.SortOrder
+  presentDistrictEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  presentDistrictBn?: Prisma.SortOrder
+  presentUpazilaEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  presentUpazilaBn?: Prisma.SortOrder
+  presentPostOfficeEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  presentPostOfficeBn?: Prisma.SortOrder
   permanentVillageEn?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentVillageBn?: Prisma.SortOrder
   permanentRoadBlockSectorEn?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentRoadBlockSectorBn?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentHoldingNo?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentWardNo?: Prisma.SortOrder
-  permanentDistrict?: Prisma.SortOrder
-  permanentUpazila?: Prisma.SortOrder
-  permanentPostOffice?: Prisma.SortOrder
+  permanentDistrictEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  permanentDistrictBn?: Prisma.SortOrder
+  permanentUpazilaEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  permanentUpazilaBn?: Prisma.SortOrder
+  permanentPostOfficeEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  permanentPostOfficeBn?: Prisma.SortOrder
   mobile?: Prisma.SortOrder
   email?: Prisma.SortOrderInput | Prisma.SortOrder
+  commentsEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  commentsBn?: Prisma.SortOrderInput | Prisma.SortOrder
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   applications?: Prisma.CitizenApplicationOrderByRelationAggregateInput
+  familyApplications?: Prisma.FamilyApplicationOrderByRelationAggregateInput
+  asFamilyMember?: Prisma.FamilyMemberOrderByRelationAggregateInput
+  holdingTaxes?: Prisma.HoldingTaxOrderByRelationAggregateInput
+  assessments?: Prisma.AssessmentApplicationOrderByRelationAggregateInput
+  certificateApplications?: Prisma.CertificateApplicationOrderByRelationAggregateInput
 }
 
 export type CitizenWhereUniqueInput = Prisma.AtLeast<{
@@ -562,36 +698,55 @@ export type CitizenWhereUniqueInput = Prisma.AtLeast<{
   fatherNameBn?: Prisma.StringFilter<"Citizen"> | string
   motherNameEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   motherNameBn?: Prisma.StringFilter<"Citizen"> | string
-  occupation?: Prisma.StringNullableFilter<"Citizen"> | string | null
-  residentStatus?: Prisma.StringFilter<"Citizen"> | string
-  educationalQualification?: Prisma.StringNullableFilter<"Citizen"> | string | null
-  religion?: Prisma.StringFilter<"Citizen"> | string
-  gender?: Prisma.StringFilter<"Citizen"> | string
-  maritalStatus?: Prisma.StringFilter<"Citizen"> | string
+  occupationEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  occupationBn?: Prisma.StringFilter<"Citizen"> | string
+  residentStatusEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  residentStatusBn?: Prisma.StringFilter<"Citizen"> | string
+  educationalQualificationEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  educationalQualificationBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  religionEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  religionBn?: Prisma.StringFilter<"Citizen"> | string
+  genderEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  genderBn?: Prisma.StringFilter<"Citizen"> | string
+  maritalStatusEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  maritalStatusBn?: Prisma.StringFilter<"Citizen"> | string
   presentVillageEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentVillageBn?: Prisma.StringFilter<"Citizen"> | string
   presentRoadBlockSectorEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentRoadBlockSectorBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentHoldingNo?: Prisma.StringNullableFilter<"Citizen"> | string | null
   presentWardNo?: Prisma.IntFilter<"Citizen"> | number
-  presentDistrict?: Prisma.StringFilter<"Citizen"> | string
-  presentUpazila?: Prisma.StringFilter<"Citizen"> | string
-  presentPostOffice?: Prisma.StringFilter<"Citizen"> | string
+  presentDistrictEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  presentDistrictBn?: Prisma.StringFilter<"Citizen"> | string
+  presentUpazilaEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  presentUpazilaBn?: Prisma.StringFilter<"Citizen"> | string
+  presentPostOfficeEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  presentPostOfficeBn?: Prisma.StringFilter<"Citizen"> | string
   permanentVillageEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentVillageBn?: Prisma.StringFilter<"Citizen"> | string
   permanentRoadBlockSectorEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentRoadBlockSectorBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentHoldingNo?: Prisma.StringNullableFilter<"Citizen"> | string | null
   permanentWardNo?: Prisma.IntFilter<"Citizen"> | number
-  permanentDistrict?: Prisma.StringFilter<"Citizen"> | string
-  permanentUpazila?: Prisma.StringFilter<"Citizen"> | string
-  permanentPostOffice?: Prisma.StringFilter<"Citizen"> | string
+  permanentDistrictEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  permanentDistrictBn?: Prisma.StringFilter<"Citizen"> | string
+  permanentUpazilaEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  permanentUpazilaBn?: Prisma.StringFilter<"Citizen"> | string
+  permanentPostOfficeEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  permanentPostOfficeBn?: Prisma.StringFilter<"Citizen"> | string
   mobile?: Prisma.StringFilter<"Citizen"> | string
   email?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  commentsEn?: Prisma.StringNullableFilter<"Citizen"> | string | null
+  commentsBn?: Prisma.StringNullableFilter<"Citizen"> | string | null
   isActive?: Prisma.BoolFilter<"Citizen"> | boolean
   createdAt?: Prisma.DateTimeFilter<"Citizen"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Citizen"> | Date | string
   applications?: Prisma.CitizenApplicationListRelationFilter
+  familyApplications?: Prisma.FamilyApplicationListRelationFilter
+  asFamilyMember?: Prisma.FamilyMemberListRelationFilter
+  holdingTaxes?: Prisma.HoldingTaxListRelationFilter
+  assessments?: Prisma.AssessmentApplicationListRelationFilter
+  certificateApplications?: Prisma.CertificateApplicationListRelationFilter
 }, "id" | "nid">
 
 export type CitizenOrderByWithAggregationInput = {
@@ -606,32 +761,46 @@ export type CitizenOrderByWithAggregationInput = {
   fatherNameBn?: Prisma.SortOrder
   motherNameEn?: Prisma.SortOrderInput | Prisma.SortOrder
   motherNameBn?: Prisma.SortOrder
-  occupation?: Prisma.SortOrderInput | Prisma.SortOrder
-  residentStatus?: Prisma.SortOrder
-  educationalQualification?: Prisma.SortOrderInput | Prisma.SortOrder
-  religion?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  maritalStatus?: Prisma.SortOrder
+  occupationEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  occupationBn?: Prisma.SortOrder
+  residentStatusEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  residentStatusBn?: Prisma.SortOrder
+  educationalQualificationEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  educationalQualificationBn?: Prisma.SortOrderInput | Prisma.SortOrder
+  religionEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  religionBn?: Prisma.SortOrder
+  genderEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  genderBn?: Prisma.SortOrder
+  maritalStatusEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  maritalStatusBn?: Prisma.SortOrder
   presentVillageEn?: Prisma.SortOrderInput | Prisma.SortOrder
   presentVillageBn?: Prisma.SortOrder
   presentRoadBlockSectorEn?: Prisma.SortOrderInput | Prisma.SortOrder
   presentRoadBlockSectorBn?: Prisma.SortOrderInput | Prisma.SortOrder
   presentHoldingNo?: Prisma.SortOrderInput | Prisma.SortOrder
   presentWardNo?: Prisma.SortOrder
-  presentDistrict?: Prisma.SortOrder
-  presentUpazila?: Prisma.SortOrder
-  presentPostOffice?: Prisma.SortOrder
+  presentDistrictEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  presentDistrictBn?: Prisma.SortOrder
+  presentUpazilaEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  presentUpazilaBn?: Prisma.SortOrder
+  presentPostOfficeEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  presentPostOfficeBn?: Prisma.SortOrder
   permanentVillageEn?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentVillageBn?: Prisma.SortOrder
   permanentRoadBlockSectorEn?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentRoadBlockSectorBn?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentHoldingNo?: Prisma.SortOrderInput | Prisma.SortOrder
   permanentWardNo?: Prisma.SortOrder
-  permanentDistrict?: Prisma.SortOrder
-  permanentUpazila?: Prisma.SortOrder
-  permanentPostOffice?: Prisma.SortOrder
+  permanentDistrictEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  permanentDistrictBn?: Prisma.SortOrder
+  permanentUpazilaEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  permanentUpazilaBn?: Prisma.SortOrder
+  permanentPostOfficeEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  permanentPostOfficeBn?: Prisma.SortOrder
   mobile?: Prisma.SortOrder
   email?: Prisma.SortOrderInput | Prisma.SortOrder
+  commentsEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  commentsBn?: Prisma.SortOrderInput | Prisma.SortOrder
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -657,32 +826,46 @@ export type CitizenScalarWhereWithAggregatesInput = {
   fatherNameBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
   motherNameEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   motherNameBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  occupation?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
-  residentStatus?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  educationalQualification?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
-  religion?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  gender?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  maritalStatus?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  occupationEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  occupationBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  residentStatusEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  residentStatusBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  educationalQualificationEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  educationalQualificationBn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  religionEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  religionBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  genderEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  genderBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  maritalStatusEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  maritalStatusBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
   presentVillageEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   presentVillageBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
   presentRoadBlockSectorEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   presentRoadBlockSectorBn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   presentHoldingNo?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   presentWardNo?: Prisma.IntWithAggregatesFilter<"Citizen"> | number
-  presentDistrict?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  presentUpazila?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  presentPostOffice?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  presentDistrictEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  presentDistrictBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  presentUpazilaEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  presentUpazilaBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  presentPostOfficeEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  presentPostOfficeBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
   permanentVillageEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   permanentVillageBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
   permanentRoadBlockSectorEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   permanentRoadBlockSectorBn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   permanentHoldingNo?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   permanentWardNo?: Prisma.IntWithAggregatesFilter<"Citizen"> | number
-  permanentDistrict?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  permanentUpazila?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
-  permanentPostOffice?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  permanentDistrictEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  permanentDistrictBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  permanentUpazilaEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  permanentUpazilaBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
+  permanentPostOfficeEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  permanentPostOfficeBn?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
   mobile?: Prisma.StringWithAggregatesFilter<"Citizen"> | string
   email?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  commentsEn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
+  commentsBn?: Prisma.StringNullableWithAggregatesFilter<"Citizen"> | string | null
   isActive?: Prisma.BoolWithAggregatesFilter<"Citizen"> | boolean
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Citizen"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Citizen"> | Date | string
@@ -700,36 +883,55 @@ export type CitizenCreateInput = {
   fatherNameBn: string
   motherNameEn?: string | null
   motherNameBn: string
-  occupation?: string | null
-  residentStatus: string
-  educationalQualification?: string | null
-  religion: string
-  gender: string
-  maritalStatus: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
   presentVillageEn?: string | null
   presentVillageBn: string
   presentRoadBlockSectorEn?: string | null
   presentRoadBlockSectorBn?: string | null
   presentHoldingNo?: string | null
   presentWardNo: number
-  presentDistrict: string
-  presentUpazila: string
-  presentPostOffice: string
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
   permanentVillageEn?: string | null
   permanentVillageBn: string
   permanentRoadBlockSectorEn?: string | null
   permanentRoadBlockSectorBn?: string | null
   permanentHoldingNo?: string | null
   permanentWardNo: number
-  permanentDistrict: string
-  permanentUpazila: string
-  permanentPostOffice: string
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
   mobile: string
   email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   applications?: Prisma.CitizenApplicationCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationCreateNestedManyWithoutCitizenInput
 }
 
 export type CitizenUncheckedCreateInput = {
@@ -744,36 +946,55 @@ export type CitizenUncheckedCreateInput = {
   fatherNameBn: string
   motherNameEn?: string | null
   motherNameBn: string
-  occupation?: string | null
-  residentStatus: string
-  educationalQualification?: string | null
-  religion: string
-  gender: string
-  maritalStatus: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
   presentVillageEn?: string | null
   presentVillageBn: string
   presentRoadBlockSectorEn?: string | null
   presentRoadBlockSectorBn?: string | null
   presentHoldingNo?: string | null
   presentWardNo: number
-  presentDistrict: string
-  presentUpazila: string
-  presentPostOffice: string
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
   permanentVillageEn?: string | null
   permanentVillageBn: string
   permanentRoadBlockSectorEn?: string | null
   permanentRoadBlockSectorBn?: string | null
   permanentHoldingNo?: string | null
   permanentWardNo: number
-  permanentDistrict: string
-  permanentUpazila: string
-  permanentPostOffice: string
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
   mobile: string
   email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   applications?: Prisma.CitizenApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedCreateNestedManyWithoutCitizenInput
 }
 
 export type CitizenUpdateInput = {
@@ -788,36 +1009,55 @@ export type CitizenUpdateInput = {
   fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
   motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
-  occupation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  residentStatus?: Prisma.StringFieldUpdateOperationsInput | string
-  educationalQualification?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  religion?: Prisma.StringFieldUpdateOperationsInput | string
-  gender?: Prisma.StringFieldUpdateOperationsInput | string
-  maritalStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  presentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  presentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  presentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  permanentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   mobile?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   applications?: Prisma.CitizenApplicationUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUpdateManyWithoutCitizenNestedInput
 }
 
 export type CitizenUncheckedUpdateInput = {
@@ -832,36 +1072,55 @@ export type CitizenUncheckedUpdateInput = {
   fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
   motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
-  occupation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  residentStatus?: Prisma.StringFieldUpdateOperationsInput | string
-  educationalQualification?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  religion?: Prisma.StringFieldUpdateOperationsInput | string
-  gender?: Prisma.StringFieldUpdateOperationsInput | string
-  maritalStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  presentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  presentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  presentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  permanentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   mobile?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   applications?: Prisma.CitizenApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedUpdateManyWithoutCitizenNestedInput
 }
 
 export type CitizenCreateManyInput = {
@@ -876,32 +1135,46 @@ export type CitizenCreateManyInput = {
   fatherNameBn: string
   motherNameEn?: string | null
   motherNameBn: string
-  occupation?: string | null
-  residentStatus: string
-  educationalQualification?: string | null
-  religion: string
-  gender: string
-  maritalStatus: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
   presentVillageEn?: string | null
   presentVillageBn: string
   presentRoadBlockSectorEn?: string | null
   presentRoadBlockSectorBn?: string | null
   presentHoldingNo?: string | null
   presentWardNo: number
-  presentDistrict: string
-  presentUpazila: string
-  presentPostOffice: string
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
   permanentVillageEn?: string | null
   permanentVillageBn: string
   permanentRoadBlockSectorEn?: string | null
   permanentRoadBlockSectorBn?: string | null
   permanentHoldingNo?: string | null
   permanentWardNo: number
-  permanentDistrict: string
-  permanentUpazila: string
-  permanentPostOffice: string
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
   mobile: string
   email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -919,32 +1192,46 @@ export type CitizenUpdateManyMutationInput = {
   fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
   motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
-  occupation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  residentStatus?: Prisma.StringFieldUpdateOperationsInput | string
-  educationalQualification?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  religion?: Prisma.StringFieldUpdateOperationsInput | string
-  gender?: Prisma.StringFieldUpdateOperationsInput | string
-  maritalStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  presentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  presentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  presentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  permanentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   mobile?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -962,32 +1249,46 @@ export type CitizenUncheckedUpdateManyInput = {
   fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
   motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
-  occupation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  residentStatus?: Prisma.StringFieldUpdateOperationsInput | string
-  educationalQualification?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  religion?: Prisma.StringFieldUpdateOperationsInput | string
-  gender?: Prisma.StringFieldUpdateOperationsInput | string
-  maritalStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  presentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  presentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  presentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  permanentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   mobile?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1010,32 +1311,46 @@ export type CitizenCountOrderByAggregateInput = {
   fatherNameBn?: Prisma.SortOrder
   motherNameEn?: Prisma.SortOrder
   motherNameBn?: Prisma.SortOrder
-  occupation?: Prisma.SortOrder
-  residentStatus?: Prisma.SortOrder
-  educationalQualification?: Prisma.SortOrder
-  religion?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  maritalStatus?: Prisma.SortOrder
+  occupationEn?: Prisma.SortOrder
+  occupationBn?: Prisma.SortOrder
+  residentStatusEn?: Prisma.SortOrder
+  residentStatusBn?: Prisma.SortOrder
+  educationalQualificationEn?: Prisma.SortOrder
+  educationalQualificationBn?: Prisma.SortOrder
+  religionEn?: Prisma.SortOrder
+  religionBn?: Prisma.SortOrder
+  genderEn?: Prisma.SortOrder
+  genderBn?: Prisma.SortOrder
+  maritalStatusEn?: Prisma.SortOrder
+  maritalStatusBn?: Prisma.SortOrder
   presentVillageEn?: Prisma.SortOrder
   presentVillageBn?: Prisma.SortOrder
   presentRoadBlockSectorEn?: Prisma.SortOrder
   presentRoadBlockSectorBn?: Prisma.SortOrder
   presentHoldingNo?: Prisma.SortOrder
   presentWardNo?: Prisma.SortOrder
-  presentDistrict?: Prisma.SortOrder
-  presentUpazila?: Prisma.SortOrder
-  presentPostOffice?: Prisma.SortOrder
+  presentDistrictEn?: Prisma.SortOrder
+  presentDistrictBn?: Prisma.SortOrder
+  presentUpazilaEn?: Prisma.SortOrder
+  presentUpazilaBn?: Prisma.SortOrder
+  presentPostOfficeEn?: Prisma.SortOrder
+  presentPostOfficeBn?: Prisma.SortOrder
   permanentVillageEn?: Prisma.SortOrder
   permanentVillageBn?: Prisma.SortOrder
   permanentRoadBlockSectorEn?: Prisma.SortOrder
   permanentRoadBlockSectorBn?: Prisma.SortOrder
   permanentHoldingNo?: Prisma.SortOrder
   permanentWardNo?: Prisma.SortOrder
-  permanentDistrict?: Prisma.SortOrder
-  permanentUpazila?: Prisma.SortOrder
-  permanentPostOffice?: Prisma.SortOrder
+  permanentDistrictEn?: Prisma.SortOrder
+  permanentDistrictBn?: Prisma.SortOrder
+  permanentUpazilaEn?: Prisma.SortOrder
+  permanentUpazilaBn?: Prisma.SortOrder
+  permanentPostOfficeEn?: Prisma.SortOrder
+  permanentPostOfficeBn?: Prisma.SortOrder
   mobile?: Prisma.SortOrder
   email?: Prisma.SortOrder
+  commentsEn?: Prisma.SortOrder
+  commentsBn?: Prisma.SortOrder
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -1058,32 +1373,46 @@ export type CitizenMaxOrderByAggregateInput = {
   fatherNameBn?: Prisma.SortOrder
   motherNameEn?: Prisma.SortOrder
   motherNameBn?: Prisma.SortOrder
-  occupation?: Prisma.SortOrder
-  residentStatus?: Prisma.SortOrder
-  educationalQualification?: Prisma.SortOrder
-  religion?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  maritalStatus?: Prisma.SortOrder
+  occupationEn?: Prisma.SortOrder
+  occupationBn?: Prisma.SortOrder
+  residentStatusEn?: Prisma.SortOrder
+  residentStatusBn?: Prisma.SortOrder
+  educationalQualificationEn?: Prisma.SortOrder
+  educationalQualificationBn?: Prisma.SortOrder
+  religionEn?: Prisma.SortOrder
+  religionBn?: Prisma.SortOrder
+  genderEn?: Prisma.SortOrder
+  genderBn?: Prisma.SortOrder
+  maritalStatusEn?: Prisma.SortOrder
+  maritalStatusBn?: Prisma.SortOrder
   presentVillageEn?: Prisma.SortOrder
   presentVillageBn?: Prisma.SortOrder
   presentRoadBlockSectorEn?: Prisma.SortOrder
   presentRoadBlockSectorBn?: Prisma.SortOrder
   presentHoldingNo?: Prisma.SortOrder
   presentWardNo?: Prisma.SortOrder
-  presentDistrict?: Prisma.SortOrder
-  presentUpazila?: Prisma.SortOrder
-  presentPostOffice?: Prisma.SortOrder
+  presentDistrictEn?: Prisma.SortOrder
+  presentDistrictBn?: Prisma.SortOrder
+  presentUpazilaEn?: Prisma.SortOrder
+  presentUpazilaBn?: Prisma.SortOrder
+  presentPostOfficeEn?: Prisma.SortOrder
+  presentPostOfficeBn?: Prisma.SortOrder
   permanentVillageEn?: Prisma.SortOrder
   permanentVillageBn?: Prisma.SortOrder
   permanentRoadBlockSectorEn?: Prisma.SortOrder
   permanentRoadBlockSectorBn?: Prisma.SortOrder
   permanentHoldingNo?: Prisma.SortOrder
   permanentWardNo?: Prisma.SortOrder
-  permanentDistrict?: Prisma.SortOrder
-  permanentUpazila?: Prisma.SortOrder
-  permanentPostOffice?: Prisma.SortOrder
+  permanentDistrictEn?: Prisma.SortOrder
+  permanentDistrictBn?: Prisma.SortOrder
+  permanentUpazilaEn?: Prisma.SortOrder
+  permanentUpazilaBn?: Prisma.SortOrder
+  permanentPostOfficeEn?: Prisma.SortOrder
+  permanentPostOfficeBn?: Prisma.SortOrder
   mobile?: Prisma.SortOrder
   email?: Prisma.SortOrder
+  commentsEn?: Prisma.SortOrder
+  commentsBn?: Prisma.SortOrder
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -1101,32 +1430,46 @@ export type CitizenMinOrderByAggregateInput = {
   fatherNameBn?: Prisma.SortOrder
   motherNameEn?: Prisma.SortOrder
   motherNameBn?: Prisma.SortOrder
-  occupation?: Prisma.SortOrder
-  residentStatus?: Prisma.SortOrder
-  educationalQualification?: Prisma.SortOrder
-  religion?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  maritalStatus?: Prisma.SortOrder
+  occupationEn?: Prisma.SortOrder
+  occupationBn?: Prisma.SortOrder
+  residentStatusEn?: Prisma.SortOrder
+  residentStatusBn?: Prisma.SortOrder
+  educationalQualificationEn?: Prisma.SortOrder
+  educationalQualificationBn?: Prisma.SortOrder
+  religionEn?: Prisma.SortOrder
+  religionBn?: Prisma.SortOrder
+  genderEn?: Prisma.SortOrder
+  genderBn?: Prisma.SortOrder
+  maritalStatusEn?: Prisma.SortOrder
+  maritalStatusBn?: Prisma.SortOrder
   presentVillageEn?: Prisma.SortOrder
   presentVillageBn?: Prisma.SortOrder
   presentRoadBlockSectorEn?: Prisma.SortOrder
   presentRoadBlockSectorBn?: Prisma.SortOrder
   presentHoldingNo?: Prisma.SortOrder
   presentWardNo?: Prisma.SortOrder
-  presentDistrict?: Prisma.SortOrder
-  presentUpazila?: Prisma.SortOrder
-  presentPostOffice?: Prisma.SortOrder
+  presentDistrictEn?: Prisma.SortOrder
+  presentDistrictBn?: Prisma.SortOrder
+  presentUpazilaEn?: Prisma.SortOrder
+  presentUpazilaBn?: Prisma.SortOrder
+  presentPostOfficeEn?: Prisma.SortOrder
+  presentPostOfficeBn?: Prisma.SortOrder
   permanentVillageEn?: Prisma.SortOrder
   permanentVillageBn?: Prisma.SortOrder
   permanentRoadBlockSectorEn?: Prisma.SortOrder
   permanentRoadBlockSectorBn?: Prisma.SortOrder
   permanentHoldingNo?: Prisma.SortOrder
   permanentWardNo?: Prisma.SortOrder
-  permanentDistrict?: Prisma.SortOrder
-  permanentUpazila?: Prisma.SortOrder
-  permanentPostOffice?: Prisma.SortOrder
+  permanentDistrictEn?: Prisma.SortOrder
+  permanentDistrictBn?: Prisma.SortOrder
+  permanentUpazilaEn?: Prisma.SortOrder
+  permanentUpazilaBn?: Prisma.SortOrder
+  permanentPostOfficeEn?: Prisma.SortOrder
+  permanentPostOfficeBn?: Prisma.SortOrder
   mobile?: Prisma.SortOrder
   email?: Prisma.SortOrder
+  commentsEn?: Prisma.SortOrder
+  commentsBn?: Prisma.SortOrder
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -1135,6 +1478,11 @@ export type CitizenMinOrderByAggregateInput = {
 export type CitizenSumOrderByAggregateInput = {
   presentWardNo?: Prisma.SortOrder
   permanentWardNo?: Prisma.SortOrder
+}
+
+export type CitizenScalarRelationFilter = {
+  is?: Prisma.CitizenWhereInput
+  isNot?: Prisma.CitizenWhereInput
 }
 
 export type CitizenCreateNestedOneWithoutApplicationsInput = {
@@ -1157,6 +1505,82 @@ export type BoolFieldUpdateOperationsInput = {
   set?: boolean
 }
 
+export type CitizenCreateNestedOneWithoutFamilyApplicationsInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutFamilyApplicationsInput, Prisma.CitizenUncheckedCreateWithoutFamilyApplicationsInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutFamilyApplicationsInput
+  connect?: Prisma.CitizenWhereUniqueInput
+}
+
+export type CitizenUpdateOneRequiredWithoutFamilyApplicationsNestedInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutFamilyApplicationsInput, Prisma.CitizenUncheckedCreateWithoutFamilyApplicationsInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutFamilyApplicationsInput
+  upsert?: Prisma.CitizenUpsertWithoutFamilyApplicationsInput
+  connect?: Prisma.CitizenWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CitizenUpdateToOneWithWhereWithoutFamilyApplicationsInput, Prisma.CitizenUpdateWithoutFamilyApplicationsInput>, Prisma.CitizenUncheckedUpdateWithoutFamilyApplicationsInput>
+}
+
+export type CitizenCreateNestedOneWithoutAsFamilyMemberInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutAsFamilyMemberInput, Prisma.CitizenUncheckedCreateWithoutAsFamilyMemberInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutAsFamilyMemberInput
+  connect?: Prisma.CitizenWhereUniqueInput
+}
+
+export type CitizenUpdateOneWithoutAsFamilyMemberNestedInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutAsFamilyMemberInput, Prisma.CitizenUncheckedCreateWithoutAsFamilyMemberInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutAsFamilyMemberInput
+  upsert?: Prisma.CitizenUpsertWithoutAsFamilyMemberInput
+  disconnect?: Prisma.CitizenWhereInput | boolean
+  delete?: Prisma.CitizenWhereInput | boolean
+  connect?: Prisma.CitizenWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CitizenUpdateToOneWithWhereWithoutAsFamilyMemberInput, Prisma.CitizenUpdateWithoutAsFamilyMemberInput>, Prisma.CitizenUncheckedUpdateWithoutAsFamilyMemberInput>
+}
+
+export type CitizenCreateNestedOneWithoutAssessmentsInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutAssessmentsInput, Prisma.CitizenUncheckedCreateWithoutAssessmentsInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutAssessmentsInput
+  connect?: Prisma.CitizenWhereUniqueInput
+}
+
+export type CitizenUpdateOneWithoutAssessmentsNestedInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutAssessmentsInput, Prisma.CitizenUncheckedCreateWithoutAssessmentsInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutAssessmentsInput
+  upsert?: Prisma.CitizenUpsertWithoutAssessmentsInput
+  disconnect?: Prisma.CitizenWhereInput | boolean
+  delete?: Prisma.CitizenWhereInput | boolean
+  connect?: Prisma.CitizenWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CitizenUpdateToOneWithWhereWithoutAssessmentsInput, Prisma.CitizenUpdateWithoutAssessmentsInput>, Prisma.CitizenUncheckedUpdateWithoutAssessmentsInput>
+}
+
+export type CitizenCreateNestedOneWithoutHoldingTaxesInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutHoldingTaxesInput, Prisma.CitizenUncheckedCreateWithoutHoldingTaxesInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutHoldingTaxesInput
+  connect?: Prisma.CitizenWhereUniqueInput
+}
+
+export type CitizenUpdateOneWithoutHoldingTaxesNestedInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutHoldingTaxesInput, Prisma.CitizenUncheckedCreateWithoutHoldingTaxesInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutHoldingTaxesInput
+  upsert?: Prisma.CitizenUpsertWithoutHoldingTaxesInput
+  disconnect?: Prisma.CitizenWhereInput | boolean
+  delete?: Prisma.CitizenWhereInput | boolean
+  connect?: Prisma.CitizenWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CitizenUpdateToOneWithWhereWithoutHoldingTaxesInput, Prisma.CitizenUpdateWithoutHoldingTaxesInput>, Prisma.CitizenUncheckedUpdateWithoutHoldingTaxesInput>
+}
+
+export type CitizenCreateNestedOneWithoutCertificateApplicationsInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutCertificateApplicationsInput, Prisma.CitizenUncheckedCreateWithoutCertificateApplicationsInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutCertificateApplicationsInput
+  connect?: Prisma.CitizenWhereUniqueInput
+}
+
+export type CitizenUpdateOneRequiredWithoutCertificateApplicationsNestedInput = {
+  create?: Prisma.XOR<Prisma.CitizenCreateWithoutCertificateApplicationsInput, Prisma.CitizenUncheckedCreateWithoutCertificateApplicationsInput>
+  connectOrCreate?: Prisma.CitizenCreateOrConnectWithoutCertificateApplicationsInput
+  upsert?: Prisma.CitizenUpsertWithoutCertificateApplicationsInput
+  connect?: Prisma.CitizenWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CitizenUpdateToOneWithWhereWithoutCertificateApplicationsInput, Prisma.CitizenUpdateWithoutCertificateApplicationsInput>, Prisma.CitizenUncheckedUpdateWithoutCertificateApplicationsInput>
+}
+
 export type CitizenCreateWithoutApplicationsInput = {
   id?: string
   fullNameEn?: string | null
@@ -1169,35 +1593,54 @@ export type CitizenCreateWithoutApplicationsInput = {
   fatherNameBn: string
   motherNameEn?: string | null
   motherNameBn: string
-  occupation?: string | null
-  residentStatus: string
-  educationalQualification?: string | null
-  religion: string
-  gender: string
-  maritalStatus: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
   presentVillageEn?: string | null
   presentVillageBn: string
   presentRoadBlockSectorEn?: string | null
   presentRoadBlockSectorBn?: string | null
   presentHoldingNo?: string | null
   presentWardNo: number
-  presentDistrict: string
-  presentUpazila: string
-  presentPostOffice: string
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
   permanentVillageEn?: string | null
   permanentVillageBn: string
   permanentRoadBlockSectorEn?: string | null
   permanentRoadBlockSectorBn?: string | null
   permanentHoldingNo?: string | null
   permanentWardNo: number
-  permanentDistrict: string
-  permanentUpazila: string
-  permanentPostOffice: string
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
   mobile: string
   email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  familyApplications?: Prisma.FamilyApplicationCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationCreateNestedManyWithoutCitizenInput
 }
 
 export type CitizenUncheckedCreateWithoutApplicationsInput = {
@@ -1212,35 +1655,54 @@ export type CitizenUncheckedCreateWithoutApplicationsInput = {
   fatherNameBn: string
   motherNameEn?: string | null
   motherNameBn: string
-  occupation?: string | null
-  residentStatus: string
-  educationalQualification?: string | null
-  religion: string
-  gender: string
-  maritalStatus: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
   presentVillageEn?: string | null
   presentVillageBn: string
   presentRoadBlockSectorEn?: string | null
   presentRoadBlockSectorBn?: string | null
   presentHoldingNo?: string | null
   presentWardNo: number
-  presentDistrict: string
-  presentUpazila: string
-  presentPostOffice: string
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
   permanentVillageEn?: string | null
   permanentVillageBn: string
   permanentRoadBlockSectorEn?: string | null
   permanentRoadBlockSectorBn?: string | null
   permanentHoldingNo?: string | null
   permanentWardNo: number
-  permanentDistrict: string
-  permanentUpazila: string
-  permanentPostOffice: string
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
   mobile: string
   email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  familyApplications?: Prisma.FamilyApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedCreateNestedManyWithoutCitizenInput
 }
 
 export type CitizenCreateOrConnectWithoutApplicationsInput = {
@@ -1271,35 +1733,54 @@ export type CitizenUpdateWithoutApplicationsInput = {
   fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
   motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
-  occupation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  residentStatus?: Prisma.StringFieldUpdateOperationsInput | string
-  educationalQualification?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  religion?: Prisma.StringFieldUpdateOperationsInput | string
-  gender?: Prisma.StringFieldUpdateOperationsInput | string
-  maritalStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  presentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  presentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  presentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  permanentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   mobile?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  familyApplications?: Prisma.FamilyApplicationUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUpdateManyWithoutCitizenNestedInput
 }
 
 export type CitizenUncheckedUpdateWithoutApplicationsInput = {
@@ -1314,35 +1795,1374 @@ export type CitizenUncheckedUpdateWithoutApplicationsInput = {
   fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
   motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
-  occupation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  residentStatus?: Prisma.StringFieldUpdateOperationsInput | string
-  educationalQualification?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  religion?: Prisma.StringFieldUpdateOperationsInput | string
-  gender?: Prisma.StringFieldUpdateOperationsInput | string
-  maritalStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  presentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  presentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  presentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
   permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
-  permanentDistrict?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentUpazila?: Prisma.StringFieldUpdateOperationsInput | string
-  permanentPostOffice?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
   mobile?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  familyApplications?: Prisma.FamilyApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenCreateWithoutFamilyApplicationsInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenUncheckedCreateWithoutFamilyApplicationsInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenCreateOrConnectWithoutFamilyApplicationsInput = {
+  where: Prisma.CitizenWhereUniqueInput
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutFamilyApplicationsInput, Prisma.CitizenUncheckedCreateWithoutFamilyApplicationsInput>
+}
+
+export type CitizenUpsertWithoutFamilyApplicationsInput = {
+  update: Prisma.XOR<Prisma.CitizenUpdateWithoutFamilyApplicationsInput, Prisma.CitizenUncheckedUpdateWithoutFamilyApplicationsInput>
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutFamilyApplicationsInput, Prisma.CitizenUncheckedCreateWithoutFamilyApplicationsInput>
+  where?: Prisma.CitizenWhereInput
+}
+
+export type CitizenUpdateToOneWithWhereWithoutFamilyApplicationsInput = {
+  where?: Prisma.CitizenWhereInput
+  data: Prisma.XOR<Prisma.CitizenUpdateWithoutFamilyApplicationsInput, Prisma.CitizenUncheckedUpdateWithoutFamilyApplicationsInput>
+}
+
+export type CitizenUpdateWithoutFamilyApplicationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenUncheckedUpdateWithoutFamilyApplicationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenCreateWithoutAsFamilyMemberInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenUncheckedCreateWithoutAsFamilyMemberInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenCreateOrConnectWithoutAsFamilyMemberInput = {
+  where: Prisma.CitizenWhereUniqueInput
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutAsFamilyMemberInput, Prisma.CitizenUncheckedCreateWithoutAsFamilyMemberInput>
+}
+
+export type CitizenUpsertWithoutAsFamilyMemberInput = {
+  update: Prisma.XOR<Prisma.CitizenUpdateWithoutAsFamilyMemberInput, Prisma.CitizenUncheckedUpdateWithoutAsFamilyMemberInput>
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutAsFamilyMemberInput, Prisma.CitizenUncheckedCreateWithoutAsFamilyMemberInput>
+  where?: Prisma.CitizenWhereInput
+}
+
+export type CitizenUpdateToOneWithWhereWithoutAsFamilyMemberInput = {
+  where?: Prisma.CitizenWhereInput
+  data: Prisma.XOR<Prisma.CitizenUpdateWithoutAsFamilyMemberInput, Prisma.CitizenUncheckedUpdateWithoutAsFamilyMemberInput>
+}
+
+export type CitizenUpdateWithoutAsFamilyMemberInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenUncheckedUpdateWithoutAsFamilyMemberInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenCreateWithoutAssessmentsInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenUncheckedCreateWithoutAssessmentsInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenCreateOrConnectWithoutAssessmentsInput = {
+  where: Prisma.CitizenWhereUniqueInput
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutAssessmentsInput, Prisma.CitizenUncheckedCreateWithoutAssessmentsInput>
+}
+
+export type CitizenUpsertWithoutAssessmentsInput = {
+  update: Prisma.XOR<Prisma.CitizenUpdateWithoutAssessmentsInput, Prisma.CitizenUncheckedUpdateWithoutAssessmentsInput>
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutAssessmentsInput, Prisma.CitizenUncheckedCreateWithoutAssessmentsInput>
+  where?: Prisma.CitizenWhereInput
+}
+
+export type CitizenUpdateToOneWithWhereWithoutAssessmentsInput = {
+  where?: Prisma.CitizenWhereInput
+  data: Prisma.XOR<Prisma.CitizenUpdateWithoutAssessmentsInput, Prisma.CitizenUncheckedUpdateWithoutAssessmentsInput>
+}
+
+export type CitizenUpdateWithoutAssessmentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenUncheckedUpdateWithoutAssessmentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenCreateWithoutHoldingTaxesInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenUncheckedCreateWithoutHoldingTaxesInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenCreateOrConnectWithoutHoldingTaxesInput = {
+  where: Prisma.CitizenWhereUniqueInput
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutHoldingTaxesInput, Prisma.CitizenUncheckedCreateWithoutHoldingTaxesInput>
+}
+
+export type CitizenUpsertWithoutHoldingTaxesInput = {
+  update: Prisma.XOR<Prisma.CitizenUpdateWithoutHoldingTaxesInput, Prisma.CitizenUncheckedUpdateWithoutHoldingTaxesInput>
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutHoldingTaxesInput, Prisma.CitizenUncheckedCreateWithoutHoldingTaxesInput>
+  where?: Prisma.CitizenWhereInput
+}
+
+export type CitizenUpdateToOneWithWhereWithoutHoldingTaxesInput = {
+  where?: Prisma.CitizenWhereInput
+  data: Prisma.XOR<Prisma.CitizenUpdateWithoutHoldingTaxesInput, Prisma.CitizenUncheckedUpdateWithoutHoldingTaxesInput>
+}
+
+export type CitizenUpdateWithoutHoldingTaxesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenUncheckedUpdateWithoutHoldingTaxesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  certificateApplications?: Prisma.CertificateApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenCreateWithoutCertificateApplicationsInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenUncheckedCreateWithoutCertificateApplicationsInput = {
+  id?: string
+  fullNameEn?: string | null
+  fullNameBn: string
+  nid: string
+  birthRegistrationNo?: string | null
+  passportNo?: string | null
+  dateOfBirth: Date | string
+  fatherNameEn?: string | null
+  fatherNameBn: string
+  motherNameEn?: string | null
+  motherNameBn: string
+  occupationEn?: string | null
+  occupationBn: string
+  residentStatusEn?: string | null
+  residentStatusBn: string
+  educationalQualificationEn?: string | null
+  educationalQualificationBn?: string | null
+  religionEn?: string | null
+  religionBn: string
+  genderEn?: string | null
+  genderBn: string
+  maritalStatusEn?: string | null
+  maritalStatusBn: string
+  presentVillageEn?: string | null
+  presentVillageBn: string
+  presentRoadBlockSectorEn?: string | null
+  presentRoadBlockSectorBn?: string | null
+  presentHoldingNo?: string | null
+  presentWardNo: number
+  presentDistrictEn?: string | null
+  presentDistrictBn: string
+  presentUpazilaEn?: string | null
+  presentUpazilaBn: string
+  presentPostOfficeEn?: string | null
+  presentPostOfficeBn: string
+  permanentVillageEn?: string | null
+  permanentVillageBn: string
+  permanentRoadBlockSectorEn?: string | null
+  permanentRoadBlockSectorBn?: string | null
+  permanentHoldingNo?: string | null
+  permanentWardNo: number
+  permanentDistrictEn?: string | null
+  permanentDistrictBn: string
+  permanentUpazilaEn?: string | null
+  permanentUpazilaBn: string
+  permanentPostOfficeEn?: string | null
+  permanentPostOfficeBn: string
+  mobile: string
+  email?: string | null
+  commentsEn?: string | null
+  commentsBn?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  applications?: Prisma.CitizenApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedCreateNestedManyWithoutCitizenInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedCreateNestedManyWithoutCitizenInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedCreateNestedManyWithoutCitizenInput
+  assessments?: Prisma.AssessmentApplicationUncheckedCreateNestedManyWithoutCitizenInput
+}
+
+export type CitizenCreateOrConnectWithoutCertificateApplicationsInput = {
+  where: Prisma.CitizenWhereUniqueInput
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutCertificateApplicationsInput, Prisma.CitizenUncheckedCreateWithoutCertificateApplicationsInput>
+}
+
+export type CitizenUpsertWithoutCertificateApplicationsInput = {
+  update: Prisma.XOR<Prisma.CitizenUpdateWithoutCertificateApplicationsInput, Prisma.CitizenUncheckedUpdateWithoutCertificateApplicationsInput>
+  create: Prisma.XOR<Prisma.CitizenCreateWithoutCertificateApplicationsInput, Prisma.CitizenUncheckedCreateWithoutCertificateApplicationsInput>
+  where?: Prisma.CitizenWhereInput
+}
+
+export type CitizenUpdateToOneWithWhereWithoutCertificateApplicationsInput = {
+  where?: Prisma.CitizenWhereInput
+  data: Prisma.XOR<Prisma.CitizenUpdateWithoutCertificateApplicationsInput, Prisma.CitizenUncheckedUpdateWithoutCertificateApplicationsInput>
+}
+
+export type CitizenUpdateWithoutCertificateApplicationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUpdateManyWithoutCitizenNestedInput
+}
+
+export type CitizenUncheckedUpdateWithoutCertificateApplicationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  fullNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fullNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  nid?: Prisma.StringFieldUpdateOperationsInput | string
+  birthRegistrationNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  passportNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  dateOfBirth?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fatherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fatherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  motherNameEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motherNameBn?: Prisma.StringFieldUpdateOperationsInput | string
+  occupationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  occupationBn?: Prisma.StringFieldUpdateOperationsInput | string
+  residentStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  residentStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  educationalQualificationEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  educationalQualificationBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  religionBn?: Prisma.StringFieldUpdateOperationsInput | string
+  genderEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  genderBn?: Prisma.StringFieldUpdateOperationsInput | string
+  maritalStatusEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  maritalStatusBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  presentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  presentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  presentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentVillageEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentVillageBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentRoadBlockSectorEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentRoadBlockSectorBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentHoldingNo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentWardNo?: Prisma.IntFieldUpdateOperationsInput | number
+  permanentDistrictEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentDistrictBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentUpazilaEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentUpazilaBn?: Prisma.StringFieldUpdateOperationsInput | string
+  permanentPostOfficeEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  permanentPostOfficeBn?: Prisma.StringFieldUpdateOperationsInput | string
+  mobile?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsEn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  commentsBn?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  applications?: Prisma.CitizenApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  familyApplications?: Prisma.FamilyApplicationUncheckedUpdateManyWithoutCitizenNestedInput
+  asFamilyMember?: Prisma.FamilyMemberUncheckedUpdateManyWithoutCitizenNestedInput
+  holdingTaxes?: Prisma.HoldingTaxUncheckedUpdateManyWithoutCitizenNestedInput
+  assessments?: Prisma.AssessmentApplicationUncheckedUpdateManyWithoutCitizenNestedInput
 }
 
 
@@ -1352,10 +3172,20 @@ export type CitizenUncheckedUpdateWithoutApplicationsInput = {
 
 export type CitizenCountOutputType = {
   applications: number
+  familyApplications: number
+  asFamilyMember: number
+  holdingTaxes: number
+  assessments: number
+  certificateApplications: number
 }
 
 export type CitizenCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   applications?: boolean | CitizenCountOutputTypeCountApplicationsArgs
+  familyApplications?: boolean | CitizenCountOutputTypeCountFamilyApplicationsArgs
+  asFamilyMember?: boolean | CitizenCountOutputTypeCountAsFamilyMemberArgs
+  holdingTaxes?: boolean | CitizenCountOutputTypeCountHoldingTaxesArgs
+  assessments?: boolean | CitizenCountOutputTypeCountAssessmentsArgs
+  certificateApplications?: boolean | CitizenCountOutputTypeCountCertificateApplicationsArgs
 }
 
 /**
@@ -1375,6 +3205,41 @@ export type CitizenCountOutputTypeCountApplicationsArgs<ExtArgs extends runtime.
   where?: Prisma.CitizenApplicationWhereInput
 }
 
+/**
+ * CitizenCountOutputType without action
+ */
+export type CitizenCountOutputTypeCountFamilyApplicationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.FamilyApplicationWhereInput
+}
+
+/**
+ * CitizenCountOutputType without action
+ */
+export type CitizenCountOutputTypeCountAsFamilyMemberArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.FamilyMemberWhereInput
+}
+
+/**
+ * CitizenCountOutputType without action
+ */
+export type CitizenCountOutputTypeCountHoldingTaxesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.HoldingTaxWhereInput
+}
+
+/**
+ * CitizenCountOutputType without action
+ */
+export type CitizenCountOutputTypeCountAssessmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.AssessmentApplicationWhereInput
+}
+
+/**
+ * CitizenCountOutputType without action
+ */
+export type CitizenCountOutputTypeCountCertificateApplicationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.CertificateApplicationWhereInput
+}
+
 
 export type CitizenSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1388,36 +3253,55 @@ export type CitizenSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   fatherNameBn?: boolean
   motherNameEn?: boolean
   motherNameBn?: boolean
-  occupation?: boolean
-  residentStatus?: boolean
-  educationalQualification?: boolean
-  religion?: boolean
-  gender?: boolean
-  maritalStatus?: boolean
+  occupationEn?: boolean
+  occupationBn?: boolean
+  residentStatusEn?: boolean
+  residentStatusBn?: boolean
+  educationalQualificationEn?: boolean
+  educationalQualificationBn?: boolean
+  religionEn?: boolean
+  religionBn?: boolean
+  genderEn?: boolean
+  genderBn?: boolean
+  maritalStatusEn?: boolean
+  maritalStatusBn?: boolean
   presentVillageEn?: boolean
   presentVillageBn?: boolean
   presentRoadBlockSectorEn?: boolean
   presentRoadBlockSectorBn?: boolean
   presentHoldingNo?: boolean
   presentWardNo?: boolean
-  presentDistrict?: boolean
-  presentUpazila?: boolean
-  presentPostOffice?: boolean
+  presentDistrictEn?: boolean
+  presentDistrictBn?: boolean
+  presentUpazilaEn?: boolean
+  presentUpazilaBn?: boolean
+  presentPostOfficeEn?: boolean
+  presentPostOfficeBn?: boolean
   permanentVillageEn?: boolean
   permanentVillageBn?: boolean
   permanentRoadBlockSectorEn?: boolean
   permanentRoadBlockSectorBn?: boolean
   permanentHoldingNo?: boolean
   permanentWardNo?: boolean
-  permanentDistrict?: boolean
-  permanentUpazila?: boolean
-  permanentPostOffice?: boolean
+  permanentDistrictEn?: boolean
+  permanentDistrictBn?: boolean
+  permanentUpazilaEn?: boolean
+  permanentUpazilaBn?: boolean
+  permanentPostOfficeEn?: boolean
+  permanentPostOfficeBn?: boolean
   mobile?: boolean
   email?: boolean
+  commentsEn?: boolean
+  commentsBn?: boolean
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   applications?: boolean | Prisma.Citizen$applicationsArgs<ExtArgs>
+  familyApplications?: boolean | Prisma.Citizen$familyApplicationsArgs<ExtArgs>
+  asFamilyMember?: boolean | Prisma.Citizen$asFamilyMemberArgs<ExtArgs>
+  holdingTaxes?: boolean | Prisma.Citizen$holdingTaxesArgs<ExtArgs>
+  assessments?: boolean | Prisma.Citizen$assessmentsArgs<ExtArgs>
+  certificateApplications?: boolean | Prisma.Citizen$certificateApplicationsArgs<ExtArgs>
   _count?: boolean | Prisma.CitizenCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["citizen"]>
 
@@ -1433,32 +3317,46 @@ export type CitizenSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   fatherNameBn?: boolean
   motherNameEn?: boolean
   motherNameBn?: boolean
-  occupation?: boolean
-  residentStatus?: boolean
-  educationalQualification?: boolean
-  religion?: boolean
-  gender?: boolean
-  maritalStatus?: boolean
+  occupationEn?: boolean
+  occupationBn?: boolean
+  residentStatusEn?: boolean
+  residentStatusBn?: boolean
+  educationalQualificationEn?: boolean
+  educationalQualificationBn?: boolean
+  religionEn?: boolean
+  religionBn?: boolean
+  genderEn?: boolean
+  genderBn?: boolean
+  maritalStatusEn?: boolean
+  maritalStatusBn?: boolean
   presentVillageEn?: boolean
   presentVillageBn?: boolean
   presentRoadBlockSectorEn?: boolean
   presentRoadBlockSectorBn?: boolean
   presentHoldingNo?: boolean
   presentWardNo?: boolean
-  presentDistrict?: boolean
-  presentUpazila?: boolean
-  presentPostOffice?: boolean
+  presentDistrictEn?: boolean
+  presentDistrictBn?: boolean
+  presentUpazilaEn?: boolean
+  presentUpazilaBn?: boolean
+  presentPostOfficeEn?: boolean
+  presentPostOfficeBn?: boolean
   permanentVillageEn?: boolean
   permanentVillageBn?: boolean
   permanentRoadBlockSectorEn?: boolean
   permanentRoadBlockSectorBn?: boolean
   permanentHoldingNo?: boolean
   permanentWardNo?: boolean
-  permanentDistrict?: boolean
-  permanentUpazila?: boolean
-  permanentPostOffice?: boolean
+  permanentDistrictEn?: boolean
+  permanentDistrictBn?: boolean
+  permanentUpazilaEn?: boolean
+  permanentUpazilaBn?: boolean
+  permanentPostOfficeEn?: boolean
+  permanentPostOfficeBn?: boolean
   mobile?: boolean
   email?: boolean
+  commentsEn?: boolean
+  commentsBn?: boolean
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -1476,32 +3374,46 @@ export type CitizenSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   fatherNameBn?: boolean
   motherNameEn?: boolean
   motherNameBn?: boolean
-  occupation?: boolean
-  residentStatus?: boolean
-  educationalQualification?: boolean
-  religion?: boolean
-  gender?: boolean
-  maritalStatus?: boolean
+  occupationEn?: boolean
+  occupationBn?: boolean
+  residentStatusEn?: boolean
+  residentStatusBn?: boolean
+  educationalQualificationEn?: boolean
+  educationalQualificationBn?: boolean
+  religionEn?: boolean
+  religionBn?: boolean
+  genderEn?: boolean
+  genderBn?: boolean
+  maritalStatusEn?: boolean
+  maritalStatusBn?: boolean
   presentVillageEn?: boolean
   presentVillageBn?: boolean
   presentRoadBlockSectorEn?: boolean
   presentRoadBlockSectorBn?: boolean
   presentHoldingNo?: boolean
   presentWardNo?: boolean
-  presentDistrict?: boolean
-  presentUpazila?: boolean
-  presentPostOffice?: boolean
+  presentDistrictEn?: boolean
+  presentDistrictBn?: boolean
+  presentUpazilaEn?: boolean
+  presentUpazilaBn?: boolean
+  presentPostOfficeEn?: boolean
+  presentPostOfficeBn?: boolean
   permanentVillageEn?: boolean
   permanentVillageBn?: boolean
   permanentRoadBlockSectorEn?: boolean
   permanentRoadBlockSectorBn?: boolean
   permanentHoldingNo?: boolean
   permanentWardNo?: boolean
-  permanentDistrict?: boolean
-  permanentUpazila?: boolean
-  permanentPostOffice?: boolean
+  permanentDistrictEn?: boolean
+  permanentDistrictBn?: boolean
+  permanentUpazilaEn?: boolean
+  permanentUpazilaBn?: boolean
+  permanentPostOfficeEn?: boolean
+  permanentPostOfficeBn?: boolean
   mobile?: boolean
   email?: boolean
+  commentsEn?: boolean
+  commentsBn?: boolean
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -1519,40 +3431,59 @@ export type CitizenSelectScalar = {
   fatherNameBn?: boolean
   motherNameEn?: boolean
   motherNameBn?: boolean
-  occupation?: boolean
-  residentStatus?: boolean
-  educationalQualification?: boolean
-  religion?: boolean
-  gender?: boolean
-  maritalStatus?: boolean
+  occupationEn?: boolean
+  occupationBn?: boolean
+  residentStatusEn?: boolean
+  residentStatusBn?: boolean
+  educationalQualificationEn?: boolean
+  educationalQualificationBn?: boolean
+  religionEn?: boolean
+  religionBn?: boolean
+  genderEn?: boolean
+  genderBn?: boolean
+  maritalStatusEn?: boolean
+  maritalStatusBn?: boolean
   presentVillageEn?: boolean
   presentVillageBn?: boolean
   presentRoadBlockSectorEn?: boolean
   presentRoadBlockSectorBn?: boolean
   presentHoldingNo?: boolean
   presentWardNo?: boolean
-  presentDistrict?: boolean
-  presentUpazila?: boolean
-  presentPostOffice?: boolean
+  presentDistrictEn?: boolean
+  presentDistrictBn?: boolean
+  presentUpazilaEn?: boolean
+  presentUpazilaBn?: boolean
+  presentPostOfficeEn?: boolean
+  presentPostOfficeBn?: boolean
   permanentVillageEn?: boolean
   permanentVillageBn?: boolean
   permanentRoadBlockSectorEn?: boolean
   permanentRoadBlockSectorBn?: boolean
   permanentHoldingNo?: boolean
   permanentWardNo?: boolean
-  permanentDistrict?: boolean
-  permanentUpazila?: boolean
-  permanentPostOffice?: boolean
+  permanentDistrictEn?: boolean
+  permanentDistrictBn?: boolean
+  permanentUpazilaEn?: boolean
+  permanentUpazilaBn?: boolean
+  permanentPostOfficeEn?: boolean
+  permanentPostOfficeBn?: boolean
   mobile?: boolean
   email?: boolean
+  commentsEn?: boolean
+  commentsBn?: boolean
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type CitizenOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "fullNameEn" | "fullNameBn" | "nid" | "birthRegistrationNo" | "passportNo" | "dateOfBirth" | "fatherNameEn" | "fatherNameBn" | "motherNameEn" | "motherNameBn" | "occupation" | "residentStatus" | "educationalQualification" | "religion" | "gender" | "maritalStatus" | "presentVillageEn" | "presentVillageBn" | "presentRoadBlockSectorEn" | "presentRoadBlockSectorBn" | "presentHoldingNo" | "presentWardNo" | "presentDistrict" | "presentUpazila" | "presentPostOffice" | "permanentVillageEn" | "permanentVillageBn" | "permanentRoadBlockSectorEn" | "permanentRoadBlockSectorBn" | "permanentHoldingNo" | "permanentWardNo" | "permanentDistrict" | "permanentUpazila" | "permanentPostOffice" | "mobile" | "email" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["citizen"]>
+export type CitizenOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "fullNameEn" | "fullNameBn" | "nid" | "birthRegistrationNo" | "passportNo" | "dateOfBirth" | "fatherNameEn" | "fatherNameBn" | "motherNameEn" | "motherNameBn" | "occupationEn" | "occupationBn" | "residentStatusEn" | "residentStatusBn" | "educationalQualificationEn" | "educationalQualificationBn" | "religionEn" | "religionBn" | "genderEn" | "genderBn" | "maritalStatusEn" | "maritalStatusBn" | "presentVillageEn" | "presentVillageBn" | "presentRoadBlockSectorEn" | "presentRoadBlockSectorBn" | "presentHoldingNo" | "presentWardNo" | "presentDistrictEn" | "presentDistrictBn" | "presentUpazilaEn" | "presentUpazilaBn" | "presentPostOfficeEn" | "presentPostOfficeBn" | "permanentVillageEn" | "permanentVillageBn" | "permanentRoadBlockSectorEn" | "permanentRoadBlockSectorBn" | "permanentHoldingNo" | "permanentWardNo" | "permanentDistrictEn" | "permanentDistrictBn" | "permanentUpazilaEn" | "permanentUpazilaBn" | "permanentPostOfficeEn" | "permanentPostOfficeBn" | "mobile" | "email" | "commentsEn" | "commentsBn" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["citizen"]>
 export type CitizenInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   applications?: boolean | Prisma.Citizen$applicationsArgs<ExtArgs>
+  familyApplications?: boolean | Prisma.Citizen$familyApplicationsArgs<ExtArgs>
+  asFamilyMember?: boolean | Prisma.Citizen$asFamilyMemberArgs<ExtArgs>
+  holdingTaxes?: boolean | Prisma.Citizen$holdingTaxesArgs<ExtArgs>
+  assessments?: boolean | Prisma.Citizen$assessmentsArgs<ExtArgs>
+  certificateApplications?: boolean | Prisma.Citizen$certificateApplicationsArgs<ExtArgs>
   _count?: boolean | Prisma.CitizenCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type CitizenIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -1562,6 +3493,11 @@ export type $CitizenPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
   name: "Citizen"
   objects: {
     applications: Prisma.$CitizenApplicationPayload<ExtArgs>[]
+    familyApplications: Prisma.$FamilyApplicationPayload<ExtArgs>[]
+    asFamilyMember: Prisma.$FamilyMemberPayload<ExtArgs>[]
+    holdingTaxes: Prisma.$HoldingTaxPayload<ExtArgs>[]
+    assessments: Prisma.$AssessmentApplicationPayload<ExtArgs>[]
+    certificateApplications: Prisma.$CertificateApplicationPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1575,32 +3511,46 @@ export type $CitizenPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     fatherNameBn: string
     motherNameEn: string | null
     motherNameBn: string
-    occupation: string | null
-    residentStatus: string
-    educationalQualification: string | null
-    religion: string
-    gender: string
-    maritalStatus: string
+    occupationEn: string | null
+    occupationBn: string
+    residentStatusEn: string | null
+    residentStatusBn: string
+    educationalQualificationEn: string | null
+    educationalQualificationBn: string | null
+    religionEn: string | null
+    religionBn: string
+    genderEn: string | null
+    genderBn: string
+    maritalStatusEn: string | null
+    maritalStatusBn: string
     presentVillageEn: string | null
     presentVillageBn: string
     presentRoadBlockSectorEn: string | null
     presentRoadBlockSectorBn: string | null
     presentHoldingNo: string | null
     presentWardNo: number
-    presentDistrict: string
-    presentUpazila: string
-    presentPostOffice: string
+    presentDistrictEn: string | null
+    presentDistrictBn: string
+    presentUpazilaEn: string | null
+    presentUpazilaBn: string
+    presentPostOfficeEn: string | null
+    presentPostOfficeBn: string
     permanentVillageEn: string | null
     permanentVillageBn: string
     permanentRoadBlockSectorEn: string | null
     permanentRoadBlockSectorBn: string | null
     permanentHoldingNo: string | null
     permanentWardNo: number
-    permanentDistrict: string
-    permanentUpazila: string
-    permanentPostOffice: string
+    permanentDistrictEn: string | null
+    permanentDistrictBn: string
+    permanentUpazilaEn: string | null
+    permanentUpazilaBn: string
+    permanentPostOfficeEn: string | null
+    permanentPostOfficeBn: string
     mobile: string
     email: string | null
+    commentsEn: string | null
+    commentsBn: string | null
     isActive: boolean
     createdAt: Date
     updatedAt: Date
@@ -1999,6 +3949,11 @@ readonly fields: CitizenFieldRefs;
 export interface Prisma__CitizenClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   applications<T extends Prisma.Citizen$applicationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Citizen$applicationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$CitizenApplicationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  familyApplications<T extends Prisma.Citizen$familyApplicationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Citizen$familyApplicationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$FamilyApplicationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  asFamilyMember<T extends Prisma.Citizen$asFamilyMemberArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Citizen$asFamilyMemberArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$FamilyMemberPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  holdingTaxes<T extends Prisma.Citizen$holdingTaxesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Citizen$holdingTaxesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$HoldingTaxPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  assessments<T extends Prisma.Citizen$assessmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Citizen$assessmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AssessmentApplicationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  certificateApplications<T extends Prisma.Citizen$certificateApplicationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Citizen$certificateApplicationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$CertificateApplicationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2039,32 +3994,46 @@ export interface CitizenFieldRefs {
   readonly fatherNameBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly motherNameEn: Prisma.FieldRef<"Citizen", 'String'>
   readonly motherNameBn: Prisma.FieldRef<"Citizen", 'String'>
-  readonly occupation: Prisma.FieldRef<"Citizen", 'String'>
-  readonly residentStatus: Prisma.FieldRef<"Citizen", 'String'>
-  readonly educationalQualification: Prisma.FieldRef<"Citizen", 'String'>
-  readonly religion: Prisma.FieldRef<"Citizen", 'String'>
-  readonly gender: Prisma.FieldRef<"Citizen", 'String'>
-  readonly maritalStatus: Prisma.FieldRef<"Citizen", 'String'>
+  readonly occupationEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly occupationBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly residentStatusEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly residentStatusBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly educationalQualificationEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly educationalQualificationBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly religionEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly religionBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly genderEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly genderBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly maritalStatusEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly maritalStatusBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly presentVillageEn: Prisma.FieldRef<"Citizen", 'String'>
   readonly presentVillageBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly presentRoadBlockSectorEn: Prisma.FieldRef<"Citizen", 'String'>
   readonly presentRoadBlockSectorBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly presentHoldingNo: Prisma.FieldRef<"Citizen", 'String'>
   readonly presentWardNo: Prisma.FieldRef<"Citizen", 'Int'>
-  readonly presentDistrict: Prisma.FieldRef<"Citizen", 'String'>
-  readonly presentUpazila: Prisma.FieldRef<"Citizen", 'String'>
-  readonly presentPostOffice: Prisma.FieldRef<"Citizen", 'String'>
+  readonly presentDistrictEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly presentDistrictBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly presentUpazilaEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly presentUpazilaBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly presentPostOfficeEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly presentPostOfficeBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly permanentVillageEn: Prisma.FieldRef<"Citizen", 'String'>
   readonly permanentVillageBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly permanentRoadBlockSectorEn: Prisma.FieldRef<"Citizen", 'String'>
   readonly permanentRoadBlockSectorBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly permanentHoldingNo: Prisma.FieldRef<"Citizen", 'String'>
   readonly permanentWardNo: Prisma.FieldRef<"Citizen", 'Int'>
-  readonly permanentDistrict: Prisma.FieldRef<"Citizen", 'String'>
-  readonly permanentUpazila: Prisma.FieldRef<"Citizen", 'String'>
-  readonly permanentPostOffice: Prisma.FieldRef<"Citizen", 'String'>
+  readonly permanentDistrictEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly permanentDistrictBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly permanentUpazilaEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly permanentUpazilaBn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly permanentPostOfficeEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly permanentPostOfficeBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly mobile: Prisma.FieldRef<"Citizen", 'String'>
   readonly email: Prisma.FieldRef<"Citizen", 'String'>
+  readonly commentsEn: Prisma.FieldRef<"Citizen", 'String'>
+  readonly commentsBn: Prisma.FieldRef<"Citizen", 'String'>
   readonly isActive: Prisma.FieldRef<"Citizen", 'Boolean'>
   readonly createdAt: Prisma.FieldRef<"Citizen", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Citizen", 'DateTime'>
@@ -2477,6 +4446,126 @@ export type Citizen$applicationsArgs<ExtArgs extends runtime.Types.Extensions.In
   take?: number
   skip?: number
   distinct?: Prisma.CitizenApplicationScalarFieldEnum | Prisma.CitizenApplicationScalarFieldEnum[]
+}
+
+/**
+ * Citizen.familyApplications
+ */
+export type Citizen$familyApplicationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the FamilyApplication
+   */
+  select?: Prisma.FamilyApplicationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the FamilyApplication
+   */
+  omit?: Prisma.FamilyApplicationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.FamilyApplicationInclude<ExtArgs> | null
+  where?: Prisma.FamilyApplicationWhereInput
+  orderBy?: Prisma.FamilyApplicationOrderByWithRelationInput | Prisma.FamilyApplicationOrderByWithRelationInput[]
+  cursor?: Prisma.FamilyApplicationWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.FamilyApplicationScalarFieldEnum | Prisma.FamilyApplicationScalarFieldEnum[]
+}
+
+/**
+ * Citizen.asFamilyMember
+ */
+export type Citizen$asFamilyMemberArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the FamilyMember
+   */
+  select?: Prisma.FamilyMemberSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the FamilyMember
+   */
+  omit?: Prisma.FamilyMemberOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.FamilyMemberInclude<ExtArgs> | null
+  where?: Prisma.FamilyMemberWhereInput
+  orderBy?: Prisma.FamilyMemberOrderByWithRelationInput | Prisma.FamilyMemberOrderByWithRelationInput[]
+  cursor?: Prisma.FamilyMemberWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.FamilyMemberScalarFieldEnum | Prisma.FamilyMemberScalarFieldEnum[]
+}
+
+/**
+ * Citizen.holdingTaxes
+ */
+export type Citizen$holdingTaxesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the HoldingTax
+   */
+  select?: Prisma.HoldingTaxSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the HoldingTax
+   */
+  omit?: Prisma.HoldingTaxOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.HoldingTaxInclude<ExtArgs> | null
+  where?: Prisma.HoldingTaxWhereInput
+  orderBy?: Prisma.HoldingTaxOrderByWithRelationInput | Prisma.HoldingTaxOrderByWithRelationInput[]
+  cursor?: Prisma.HoldingTaxWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.HoldingTaxScalarFieldEnum | Prisma.HoldingTaxScalarFieldEnum[]
+}
+
+/**
+ * Citizen.assessments
+ */
+export type Citizen$assessmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the AssessmentApplication
+   */
+  select?: Prisma.AssessmentApplicationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the AssessmentApplication
+   */
+  omit?: Prisma.AssessmentApplicationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.AssessmentApplicationInclude<ExtArgs> | null
+  where?: Prisma.AssessmentApplicationWhereInput
+  orderBy?: Prisma.AssessmentApplicationOrderByWithRelationInput | Prisma.AssessmentApplicationOrderByWithRelationInput[]
+  cursor?: Prisma.AssessmentApplicationWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.AssessmentApplicationScalarFieldEnum | Prisma.AssessmentApplicationScalarFieldEnum[]
+}
+
+/**
+ * Citizen.certificateApplications
+ */
+export type Citizen$certificateApplicationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the CertificateApplication
+   */
+  select?: Prisma.CertificateApplicationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the CertificateApplication
+   */
+  omit?: Prisma.CertificateApplicationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.CertificateApplicationInclude<ExtArgs> | null
+  where?: Prisma.CertificateApplicationWhereInput
+  orderBy?: Prisma.CertificateApplicationOrderByWithRelationInput | Prisma.CertificateApplicationOrderByWithRelationInput[]
+  cursor?: Prisma.CertificateApplicationWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.CertificateApplicationScalarFieldEnum | Prisma.CertificateApplicationScalarFieldEnum[]
 }
 
 /**

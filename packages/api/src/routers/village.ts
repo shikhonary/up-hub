@@ -88,4 +88,15 @@ export const villageRouter = createTRPCRouter({
       data,
     };
   }),
+
+  getByWardId: tenantProcedure
+    .input(idSchema.optional())
+    .query(async ({ ctx, input }) => {
+      const service = new VillageService(ctx.tenantClient);
+      const data = await service.getByWardId(input || undefined);
+      return {
+        success: true,
+        data,
+      };
+    }),
 });
