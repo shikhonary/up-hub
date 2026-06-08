@@ -738,10 +738,10 @@ model Notification {
 // PDF Ingestion & Content Pipeline
 // Book → Chapter → ContentBlock → ContentBlockMedia (images)
 //                               → AudioCache        (TTS mp3)
-// PdfIngestionJob tracks the Inngest-driven extraction workflow per Book.
+// PdfIngestionJob tracks the PDF extraction workflow per Book.
 // ---------------------------------------------------------------------------
 
-/// Tracks a single Inngest-driven PDF extraction job for one Book.
+/// Tracks a single PDF extraction job for one Book.
 model PdfIngestionJob {
     id     String @id @default(uuid())
     bookId String @unique
